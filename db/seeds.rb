@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
@@ -19,8 +17,9 @@ Category.destroy_all
 category_array = %w(Restaurants Activities Beauty Fitness)
 counter = 0
 category_array.each do |category|
-  Category.new(name: category_array[counter])
+  new_cat = Category.new(name: category_array[counter])
   counter += 1
+  new_cat.save!
 end
 
 # Destroy all providers
@@ -65,9 +64,7 @@ end
 #   byebug
 #   puts acivity_doc.search(".act_main_section").text.strip
 # end
-=======
-#   movies = Movie.create([{ name: Star Wars }, { name: Lord of the Rings }])
-#   Character.create(name: Luke, movie: movies.first)
+
 
 def new_company(name, translated_name, description, address, phone_number, website)
   company = Provider.new(name: name, translated_name: translated_name, description: description, price: '', avg_rating: '', street_address: address, district: '', city: '', country: '', open_hours: '', phone_number: phone_number, website: website, longitude: '', latitude: '')
@@ -83,10 +80,18 @@ searialised_beauty_places = File.read(filepath)
 beauty_places = JSON.parse(searialised_beauty_places)
 
 #create beauty companies
+beauty_tags = nil
 beauty_places['beauty_companies'].each do |company|
+  beauty_tags = company['categories'].gsub("  ","").split(",")
   new_company(company['name'], company['name'], company['description'], company['address'], company['phone'], company['website'])
 end
-
+#create beauty tags
+beauty_tags.uniq!
+beauty_tags.each do |tag|
+  new_tag = Tag.new(name: tag)
+  new_tag.category = Category.first
+  new_tag.save!
+end
 
 # FITNESS COMPANIES
 
@@ -96,6 +101,19 @@ searialised_fitness_places = File.read(filepath)
 fitness_places = JSON.parse(searialised_fitness_places)
 
 #create fitness companies
+fitness_tags = nil
 fitness_places['fitness_companies'].each do |company|
+  fitness_tags = company['categories'].gsub("  ","").split(",")
   new_company(company['name'], company['name'], company['description'], company['address'], company['phone'], company['website'])
 end
+#create fitness tags
+fitness_tags.uniq!
+fitness_tags.each do |tag|
+  new_tag = Tag.new(name: tag)
+  new_tag.category = Category.first
+  new_tag.save!
+end
+
+
+
+
