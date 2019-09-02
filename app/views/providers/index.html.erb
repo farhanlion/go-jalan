@@ -6,6 +6,14 @@
     <p>Name: <%= link_to provider.name, provider %></p>
     <p>Translated name: <%= provider.translated_name %></p>
     <p>Description: <%= provider.description %></p>
+    <p>Tags: <% provider.provider_tags.each do |t| %>
+        <%= t.tag.name %>
+      <% end %>
+    </p>
+    <p>Categories: <% provider.provider_categories.each do |c| %>
+        <%= c.category.name %>
+      <% end %>
+    </p>
     <p>Rating: <%= provider.avg_rating %></p>
     <p>Price: <%= provider.price %></p>
     <p>Address: <%= provider.street_address %></p>
@@ -15,6 +23,7 @@
     <p>Hours: <%= provider.open_hours %></p>
     <p>Phone: <%= provider.phone_number %></p>
     <p>Website: <%= provider.website %></p>
+    <p><%= link_to "Review provider", new_provider_review_path(provider) %></p>
     <p>Services:</p>
     <% provider.services.each do |service| %>
       <p><%= service.name %></p>
@@ -26,6 +35,7 @@
       <p>Hours: <%= service.open_hours %></p>
       <p>Phone: <%= service.phone_number %></p>
       <p>Website: <%= service.website %></p>
+      <p><%= link_to "Review service", new_service_review_path(service) %></p>
     <% end %>
     <p>---------------------------------------------</p>
   <% end %>

@@ -14,17 +14,21 @@ require 'open-uri'
 require 'json'
 
 
-# Seed four categories
+ProviderTag.destroy_all
+ProviderCategory.destroy_all
+Tag.destroy_all
 Category.destroy_all
+Review.destroy_all
+Provider.destroy_all
+
+# Seed four categories
 category_array = %w(Restaurants Activities Beauty Fitness)
 counter = 0
 category_array.each do |category|
-  Category.new(name: category_array[counter])
+  category = Category.new(name: category_array[counter])
+  category.save!
   counter += 1
 end
-
-# Destroy all providers
-Provider.destroy_all
 
 # Seed restaurants
 file_path = File.join(__dir__, 'restaurants.csv')
@@ -32,10 +36,15 @@ counter = 1
 CSV.foreach(file_path, {:headers => true, :header_converters => :symbol}) do |row|
   new_provider = Provider.new(name: row[:name], description: row[:description], open_hours: row[:hours], price: row[:price], country: 'Singapore')
   new_provider_category = ProviderCategory.new(category: Category.find_by(name: 'Restaurants'), provider: new_provider)
+  new_provider_category.save!
   tags = row[:good_for]
   tags.split(" ").each do |tag|
     new_tag = Tag.new(name: tag)
+    new_tag.category = Category.find_by(name: 'Restaurants')
+    new_tag.save!
+    # byebug
     new_provider_tag = ProviderTag.new(tag: new_tag, provider: new_provider)
+    new_provider_tag.save!
   end
   # row[:address].match(/(.*)(Singapore.*)/)
   if Provider.find_by(name: row[:name]) == nil
@@ -65,7 +74,7 @@ end
 #   byebug
 #   puts acivity_doc.search(".act_main_section").text.strip
 # end
-=======
+#=======
 #   movies = Movie.create([{ name: Star Wars }, { name: Lord of the Rings }])
 #   Character.create(name: Luke, movie: movies.first)
 
