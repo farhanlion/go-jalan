@@ -46,18 +46,21 @@ CSV.foreach(file_path, {:headers => true, :header_converters => :symbol}) do |ro
 end
 
 
-# # Seed 10 activities
-# file_path = File.join(__dir__, 'klook.html')
-# klook_doc = Nokogiri::HTML(File.open(file_path), nil, 'utf-8')
-# klook_doc.search(".act_card").each do |element|
-#   puts title = element.search(".title").text
-#   puts price = element.search(".latest_price").text.strip
-#   url = element.search("a").map do |element|
-#     element.to_h["href"]
-#   end
-#   match_data = url[0].match(/(.*)\?(.*)$/)
-#   p match_data[1]
-#   activity_doc = Nokogiri::HTML(open("https://www.klook.com/en-SG/activity/25467-singapore-comic-con-ticket/"), nil, 'utf-8')
-#   byebug
-#   puts acivity_doc.search(".act_main_section").text.strip
-# end
+# Seed 10 activities
+file_path = File.join(__dir__, 'klook.html')
+klook_doc = Nokogiri::HTML(File.open(file_path), nil, 'utf-8')
+klook_doc.search(".act_card").each do |element|
+  puts title = element.search(".title").text
+  puts price = element.search(".latest_price").text.strip
+  url = element.search("a").map do |element|
+    element.to_h["href"]
+  end
+  match_data = url[0].match(/(.*)\?(.*)$/)
+  p match_data[1]
+  page = Net::HTTP.get(URI.parse(match_data[1]))
+
+  activity_doc = Nokogiri::HTML(page, nil, 'utf-8')
+  byebug
+
+  puts acivity_doc.search(".act_main_section").text.strip
+end
