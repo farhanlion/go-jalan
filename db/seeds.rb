@@ -11,6 +11,7 @@ require 'pry'
 require 'open-uri'
 require 'json'
 
+
 Service.destroy_all
 ProviderTag.destroy_all
 ProviderCategory.destroy_all
@@ -18,6 +19,7 @@ Tag.destroy_all
 Category.destroy_all
 Review.destroy_all
 Provider.destroy_all
+
 
 category_array = %w(Restaurants Activities Beauty Fitness)
 counter = 0
@@ -33,10 +35,15 @@ counter = 1
 CSV.foreach(file_path, {:headers => true, :header_converters => :symbol}) do |row|
   new_provider = Provider.new(name: row[:name], description: row[:description], open_hours: row[:hours], price: row[:price], country: 'Singapore')
   new_provider_category = ProviderCategory.new(category: Category.find_by(name: 'Restaurants'), provider: new_provider)
+  new_provider_category.save!
   tags = row[:good_for]
   tags.split(" ").each do |tag|
     new_tag = Tag.new(name: tag)
+    new_tag.category = Category.find_by(name: 'Restaurants')
+    new_tag.save!
+    # byebug
     new_provider_tag = ProviderTag.new(tag: new_tag, provider: new_provider)
+    new_provider_tag.save!
   end
   # row[:address].match(/(.*)(Singapore.*)/)
   if Provider.find_by(name: row[:name]) == nil

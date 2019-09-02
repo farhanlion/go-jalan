@@ -3,8 +3,8 @@ class Provider < ApplicationRecord
   has_many :services
   has_many :provider_categories
   has_many :categories, through: :provider_category
-  has_many :provider_tags
   has_many :tags, through: :provider_tag
+  has_many :provider_tags
   has_many :reviews
   has_many :provider_favourites
   geocoded_by :street_address

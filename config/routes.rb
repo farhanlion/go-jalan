@@ -8,11 +8,16 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
   resources :providers, only: [:index, :show] do
+      resources :reviews, only: [:new, :create]
+  end
+  resources :services, only: [:index, :show] do
     resources :reviews, only: [:new, :create]
     resources :provider_favourites, only: [:index, :create, :destroy]
   end
+
   resources :services, only: [:index, :show] do 
 	  resources :service_favourites, only: [:index, :create, :destroy]
 	end
-	  resources :reviews, only: [:index]
+	resources :reviews, only: [:index]
+
 end
