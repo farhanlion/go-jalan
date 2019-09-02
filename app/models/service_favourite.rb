@@ -1,4 +1,4 @@
 class ServiceFavourite < ApplicationRecord
   belongs_to :service
-  belongs_to :
+  belongs_to :user
 end
