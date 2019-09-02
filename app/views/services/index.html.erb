@@ -1,0 +1,20 @@
+<h1>All services</h1>
+<% if @services.empty? %>
+  <p>No services to show yet</p>
+<% else %>
+  <% @services.each do |service| %>
+    <p>Name: <%= service.name %></p>
+    <p>Translated name:<%= service.translated_name %></p>
+    <p>Description: <%= service.description %></p>
+    <p>Description: <%= service.avg_rating %></p>
+    <p>Price: <%= service.price %></p>
+    <p>Address: <%= service.street_address %></p>
+    <p>District: <%= service.district %></p>
+    <p>City: <%= service.city %></p>
+    <p>Country: <%= service.country %></p>
+    <p>Hours: <%= service.open_hours %></p>
+    <p>Phone: <%= service.phone_number %></p>
+    <p>Website: <%= service.website %></p>
+    <p>---------------------------------------------</p>
+  <% end %>
+<% end %>

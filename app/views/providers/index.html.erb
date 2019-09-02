@@ -1,0 +1,32 @@
+<h1>All providers</h1>
+<% if @providers.empty? %>
+  <p>Nothing providers to show yet</p>
+<% else %>
+  <% @providers.each do |provider| %>
+    <p>Name: <%= link_to provider.name, provider %></p>
+    <p>Translated name:<%= provider.translated_name %></p>
+    <p>Description: <%= provider.description %></p>
+    <p>Description: <%= provider.avg_rating %></p>
+    <p>Price: <%= provider.price %></p>
+    <p>Address: <%= provider.street_address %></p>
+    <p>District: <%= provider.district %></p>
+    <p>City: <%= provider.city %></p>
+    <p>Country: <%= provider.country %></p>
+    <p>Hours: <%= provider.open_hours %></p>
+    <p>Phone: <%= provider.phone_number %></p>
+    <p>Website: <%= provider.website %></p>
+    <p>Services:</p>
+    <% provider.services.each do |service| %>
+      <p><%= service.name %></p>
+      <p><%= service.description %></p>
+      <p>Address: <%= service.street_address %></p>
+      <p>District: <%= service.district %></p>
+      <p>City: <%= service.city %></p>
+      <p>Country: <%= service.country %></p>
+      <p>Hours: <%= service.open_hours %></p>
+      <p>Phone: <%= service.phone_number %></p>
+      <p>Website: <%= service.website %></p>
+    <% end %>
+    <p>---------------------------------------------</p>
+  <% end %>
+<% end %>
