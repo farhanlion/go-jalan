@@ -4,9 +4,9 @@
 <% else %>
   <% @providers.each do |provider| %>
     <p>Name: <%= link_to provider.name, provider %></p>
-    <p>Translated name:<%= provider.translated_name %></p>
+    <p>Translated name: <%= provider.translated_name %></p>
     <p>Description: <%= provider.description %></p>
-    <p>Description: <%= provider.avg_rating %></p>
+    <p>Rating: <%= provider.avg_rating %></p>
     <p>Price: <%= provider.price %></p>
     <p>Address: <%= provider.street_address %></p>
     <p>District: <%= provider.district %></p>
