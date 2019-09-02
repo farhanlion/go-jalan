@@ -11,9 +11,14 @@ require 'pry'
 require 'open-uri'
 require 'json'
 
-
-# Seed four categories
+Service.destroy_all
+ProviderTag.destroy_all
+ProviderCategory.destroy_all
+Tag.destroy_all
 Category.destroy_all
+Review.destroy_all
+Provider.destroy_all
+
 category_array = %w(Restaurants Activities Beauty Fitness)
 counter = 0
 category_array.each do |category|
@@ -21,9 +26,6 @@ category_array.each do |category|
   counter += 1
   new_cat.save!
 end
-
-# Destroy all providers
-Provider.destroy_all
 
 # Seed restaurants
 file_path = File.join(__dir__, 'restaurants.csv')
@@ -49,21 +51,39 @@ CSV.foreach(file_path, {:headers => true, :header_converters => :symbol}) do |ro
 end
 
 
-# # Seed 10 activities
-# file_path = File.join(__dir__, 'klook.html')
-# klook_doc = Nokogiri::HTML(File.open(file_path), nil, 'utf-8')
-# klook_doc.search(".act_card").each do |element|
-#   puts title = element.search(".title").text
-#   puts price = element.search(".latest_price").text.strip
-#   url = element.search("a").map do |element|
-#     element.to_h["href"]
-#   end
-#   match_data = url[0].match(/(.*)\?(.*)$/)
-#   p match_data[1]
-#   activity_doc = Nokogiri::HTML(open("https://www.klook.com/en-SG/activity/25467-singapore-comic-con-ticket/"), nil, 'utf-8')
-#   byebug
-#   puts acivity_doc.search(".act_main_section").text.strip
-# end
+
+# Seed 10 activities
+file_path = File.join(__dir__, 'viator.html')
+viator_doc = Nokogiri::HTML(File.open(file_path), nil, 'utf-8')
+viator_doc.search(".product-card-main-content").each do |element|
+  name = element.search("h2").text.strip
+  price =  element.search(".h4").text.strip.split(" ").first
+  url = element.search("a").map do |element|
+    element.to_h["href"]
+  end
+  activity_doc = Nokogiri::HTML(open(url[0]), nil, 'utf-8')
+  match_data =  activity_doc.search(".mb-5 .mb-3").text.strip.match(/Overview(.*)/)
+  description = match_data[1]
+  country = 'Singapore'
+  # address
+  match_data = activity_doc.search(".mr-md-4").text.match(/^(.*Singapore)/)
+  street_address = match_data[1]
+
+  new_provider = Provider.new(name: name)
+  new_provider.save!
+  new_provider_category = ProviderCategory.new(category: Category.find_by(name: 'Activities'), provider: new_provider)
+  new_provider_category.save!
+
+  new_service = Service.new(name: name, description: description, street_address: street_address, country: country, provider: new_provider)
+
+  tag =  element.search(".category-card-tag").text
+  new_tag = Tag.new(name: tag, category: Category.find_by(name: 'Activities'))
+  new_tag.save!
+
+  new_provider_tag = ProviderTag.new(tag: new_tag, provider: new_provider)
+  new_provider.save!
+  new_service.save!
+end
 
 
 def new_company(name, translated_name, description, address, phone_number, website)
@@ -79,8 +99,11 @@ filepath = File.join(__dir__, 'beauty.json')
 searialised_beauty_places = File.read(filepath)
 beauty_places = JSON.parse(searialised_beauty_places)
 
+
 #create beauty companies
 beauty_tags = nil
+
+# create beauty companies
 beauty_places['beauty_companies'].each do |company|
   beauty_tags = company['categories'].gsub("  ","").split(",")
   new_company(company['name'], company['name'], company['description'], company['address'], company['phone'], company['website'])
@@ -95,10 +118,11 @@ end
 
 # FITNESS COMPANIES
 
-#parse fitness.json
+# parse fitness.json
 filepath = File.join(__dir__, 'fitness.json')
 searialised_fitness_places = File.read(filepath)
 fitness_places = JSON.parse(searialised_fitness_places)
+
 
 #create fitness companies
 fitness_tags = nil
@@ -106,6 +130,7 @@ fitness_places['fitness_companies'].each do |company|
   fitness_tags = company['categories'].gsub("  ","").split(",")
   new_company(company['name'], company['name'], company['description'], company['address'], company['phone'], company['website'])
 end
+
 #create fitness tags
 fitness_tags.uniq!
 fitness_tags.each do |tag|
@@ -113,7 +138,5 @@ fitness_tags.each do |tag|
   new_tag.category = Category.first
   new_tag.save!
 end
-
-
 
 
