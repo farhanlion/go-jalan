@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
@@ -24,8 +22,9 @@ Provider.destroy_all
 category_array = %w(Restaurants Activities Beauty Fitness)
 counter = 0
 category_array.each do |category|
-  Category.new(name: category_array[counter]).save
+  new_cat = Category.new(name: category_array[counter])
   counter += 1
+  new_cat.save!
 end
 
 # Seed restaurants
@@ -50,6 +49,7 @@ CSV.foreach(file_path, {:headers => true, :header_converters => :symbol}) do |ro
     break
   end
 end
+
 
 
 # Seed 10 activities
@@ -99,11 +99,22 @@ filepath = File.join(__dir__, 'beauty.json')
 searialised_beauty_places = File.read(filepath)
 beauty_places = JSON.parse(searialised_beauty_places)
 
+
+#create beauty companies
+beauty_tags = nil
+
 # create beauty companies
 beauty_places['beauty_companies'].each do |company|
+  beauty_tags = company['categories'].gsub("  ","").split(",")
   new_company(company['name'], company['name'], company['description'], company['address'], company['phone'], company['website'])
 end
-
+#create beauty tags
+beauty_tags.uniq!
+beauty_tags.each do |tag|
+  new_tag = Tag.new(name: tag)
+  new_tag.category = Category.first
+  new_tag.save!
+end
 
 # FITNESS COMPANIES
 
@@ -112,8 +123,20 @@ filepath = File.join(__dir__, 'fitness.json')
 searialised_fitness_places = File.read(filepath)
 fitness_places = JSON.parse(searialised_fitness_places)
 
-# create fitness companies
+
+#create fitness companies
+fitness_tags = nil
 fitness_places['fitness_companies'].each do |company|
+  fitness_tags = company['categories'].gsub("  ","").split(",")
   new_company(company['name'], company['name'], company['description'], company['address'], company['phone'], company['website'])
 end
+
+#create fitness tags
+fitness_tags.uniq!
+fitness_tags.each do |tag|
+  new_tag = Tag.new(name: tag)
+  new_tag.category = Category.first
+  new_tag.save!
+end
+
 
