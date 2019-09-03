@@ -12,4 +12,5 @@ class Review < ApplicationRecord
     using: {
       tsearch: { prefix: true } # <-- now `superman batm` will return something!
     }
+  has_many :review_photos
 end

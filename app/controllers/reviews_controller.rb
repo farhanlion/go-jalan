@@ -27,9 +27,11 @@ class ReviewsController < ApplicationController
     @review = Review.new(review_params)
     @review.user = current_user
     @review.provider = @provider
-
     authorize @review
     if @review.save
+      params[:review][:photo_url].each do |photo|
+        ReviewPhoto.create(photo_url: photo, review: @review)
+      end
       redirect_to @provider
     else
       render :new
@@ -49,6 +51,9 @@ class ReviewsController < ApplicationController
 
   def destroy
     authorize @review
+    @review.review_photos.each do |photo|
+      photo.destroy
+    end
     @review.destroy
     redirect_to @review.provider
   end
@@ -60,6 +65,6 @@ class ReviewsController < ApplicationController
   end
 
   def review_params
-    params.required(:review).permit(:title, :content, :rating)
+    params.required(:review).permit(:title, :content, :rating )
   end
 end
