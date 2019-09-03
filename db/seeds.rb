@@ -82,8 +82,11 @@ viator_doc.search(".product-card-main-content").each do |element|
   new_tag = Tag.new(name: tag, category: Category.find_by(name: 'Activities'))
   new_tag.save!
 
-  new_provider_tag = ProviderTag.new(tag: new_tag, provider: new_provider)
-  new_provider_tag.save!
+
+def new_company(name, translated_name, description, address, phone_number)
+  company = Provider.new(name: name, translated_name: translated_name, description: description, price: '', avg_rating: '', street_address: address, district: '', city: '', country: '', open_hours: '', phone_number: phone_number, website: website, longitude: '', latitude: '')
+  company.save!
+
 end
 
 
@@ -100,8 +103,8 @@ beauty_tags = nil
 
 # create beauty companies
 beauty_places['beauty_companies'].each do |company|
-  beauty_tags = company['categories'].gsub("  ","").split(",")
-  new_company(company['name'], company['name'], company['description'], company['address'], company['phone'], company['website'])
+  beauty_tags = company['tags'].gsub("  ","").split(",")
+  new_company(company['name'], company['name'], company['description'], company['address'], company['phone'])
 end
 #create beauty tags
 beauty_tags.uniq!
@@ -122,8 +125,12 @@ fitness_places = JSON.parse(searialised_fitness_places)
 #create fitness companies
 fitness_tags = nil
 fitness_places['fitness_companies'].each do |company|
-  fitness_tags = company['categories'].gsub("  ","").split(",")
-  new_company(company['name'], company['name'], company['description'], company['address'], company['phone'], company['website'])
+  fitness_tags = company['tags'].gsub("  ","").split(",")
+  new_company(company['name'], company['name'], company['description'], company['address'], company['phone'])
+  company['image'].each do |pic|
+    new_pic = Photo.new(remote_photo_url: pic)
+    new_pic.provider = company
+  end
 end
 
 #create fitness tags
@@ -139,6 +146,5 @@ end
 #   company = Provider.new(name: name, translated_name: translated_name, description: description, price: '', avg_rating: '', street_address: address, district: '', city: '', country: '', open_hours: '', phone_number: phone_number, website: website, longitude: '', latitude: '')
 #   company.save!
 # end
-
 
 
