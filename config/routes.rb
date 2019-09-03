@@ -10,14 +10,12 @@ Rails.application.routes.draw do
   resources :providers, only: [:index, :show] do
       resources :reviews, only: [:new, :create]
   end
-  resources :services, only: [:index, :show] do
-    resources :reviews, only: [:new, :create]
-    resources :provider_favourites, only: [:index, :create, :destroy]
+  resources :reviews, only: [:show] do
+    resources :review_likes, only: [:create]
   end
 
-  resources :services, only: [:index, :show] do
-	  resources :service_favourites, only: [:index, :create, :destroy]
-	end
 	resources :reviews, only: [:index, :edit, :update, :destroy]
+  resources :users, only: [:show, :edit, :update, :destroy]
+  resources :review_likes, only: [:destroy]
 
 end
