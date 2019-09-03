@@ -1,3 +1,6 @@
+<% @provider.photos.each do |photo| %>
+  <%= cl_image_tag(photo.photo) %>
+<% end %>
 <h1>This is a Provider page</h1>
 <h2><%= @provider.name %></h2>
 <p>Translated name: <%= @provider.translated_name %></p>
