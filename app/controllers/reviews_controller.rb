@@ -12,20 +12,15 @@ class ReviewsController < ApplicationController
 
   def new
     @provider = Provider.find(params[:provider_id]) unless params[:provider_id].nil?
-    @service = Service.find(params[:service_id]) unless params[:service_id].nil?
-    @provider = @service.provider if @service
     @user = current_user
     @review = Review.new
   end
 
   def create
     @provider = Provider.find(params[:provider_id]) unless params[:provider_id].nil?
-    @service = Service.find(params[:service_id]) unless params[:service_id].nil?
-    @provider = @service.provider if @service
     @review = Review.new(review_params)
     @review.user = current_user
     @review.provider = @provider
-    @review.service = @service
 
     authorize @review
     if @review.save

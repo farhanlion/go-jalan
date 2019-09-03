@@ -35,20 +35,5 @@
 <% end %>
 <%= link_to "Add a review", new_provider_review_path(@provider) %>
 
-<h2>Services</h2>
-<p>--------------------------</p>
-<% @provider.services.each do |service| %>
-  <p><%= service.name %></p>
-  <p><%= service.description %></p>
-  <p>Address: <%= service.street_address %></p>
-  <p>District: <%= service.district %></p>
-  <p>City: <%= service.city %></p>
-  <p>Country: <%= service.country %></p>
-  <p>Hours: <%= service.open_hours %></p>
-  <p>Phone: <%= service.phone_number %></p>
-  <p>Website: <%= service.website %></p>
-  <p><%= link_to "Review service", new_service_review_path(service) %></p>
-<% end %>
-
 <p>--------------------------</p>
 <%= link_to "back", providers_path %>
