@@ -66,7 +66,7 @@ end
 # end
 
 
-def new_company(name, translated_name, description, address, phone_number, website)
+def new_company(name, translated_name, description, address, phone_number)
   company = Provider.new(name: name, translated_name: translated_name, description: description, price: '', avg_rating: '', street_address: address, district: '', city: '', country: '', open_hours: '', phone_number: phone_number, website: website, longitude: '', latitude: '')
   company.save!
 end
@@ -82,8 +82,8 @@ beauty_places = JSON.parse(searialised_beauty_places)
 #create beauty companies
 beauty_tags = nil
 beauty_places['beauty_companies'].each do |company|
-  beauty_tags = company['categories'].gsub("  ","").split(",")
-  new_company(company['name'], company['name'], company['description'], company['address'], company['phone'], company['website'])
+  beauty_tags = company['tags'].gsub("  ","").split(",")
+  new_company(company['name'], company['name'], company['description'], company['address'], company['phone'])
 end
 #create beauty tags
 beauty_tags.uniq!
@@ -103,8 +103,12 @@ fitness_places = JSON.parse(searialised_fitness_places)
 #create fitness companies
 fitness_tags = nil
 fitness_places['fitness_companies'].each do |company|
-  fitness_tags = company['categories'].gsub("  ","").split(",")
-  new_company(company['name'], company['name'], company['description'], company['address'], company['phone'], company['website'])
+  fitness_tags = company['tags'].gsub("  ","").split(",")
+  new_company(company['name'], company['name'], company['description'], company['address'], company['phone'])
+  company['image'].each do |pic|
+    new_pic = Photo.new(remote_photo_url: pic)
+    new_pic.provider = company
+  end
 end
 #create fitness tags
 fitness_tags.uniq!
@@ -113,7 +117,6 @@ fitness_tags.each do |tag|
   new_tag.category = Category.first
   new_tag.save!
 end
-
 
 
 
