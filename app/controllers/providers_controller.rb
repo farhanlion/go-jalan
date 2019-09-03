@@ -1,11 +1,13 @@
 class ProvidersController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   before_action :set_provider, only: [:show]
+  skip_after_action :verify_authorized, only: [:show, :new]
   def index
-    @providers = Provider.all
+    @providers = policy_scope(Provider)
   end
-  def show
 
+  def show
+    skip_authorization
   end
 
   private
