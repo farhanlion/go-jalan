@@ -7,4 +7,5 @@ class User < ApplicationRecord
   has_many :review_likes
   has_many :service_favourites
   has_many :provider_favourites
+  mount_uploader :avatar, PhotoUploader
 end

@@ -1,0 +1,26 @@
+<p>
+  <% review.review_photos.each do |p| %>
+    <% if p.photo_url.resource_type == "video" %>
+      <%= cl_video_tag(p.photo_url.file.public_id,
+          :loop => true, :controls => true, :autoplay => true,
+          :transformation => [
+            :height=>640, :crop=>"pad"],
+          :fallback_content => "Your browser does not support HTML5 video tags." ) %>
+    <% else %>
+      <%= cl_image_tag(p.photo_url, width: 300, height: 300, crop: :fill) %>
+    <% end %>
+  <% end %>
+</p>
+<p><strong><%= review.title %></strong></p>
+<p><%= review.content %></p>
+<p><%= review.rating %></p>
+<p><%= review.review_likes.size %> Likes!</p>
+<p><%= link_to review.user.first_name, review.user %></p>
+<p><%= review.provider.name unless review.provider.nil? %></p>
+<p><small><%= review.created_at.strftime("%b %e, %l:%M %p") %></small></p>
+<p><%= link_to "Like this review", review_review_likes_path(review), method: :post %></p>
+<p><%= link_to "Unlike this review", review_like_path(review), method: :delete %></p>
+<% if policy(review).update? %>
+  <%= link_to "Edit review", edit_review_path(review) %>
+  <%= link_to "Delete review", review_path(review), method: :delete %>
+<% end %>
