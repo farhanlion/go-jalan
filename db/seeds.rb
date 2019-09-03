@@ -22,10 +22,13 @@ Category.destroy_all
 Review.destroy_all
 Provider.destroy_all
 
+puts "database cleaned"
+
 category_array = %w[Restaurants Activities Beauty Fitness]
 counter = 0
 category_array.each do |_category|
   new_cat = Category.new(name: category_array[counter])
+  p new_cat
   counter += 1
   new_cat.save!
 end
@@ -75,7 +78,7 @@ def url_should_be_accessible(url)
     Net::HTTP.get_response(URI.parse(url)).is_a?(Net::HTTPSuccess)
   rescue StandardError
     success = false
-  end
+  endcreatcreatee
   success
 end
 
@@ -119,25 +122,17 @@ viator_doc.search('.product-card-main-content').each do |element|
   break if counter >= 10
 end
 
-def new_company(name, translated_name, description, address, phone_number)
-  company = Provider.new(name: name, translated_name: translated_name, description: description, price: '', avg_rating: '', street_address: address, district: '', city: '', country: '', open_hours: '', phone_number: phone_number, website: website, longitude: '', latitude: '')
-  company.save!
-end
-
-def new_company(name, translated_name, description, address, phone_number, website)
-  company = Provider.new(name: name, translated_name: translated_name, description: description, price: '', avg_rating: '', street_address: address, district: '', city: '', country: '', open_hours: '', phone_number: phone_number, website: website, longitude: '', latitude: '')
-  company.save!
-end
 
 def new_company(name, translated_name, description, address, phone_number)
   company = Provider.new(name: name, translated_name: translated_name, description: description, price: '', avg_rating: '', street_address: address, district: '', city: '', country: '', open_hours: '', phone_number: phone_number, longitude: '', latitude: '')
+  p company
   company.save!
   company
 end
 
 # BEAUTY COMPANIES
 
-puts 'Creating beauty services....'
+
 # parse beauty.json
 filepath = File.join(__dir__, 'beauty.json')
 searialised_beauty_places = File.read(filepath)
@@ -147,52 +142,57 @@ beauty_places = JSON.parse(searialised_beauty_places)
 beauty_tags = nil
 created_company = ''
 # create beauty companies
-puts 'creating beauty companies...'
+puts 'Creating beauty companies...'
 beauty_places['beauty_companies'].each do |company|
-  beauty_tags = company['categories'].gsub('  ', '').split(',')
+  # beauty_tags = company['categories'].gsub('  ', '').split(',')
   created_company = new_company(company['name'], company['name'], company['description'], company['address'], company['phone'])
 end
-# create beauty tags
-beauty_tags.uniq!
-beauty_tags.each do |tag|
-  new_tag = Tag.new(name: tag)
-  new_tag.category = Category.find_by(name: 'Beauty')
-  new_tag.save!
+# # create beauty tags
+# beauty_tags.uniq!
+# beauty_tags.each do |tag|
+#   new_tag = Tag.new(name: tag)
+#   new_tag.category = Category.find_by(name: 'Beauty')
+#   puts new_tag
+#   new_tag.save!
 
-  new_provider_tag = ProviderTag.new(tag: tag, provider: created_company)
-  new_provider_tag.save!
-end
+#   new_provider_tag = ProviderTag.new(tag: new_tag, provider: created_company)
+#   puts new_provider_tag
+#   new_provider_tag.save!
+# end
 
 # FITNESS COMPANIES
 
-puts 'Creating fitness services....'
+
 # parse fitness.json
 filepath = File.join(__dir__, 'fitness.json')
 searialised_fitness_places = File.read(filepath)
 fitness_places = JSON.parse(searialised_fitness_places)
 
 # create fitness companies
-puts 'creating fitness companies...'
+puts 'Creating fitness companies...'
 
-fitness_tags = nil
+fitness_tags = []
 
 fitness_places['fitness_companies'].each do |company|
-  fitness_tags = company['tags']
+  company['tags'].each do |tag|
+    fitness_tags<<tag
+  end
   created_company = new_company(company['name'], company['name'], company['description'], company['address'], company['phone'])
   company['image'].each do |pic|
     new_photo = Photo.new(provider: created_company)
     new_photo.remote_photo_url = pic
+    p new_photo
     new_photo.save!
   end
 end
 # create fitness tags
-
 fitness_tags.uniq!
 fitness_tags.each do |tag|
-  new_tag = Tag.new(name: tag)
-  new_tag.category = Category.find_by(name: 'Fitness')
+  new_tag = Tag.new(name: tag, category: Category.find_by(name: 'Fitness'))
+  p new_tag
   new_tag.save!
-
-  new_provider_tag = ProviderTag.new(tag: tag, provider: created_company)
+   
+  new_provider_tag = ProviderTag.new(tag: new_tag, provider: created_company)
+  p new_provider_tag
   new_provider_tag.save!
 end
