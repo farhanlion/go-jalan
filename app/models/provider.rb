@@ -12,10 +12,10 @@ class Provider < ApplicationRecord
   include PgSearch::Model
   pg_search_scope :global_search,
     against: [:name, :description, :street_address, :district, :country],
-    associated_against: {
-      tags: [:name]
-    },
+    # associated_against: {
+    #   tags: [:name]
+    # },
     using: {
-      tsearch: { prefix: true } # <-- now `superman batm` will return something!
+      tsearch: { prefix: true }
     }
 end
