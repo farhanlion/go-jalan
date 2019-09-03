@@ -12,7 +12,6 @@ require 'json'
 require 'pry'
 
 Photo.destroy_all
-Service.destroy_all
 ProviderTag.destroy_all
 ProviderCategory.destroy_all
 Tag.destroy_all
@@ -30,6 +29,7 @@ category_array.each do |category|
 end
 
 # Seed restaurants
+puts "Creating restaurants..."
 file_path = File.join(__dir__, 'restaurants.csv')
 counter = 1
 CSV.foreach(file_path, {:headers => true, :header_converters => :symbol}) do |row|
@@ -57,6 +57,7 @@ end
 
 
 # Seed 10 activities
+puts "Creating activities..."
 file_path = File.join(__dir__, 'viator.html')
 viator_doc = Nokogiri::HTML(File.open(file_path), nil, 'utf-8')
 viator_doc.search(".product-card-main-content").each do |element|
@@ -75,9 +76,6 @@ viator_doc.search(".product-card-main-content").each do |element|
   new_provider_category = ProviderCategory.new(category: Category.find_by(name: 'Activities'), provider: new_provider)
   new_provider_category.save!
 
-  new_service = Service.new(name: name, description: description, country: country, provider: new_provider)
-  new_service.save!
-
   tag =  element.search(".category-card-tag").text
   new_tag = Tag.new(name: tag, category: Category.find_by(name: 'Activities'))
   new_tag.save!
@@ -86,6 +84,12 @@ viator_doc.search(".product-card-main-content").each do |element|
   new_provider_tag.save!
 end
 
+
+def new_company(name, translated_name, description, address, phone_number)
+  company = Provider.new(name: name, translated_name: translated_name, description: description, price: '', avg_rating: '', street_address: address, district: '', city: '', country: '', open_hours: '', phone_number: phone_number, longitude: '', latitude: '')
+  company.save!
+  return company
+end
 
 # BEAUTY COMPANIES
 
@@ -97,11 +101,12 @@ beauty_places = JSON.parse(searialised_beauty_places)
 
 #create beauty companies
 beauty_tags = nil
-
+created_company = ""
 # create beauty companies
+puts "creating beauty companies..."
 beauty_places['beauty_companies'].each do |company|
   beauty_tags = company['categories'].gsub("  ","").split(",")
-  new_company(company['name'], company['name'], company['description'], company['address'], company['phone'], company['website'])
+  created_company = new_company(company['name'], company['name'], company['description'], company['address'], company['phone'])
 end
 #create beauty tags
 beauty_tags.uniq!
@@ -109,7 +114,11 @@ beauty_tags.each do |tag|
   new_tag = Tag.new(name: tag)
   new_tag.category = Category.find_by(name: 'Beauty')
   new_tag.save!
+
+  new_provider_tag = ProviderTag.new(tag: tag, provider: created_company)
+  new_provider_tag.save!
 end
+
 
 # FITNESS COMPANIES
 
@@ -119,26 +128,36 @@ searialised_fitness_places = File.read(filepath)
 fitness_places = JSON.parse(searialised_fitness_places)
 
 
-#create fitness companies
-fitness_tags = nil
-fitness_places['fitness_companies'].each do |company|
-  fitness_tags = company['categories'].gsub("  ","").split(",")
-  new_company(company['name'], company['name'], company['description'], company['address'], company['phone'], company['website'])
-end
 
+#create fitness companies
+puts "creating fitness companies..."
+fitness_tags = nil
+
+fitness_places['fitness_companies'].each do |company|
+  fitness_tags = company['tags']
+  created_company = new_company(company['name'], company['name'], company['description'], company['address'], company['phone'])
+ company['image'].each do |pic|
+    new_photo = Photo.new(provider: created_company)
+    new_photo.remote_photo_url = pic
+    new_photo.save!
+end
+end
 #create fitness tags
 fitness_tags.uniq!
 fitness_tags.each do |tag|
   new_tag = Tag.new(name: tag)
   new_tag.category = Category.find_by(name:'Fitness')
   new_tag.save!
+
+  new_provider_tag = ProviderTag.new(tag: tag, provider: created_company)
+  new_provider_tag.save!
 end
 
 
-# def new_company(name, translated_name, description, address, phone_number, website)
-#   company = Provider.new(name: name, translated_name: translated_name, description: description, price: '', avg_rating: '', street_address: address, district: '', city: '', country: '', open_hours: '', phone_number: phone_number, website: website, longitude: '', latitude: '')
-#   company.save!
-# end
+
+
+
+
 
 
 
