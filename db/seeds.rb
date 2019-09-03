@@ -10,7 +10,7 @@ require 'csv'
 require 'open-uri'
 require 'json'
 
-
+Photo.destroy_all
 Service.destroy_all
 ProviderTag.destroy_all
 ProviderCategory.destroy_all
@@ -40,20 +40,18 @@ CSV.foreach(file_path, {:headers => true, :header_converters => :symbol}) do |ro
     new_tag = Tag.new(name: tag)
     new_tag.category = Category.find_by(name: 'Restaurants')
     new_tag.save!
-    # byebug
     new_provider_tag = ProviderTag.new(tag: new_tag, provider: new_provider)
     new_provider_tag.save!
   end
+  row[:image].split(" ").each do |photo_url|
+    new_photo = Photo.new(provider: new_provider)
+    new_photo.remote_photo_url = photo_url
+    new_photo.save!
+  end
   # row[:address].match(/(.*)(Singapore.*)/)
-  if Provider.find_by(name: row[:name]) == nil
-    new_provider.save
-  end
-  if new_provider.save
-    counter += 1
-  end
-  if counter > 10
-    break
-  end
+  new_provider.save if Provider.find_by(name: row[:name]) == nil
+  counter += 1 if new_provider.save
+  break if counter > 10
 end
 
 
@@ -118,7 +116,7 @@ end
 beauty_tags.uniq!
 beauty_tags.each do |tag|
   new_tag = Tag.new(name: tag)
-  new_tag.category = Category.first
+  new_tag.category = Category.find_by(name: 'Beauty')
   new_tag.save!
 end
 
@@ -141,7 +139,7 @@ end
 fitness_tags.uniq!
 fitness_tags.each do |tag|
   new_tag = Tag.new(name: tag)
-  new_tag.category = Category.first
+  new_tag.category = Category.find_by(name:'Fitness')
   new_tag.save!
 end
 
