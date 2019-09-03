@@ -10,8 +10,11 @@ class Provider < ApplicationRecord
   after_validation :geocode, if: :will_save_change_to_street_address?
   has_many :photos
   include PgSearch::Model
-  pg_search_scope :search_by_name_and_description_and_street_address_and_district_and_country,
+  pg_search_scope :global_search,
     against: [:name, :description, :street_address, :district, :country],
+    associated_against: {
+      tags: [:name]
+    },
     using: {
       tsearch: { prefix: true } # <-- now `superman batm` will return something!
     }
