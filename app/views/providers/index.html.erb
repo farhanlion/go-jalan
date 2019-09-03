@@ -24,8 +24,8 @@
     <p>Phone: <%= provider.phone_number %></p>
     <p>Website: <%= provider.website %></p>
     <p><%= link_to "Review provider", new_provider_review_path(provider) %></p>
+    <p>Photos: </p>
     <div class="photos row">
-      <p>Photos: </p>
       <% provider.photos.each do |photo| %>
         <%= cl_image_tag(photo.photo, width: 300, height: 300, crop: :fill) %>
       <% end %>

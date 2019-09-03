@@ -1,3 +1,21 @@
 <h1>Pages#home</h1>
 <p><%= link_to "All Providers", providers_path %></p>
 <p><%= link_to "All Reviews", reviews_path %></p>
+
+<%= form_tag providers_path, method: :get, class: "d-flex mx-auto justify-content-center" do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Search for a provider"    %>
+    <%= submit_tag "Search", class: "btn btn-primary ml-3" %>
+<% end %>
+
+<br>
+
+<%= form_tag reviews_path, method: :get, class: "d-flex mx-auto justify-content-center" do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Search for a review"    %>
+    <%= submit_tag "Search", class: "btn btn-primary ml-3" %>
+<% end %>
