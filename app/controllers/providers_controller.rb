@@ -7,7 +7,7 @@ class ProvidersController < ApplicationController
     if !params[:query]
       @providers
     else
-      @providers = @providers.search_by_name_and_description_and_street_address_and_district_and_country(params[:query])
+      @providers = @providers.global_search(params[:query])
     end
   end
 
