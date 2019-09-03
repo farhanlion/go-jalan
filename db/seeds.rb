@@ -48,7 +48,8 @@ CSV.foreach(file_path, headers: true, header_converters: :symbol) do |row|
     new_provider_tag = ProviderTag.new(tag: new_tag, provider: new_provider)
     new_provider_tag.save!
   end
-  row[:image].split(' ').each do |photo_url|
+
+  row[:image].split(" ").first(3).each do |photo_url|
     new_photo = Photo.new(provider: new_provider)
     new_photo.remote_photo_url = photo_url
     new_photo.save!
