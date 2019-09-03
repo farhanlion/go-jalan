@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_03_031026) do
+ActiveRecord::Schema.define(version: 2019_09_03_054426) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -89,41 +89,11 @@ ActiveRecord::Schema.define(version: 2019_09_03_031026) do
     t.text "content"
     t.integer "rating"
     t.bigint "provider_id"
-    t.bigint "service_id"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["provider_id"], name: "index_reviews_on_provider_id"
-    t.index ["service_id"], name: "index_reviews_on_service_id"
     t.index ["user_id"], name: "index_reviews_on_user_id"
-  end
-
-  create_table "service_favourites", force: :cascade do |t|
-    t.bigint "service_id"
-    t.bigint "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["service_id"], name: "index_service_favourites_on_service_id"
-    t.index ["user_id"], name: "index_service_favourites_on_user_id"
-  end
-
-  create_table "services", force: :cascade do |t|
-    t.string "name"
-    t.text "description"
-    t.float "avg_rating"
-    t.string "street_address"
-    t.string "district"
-    t.string "city"
-    t.string "country"
-    t.string "website"
-    t.string "open_hours"
-    t.string "phone_number"
-    t.float "longitude"
-    t.float "latitude"
-    t.bigint "provider_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["provider_id"], name: "index_services_on_provider_id"
   end
 
   create_table "tags", force: :cascade do |t|
@@ -158,10 +128,6 @@ ActiveRecord::Schema.define(version: 2019_09_03_031026) do
   add_foreign_key "review_likes", "reviews"
   add_foreign_key "review_likes", "users"
   add_foreign_key "reviews", "providers"
-  add_foreign_key "reviews", "services"
   add_foreign_key "reviews", "users"
-  add_foreign_key "service_favourites", "services"
-  add_foreign_key "service_favourites", "users"
-  add_foreign_key "services", "providers"
   add_foreign_key "tags", "categories"
 end

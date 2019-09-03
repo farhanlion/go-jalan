@@ -9,6 +9,7 @@
 require 'csv'
 require 'open-uri'
 require 'json'
+require 'pry'
 
 Photo.destroy_all
 Service.destroy_all
@@ -35,8 +36,7 @@ CSV.foreach(file_path, {:headers => true, :header_converters => :symbol}) do |ro
   new_provider = Provider.new(name: row[:name], description: row[:description], open_hours: row[:hours], price: row[:price], country: 'Singapore')
   new_provider_category = ProviderCategory.new(category: Category.find_by(name: 'Restaurants'), provider: new_provider)
   new_provider_category.save!
-  tags = row[:good_for]
-  tags.split(" ").each do |tag|
+  row[:good_for].split(" ").each do |tag|
     new_tag = Tag.new(name: tag)
     new_tag.category = Category.find_by(name: 'Restaurants')
     new_tag.save!
@@ -66,33 +66,24 @@ viator_doc.search(".product-card-main-content").each do |element|
     element.to_h["href"]
   end
   activity_doc = Nokogiri::HTML(open(url[0]), nil, 'utf-8')
-  match_data =  activity_doc.search(".mb-5 .mb-3").text.strip.match(/Overview(.*)/)
-  description = match_data[1]
+  description =  activity_doc.search(".mb-5 .mb-3").text.strip.match(/Overview(.*)/)[1]
   country = 'Singapore'
-  # address
-  match_data = activity_doc.search(".mr-md-4").text.match(/^(.*Singapore)/)
-  street_address = match_data[1]
 
   new_provider = Provider.new(name: name)
   new_provider.save!
+
   new_provider_category = ProviderCategory.new(category: Category.find_by(name: 'Activities'), provider: new_provider)
   new_provider_category.save!
 
-  new_service = Service.new(name: name, description: description, street_address: street_address, country: country, provider: new_provider)
+  new_service = Service.new(name: name, description: description, country: country, provider: new_provider)
+  new_service.save!
 
   tag =  element.search(".category-card-tag").text
   new_tag = Tag.new(name: tag, category: Category.find_by(name: 'Activities'))
   new_tag.save!
 
   new_provider_tag = ProviderTag.new(tag: new_tag, provider: new_provider)
-  new_provider.save!
-  new_service.save!
-end
-
-
-def new_company(name, translated_name, description, address, phone_number, website)
-  company = Provider.new(name: name, translated_name: translated_name, description: description, price: '', avg_rating: '', street_address: address, district: '', city: '', country: '', open_hours: '', phone_number: phone_number, website: website, longitude: '', latitude: '')
-  company.save!
+  new_provider_tag.save!
 end
 
 
@@ -142,5 +133,12 @@ fitness_tags.each do |tag|
   new_tag.category = Category.find_by(name:'Fitness')
   new_tag.save!
 end
+
+
+# def new_company(name, translated_name, description, address, phone_number, website)
+#   company = Provider.new(name: name, translated_name: translated_name, description: description, price: '', avg_rating: '', street_address: address, district: '', city: '', country: '', open_hours: '', phone_number: phone_number, website: website, longitude: '', latitude: '')
+#   company.save!
+# end
+
 
 
