@@ -7,15 +7,19 @@ class ProviderFavouritesController < ApplicationController
   end
 
   def create
-    @favourite = ProviderFavourite.new
-    @provider_favourite.provider = @provider
-    @provider_favourite.user = current_user
-    @provider_favourite.save
+    @fav = ProviderFavourite.new(provider: Provider.find(params[:provider_id]), user: current_user)
+    authorize @fav
+    @fav.save!
+    # @favourite = ProviderFavourite.new
+    # @provider_favourite.provider = @provider
+    # @provider_favourite.user = current_user
+    # @provider_favourite.save
+    redirect_to provider_favourites_path
   end
 
   def destroy
-    set_favourite
-    @provider_favourite.destroy!
+    # set_favourite
+    # @provider_favourite.destroy!
   end
 
   private
