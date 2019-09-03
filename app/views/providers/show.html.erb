@@ -25,26 +25,7 @@
 <h2>Reviews for this provider</h2>
 <p>--------------------------</p>
 <% @provider.reviews.each do |review| %>
-  <p>
-    <% review.review_photos.each do |p| %>
-      <% if p.photo_url.resource_type == "video" %>
-        <%= cl_video_tag(p.photo_url.file.public_id,
-            :loop => true, :controls => true, :autoplay => true,
-            :transformation => [
-              :height=>640, :crop=>"pad"],
-            :fallback_content => "Your browser does not support HTML5 video tags." ) %>
-      <% else %>
-        <%= cl_image_tag(p.photo_url, width: 300, height: 300, crop: :fill) %>
-      <% end %>
-    <% end %>
-  </p>
-  <p><%= review.title %></p>
-  <p><%= review.content %></p>
-  <p><%= review.rating %></p>
-  <% if policy(review).update? %>
-  <%= link_to "Edit review", edit_review_path(review) %>
-  <%= link_to "Delete review", review_path(review), method: :delete %>
-  <% end %>
+  <%= render "shared/review", review: review %>
 <% end %>
 <%= link_to "Add a review", new_provider_review_path(@provider) %>
 
