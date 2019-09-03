@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.6.3'
+gem 'cloudinary', '~> 1.9.1'
+gem 'carrierwave', '~> 1.2'
 gem 'geocoder'
 gem 'bootsnap', require: false
 gem 'devise'
@@ -9,6 +11,7 @@ gem 'puma'
 gem 'rails', '5.2.3'
 gem 'redis'
 gem 'devise'
+gem 'pundit'
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.6.1'

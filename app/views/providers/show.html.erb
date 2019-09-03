@@ -1,0 +1,39 @@
+<% @provider.photos.each do |photo| %>
+  <%= cl_image_tag(photo.photo) %>
+<% end %>
+<h1>This is a Provider page</h1>
+<h2><%= @provider.name %></h2>
+<p>Translated name: <%= @provider.translated_name %></p>
+<p>Description: <%= @provider.description %></p>
+<p>Tags: <% @provider.provider_tags.each do |t| %>
+    <%= t.tag.name %>
+  <% end %>
+</p>
+<p>Categories: <% @provider.provider_categories.each do |c| %>
+    <%= c.category.name %>
+  <% end %>
+</p>
+<p>Rating: <%= @provider.avg_rating %></p>
+<p>Price: <%= @provider.price %></p>
+<p>Address: <%= @provider.street_address %></p>
+<p>District: <%= @provider.district %></p>
+<p>City: <%= @provider.city %></p>
+<p>Country: <%= @provider.country %></p>
+<p>Hours: <%= @provider.open_hours %></p>
+<p>Phone: <%= @provider.phone_number %></p>
+<p>Website: <%= @provider.website %></p>
+<h2>Reviews for this provider</h2>
+<p>--------------------------</p>
+<% @provider.reviews.each do |review| %>
+  <p><%= review.title %></p>
+  <p><%= review.content %></p>
+  <p><%= review.rating %></p>
+  <% if policy(review).update? %>
+  <%= link_to "Edit review", edit_review_path(review) %>
+  <%= link_to "Delete review", review_path(review), method: :delete %>
+  <% end %>
+<% end %>
+<%= link_to "Add a review", new_provider_review_path(@provider) %>
+
+<p>--------------------------</p>
+<%= link_to "back", providers_path %>
