@@ -15,9 +15,9 @@ Rails.application.routes.draw do
     resources :provider_favourites, only: [:index, :create, :destroy]
   end
 
-  resources :services, only: [:index, :show] do 
+  resources :services, only: [:index, :show] do
 	  resources :service_favourites, only: [:index, :create, :destroy]
 	end
-	resources :reviews, only: [:index]
+	resources :reviews, only: [:index, :edit, :update, :destroy]
 
 end

@@ -25,6 +25,10 @@
   <p><%= review.title %></p>
   <p><%= review.content %></p>
   <p><%= review.rating %></p>
+  <% if policy(review).update? %>
+  <%= link_to "Edit review", edit_review_path(review) %>
+  <%= link_to "Delete review", review_path(review), method: :delete %>
+  <% end %>
 <% end %>
 <%= link_to "Add a review", new_provider_review_path(@provider) %>
 
