@@ -28,10 +28,13 @@ class ReviewsController < ApplicationController
     @review.provider = @provider
     authorize @review
     if @review.save
-      params[:review][:photo_url].each do |photo|
-        ReviewPhoto.create(photo_url: photo, review: @review)
+      if params[:review][:photo_url].nil?
+        redirect_to @provider
+      else
+        params[:review][:photo_url].each do |photo|
+          ReviewPhoto.create(photo_url: photo, review: @review)
+        end
       end
-      redirect_to @provider
     else
       render :new
     end

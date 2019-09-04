@@ -24,6 +24,7 @@
     <p>Phone: <%= provider.phone_number %></p>
     <p>Website: <%= provider.website %></p>
     <p><%= link_to "Review provider", new_provider_review_path(provider) %></p>
+    <p><%= link_to 'Favourite this provider', provider_favourites_path(provider), method: :post %></p>
     <p>Photos: </p>
     <div class="photos row">
       <% provider.photos.each do |photo| %>
