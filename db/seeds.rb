@@ -145,6 +145,7 @@ end
 
 # BEAUTY COMPANIES
 
+
 # parse beauty.json
 filepath = File.join(__dir__, 'beauty.json')
 searialised_beauty_places = File.read(filepath)
@@ -211,7 +212,7 @@ fitness_places['fitness_companies'].each do |company|
   new_provider_category = ProviderCategory.new(category: Category.find_by(name: 'Fitness'), provider: created_company)
   new_provider_category.save!
 end
-# crtteate fitness tags
+# create fitness tags
 fitness_tags.uniq!
 fitness_tags.each do |tag|
   new_tag = Tag.new(name: tag, category: Category.find_by(name: 'Fitness'))
