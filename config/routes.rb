@@ -8,8 +8,10 @@ Rails.application.routes.draw do
 
   resources :providers, only: [:index, :show] do
       resources :reviews, only: [:new, :create]
-      resources :favourites, only: [:create, :destroy]
+      resources :favourites, only: [:create]
   end
+
+  resources :favourites, only: [:destroy]
 
   resources :reviews, only: [:show] do
     resources :likes, only: [:create]

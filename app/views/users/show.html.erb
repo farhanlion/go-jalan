@@ -1,5 +1,9 @@
 <h1>Hi <%= @user.first_name %>!</h1>
-<p><%= cl_image_tag(@user.avatar, width: 100, height: 100, crop: :fill) %></p>
+<% if @user.avatar.filename.nil? %>
+  <p><%= image_tag "avatar-default.png", width: 100, height: 100, crop: :fill %></p>
+<% else %>
+  <p><%= cl_image_tag(@user.avatar, width: 100, height: 100, crop: :fill) %></p>
+<% end %>
 <p>First name: <%= @user.first_name %></p>
 <p>Last name: <%= @user.last_name %></p>
 <p>Email: <%= @user.email%></p>
@@ -14,3 +18,9 @@
   <% end %>
 <% end %>
 <h2>My Favourites</h2>
+  <% current_user.favourites.each do |fav| %>
+     <div class="border-bottom">
+       <p><%= fav.provider.name %></p>
+      <%= link_to 'Delete this favourite', favourite_path(fav), method: :delete %>
+     </div>
+  <% end %>

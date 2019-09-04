@@ -14,19 +14,19 @@ require 'json'
 require 'pry'
 require 'net/http'
 
-puts "Deleting Photos..."
-Photo.destroy_all
-puts "Deleting Provider Tags..."
-ProviderTag.destroy_all
-puts "Deleting Provider Categories..."
-ProviderCategory.destroy_all
-puts "Deleting Tags..."
-Tag.destroy_all
-puts "Deleting Categories..."
-Category.destroy_all
-puts "Deleting Reviews..."
-Review.destroy_all
-Provider.destroy_all
+# puts "Deleting Photos..."
+# Photo.destroy_all
+# puts "Deleting Provider Tags..."
+# ProviderTag.destroy_all
+# puts "Deleting Provider Categories..."
+# ProviderCategory.destroy_all
+# puts "Deleting Tags..."
+# Tag.destroy_all
+# puts "Deleting Categories..."
+# Category.destroy_all
+# puts "Deleting Reviews..."
+# Review.destroy_all
+# Provider.destroy_all
 
 puts "database cleaned"
 
@@ -55,6 +55,20 @@ CSV.foreach(file_path, headers: true, header_converters: :symbol) do |row|
     new_provider_tag.save!
     p new_provider_tag
   end
+
+  post_code = row[:address].match(/Singapore \((.*)\)/)[1]
+  url = "https://developers.onemap.sg/commonapi/search?searchVal=#{post_code}&returnGeom=Y&getAddrDetails=Y&pageNum=1"
+  response = open(url).read
+  results = JSON.parse(response)["results"][0]
+  if !results.empty?
+    street_address = results["ADDRESS"]
+    latitude = results["X"]
+    longitude = results["LONGITUDE"]
+  end
+
+  new_provider.street_address = street_address
+  new_provider.latitude = latitude
+  new_provider.longitude = longitude
 
   row[:image].split(" ").first(3).each do |photo_url|
     new_photo = Photo.new(provider: new_provider)
@@ -119,7 +133,6 @@ viator_doc.search('.product-card-main-content').each do |element|
       p new_photo
     end
   end
-  
 
   new_provider_category = ProviderCategory.new(category: Category.find_by(name: 'Activities'), provider: new_provider)
   new_provider_category.save!
@@ -144,8 +157,6 @@ def new_company(name, translated_name, description, address, phone_number)
 end
 
 # BEAUTY COMPANIES
-
-
 # parse beauty.json
 filepath = File.join(__dir__, 'beauty.json')
 searialised_beauty_places = File.read(filepath)
@@ -157,7 +168,7 @@ created_company = ''
 puts 'Creating beauty companies...'
 beauty_places['beauty_companies'].each do |company|
   company['tags'].each do |tag|
-    beauty_tags<<tag
+    beauty_tags << tag
   end
   created_company = new_company(company['name'], company['name'], company['description'], company['address'], company['phone'])
   company['image'].each do |pic|
@@ -200,7 +211,7 @@ fitness_tags = []
 
 fitness_places['fitness_companies'].each do |company|
   company['tags'].each do |tag|
-    fitness_tags<<tag
+    fitness_tags << tag
   end
   created_company = new_company(company['name'], company['name'], company['description'], company['address'], company['phone'])
   company['image'].each do |pic|
