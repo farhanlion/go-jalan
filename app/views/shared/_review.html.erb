@@ -14,12 +14,15 @@
 <p><strong><%= review.title %></strong></p>
 <p><%= review.content %></p>
 <p><%= review.rating %></p>
-<p><%= review.review_likes.size %> Likes!</p>
+<p><%= review.likes.size %> Likes!</p>
 <p><%= link_to review.user.first_name, review.user %></p>
 <p><%= review.provider.name unless review.provider.nil? %></p>
 <p><small><%= review.created_at.strftime("%b %e, %l:%M %p") %></small></p>
-<p><%= link_to "Like this review", review_review_likes_path(review), method: :post %></p>
-<p><%= link_to "Unlike this review", review_like_path(review), method: :delete %></p>
+<% if review.likes.find_by(user: current_user).nil? %>
+  <p><%= link_to "Like this review", review_likes_path(review), method: :post %></p>
+<% else %>
+  <p><%= link_to "Unlike this review", like_path(review), method: :delete %></p>
+<% end %>
 <% if policy(review).update? %>
   <%= link_to "Edit review", edit_review_path(review) %>
   <%= link_to "Delete review", review_path(review), method: :delete %>
