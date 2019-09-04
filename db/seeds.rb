@@ -78,7 +78,7 @@ def url_should_be_accessible(url)
     Net::HTTP.get_response(URI.parse(url)).is_a?(Net::HTTPSuccess)
   rescue StandardError
     success = false
-  endcreatcreatee
+  end
   success
 end
 
@@ -131,8 +131,6 @@ def new_company(name, translated_name, description, address, phone_number)
 end
 
 # BEAUTY COMPANIES
-
-
 # parse beauty.json
 filepath = File.join(__dir__, 'beauty.json')
 searialised_beauty_places = File.read(filepath)
