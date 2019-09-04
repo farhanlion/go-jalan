@@ -38,7 +38,7 @@ puts 'Creating restaurants...'
 file_path = File.join(__dir__, 'restaurants.csv')
 counter = 1
 CSV.foreach(file_path, headers: true, header_converters: :symbol) do |row|
-  new_provider = Provider.new(name: row[:name], description: row[:description], open_hours: row[:hours], price: row[:price], country: 'Singapore')
+  new_provider = Provider.new(name: row[:name], description: row[:description], open_hours: row[:hours], price: row[:price], country: 'Singapore', street_address: row[:address])
   new_provider_category = ProviderCategory.new(category: Category.find_by(name: 'Restaurants'), provider: new_provider)
   new_provider_category.save!
   row[:good_for].split(' ').each do |tag|

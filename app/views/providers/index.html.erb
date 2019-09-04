@@ -1,6 +1,6 @@
 <h1>All providers</h1>
 <% if @providers.empty? %>
-  <p>Nothing providers to show yet</p>
+  <p>No providers to show yet</p>
 <% else %>
   <% @providers.each do |provider| %>
     <p>Name: <%= link_to provider.name, provider %></p>
@@ -24,7 +24,11 @@
     <p>Phone: <%= provider.phone_number %></p>
     <p>Website: <%= provider.website %></p>
     <p><%= link_to "Review provider", new_provider_review_path(provider) %></p>
-    <p><%= link_to 'Favourite this provider', provider_favourites_path(provider), method: :post %></p>
+    <% if current_user.favourited_providers.include?(provider) %>
+      <p><%= link_to 'Unfavourite this provider', favourite_path(provider), method: :delete %></p>
+    <% else %>
+      <p><%= link_to 'Favourite this provider', provider_favourites_path(provider), method: :post %></p>
+    <% end %>
     <p>Photos: </p>
     <div class="photos row">
       <% provider.photos.each do |photo| %>
