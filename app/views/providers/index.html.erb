@@ -30,6 +30,7 @@
         <%= cl_image_tag(photo.photo, width: 300, height: 300, crop: :fill) %>
       <% end %>
     </div>
+    <%= link_to 'Fav this provider', provider_provider_favourites_path(provider), method: :post %>
     <p>---------------------------------------------</p>
   <% end %>
 <% end %>

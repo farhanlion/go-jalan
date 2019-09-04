@@ -1,0 +1,34 @@
+class FavouritesController < ApplicationController
+  # before_action :set_provider, only: [:create, :destroy]
+  # before_action :set_favourite, only: [:create, :destroy]
+  def index
+    @favs = policy_scope(Favourite)
+    @favs = Favourite.all
+  end
+
+  def create
+    @fav = Favourite.new(provider: Provider.find(params[:provider_id]), user: current_user)
+    authorize @fav
+    @fav.save!
+    # @favourite = ProviderFavourite.new
+    # @provider_favourite.provider = @provider
+    # @provider_favourite.user = current_user
+    # @provider_favourite.save
+    redirect_to favourites_path
+  end
+
+  def destroy
+    # set_favourite
+    # @provider_favourite.destroy!
+  end
+
+  private
+
+  # def set_provider
+  #   @provider = Provider.find(params[:id])
+  # end
+
+  # def set_favourite
+  #   @fav = ProviderFavourite.find(params[:])
+  # end
+end
