@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :reviews
-  has_many :review_likes
+  has_many :likes
   has_many :service_favourites
   has_many :provider_favourites
   mount_uploader :avatar, PhotoUploader

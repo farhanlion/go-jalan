@@ -1,7 +1,8 @@
-<h1>Add a new review for "<strong><%= @provider.name %></strong>"</h1>
+<h1>Create a new review</h1>
 <p>Hey <%= @user.first_name %></p>
-<%= simple_form_for [@provider, @review] do |f| %>
+<%= simple_form_for [@review] do |f| %>
   <%= f.input :photo_url, input_html: {value: '', multiple: "true"}, as: :file %>
+  <%= f.input :provider, collection: Provider.all %>
   <%= f.input :title %>
   <%= f.input :content %>
   <%= f.input :rating, collection: 0..5, prompt: "Rating", selected: 0  %>
