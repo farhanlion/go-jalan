@@ -14,3 +14,9 @@
   <% end %>
 <% end %>
 <h2>My Favourites</h2>
+  <% current_user.favourites.each do |fav| %>
+     <div class="border-bottom">
+       <p><%= fav.provider.name %></p>
+      <%= link_to 'Delete this favourite', favourite_path(fav), method: :delete %>
+     </div>
+  <% end %>

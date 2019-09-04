@@ -14,12 +14,14 @@ class FavouritesController < ApplicationController
   end
 
   def destroy
+    authorize @fav
     @fav.destroy
+    redirect_to user_path(current_user)
   end
 
   private
 
   def set_favourite
-    @fav = rFavourite.find(params[:id])
+    @fav = Favourite.find(params[:id])
   end
 end

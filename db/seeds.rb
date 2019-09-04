@@ -144,8 +144,6 @@ def new_company(name, translated_name, description, address, phone_number)
 end
 
 # BEAUTY COMPANIES
-
-
 # parse beauty.json
 filepath = File.join(__dir__, 'beauty.json')
 searialised_beauty_places = File.read(filepath)
