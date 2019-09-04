@@ -1,6 +1,5 @@
 {  
    "fitness_companies":[  
-
       {  
          "name":"Fitness First",
          "description":"Largest Fitness Centre in Singapore (20 Outlets Island-wide). Fitness First Gym & Health Club started as a single health and fitness club in Bournemouth, UK in 1992. Since then, we have grown quite a bit - we're now the largest gym, health and fitness club group in the world with more than 1.4 million Fitness First members in over 540 clubs worldwide. In Asia Pacific alone, we have over 140 clubs! But we still keep that Fitness First one-health club mentality - every single Fitness First member counts. Largest range of classes. Highly certified trainers. 2,000 classes per week. 20 clubs islandwide. Courses: Yoga, Pilates, Zumba, Kickboxing, Muay Thai, Cardio, Dance, Circuit.",
@@ -98,7 +97,9 @@
             "Physical Fitness",
             "Yoga",
             "Yoga Studio"
-         ]
+         ],
+         "lat":"1.36925511350953",
+         "long":"103.848464053097"
       },
       {  
          "name":"Gold's Gym Pte Ltd",
@@ -197,7 +198,9 @@
             "Physical Fitness",
             "Yoga",
             "Yoga Studio"
-         ]
+         ],
+         "lat":"1.27843512735483",
+         "long":"103.843683532192"
       },
       {  
          "name":"Amore Fitness Pte Ltd",
@@ -296,7 +299,9 @@
             "Physical Fitness",
             "Yoga",
             "Yoga Studio"
-         ]
+         ],
+         "lat":"1.3042868979288897",
+         "long":"103.79695278603201"
       },
       {  
          "name":"Celebrity Fitness Singapore Pte Ltd",
@@ -395,7 +400,9 @@
             "Physical Fitness",
             "Yoga",
             "Yoga Studio"
-         ]
+         ],
+         "lat":"1.30535121511821",
+         "long":"103.788347379295"
       },
       {  
          "name":"True Fitness Pte Ltd",
@@ -494,7 +501,9 @@
             "Physical Fitness",
             "Yoga",
             "Yoga Studio"
-         ]
+         ],
+         "lat":"1.29317220444775",
+         "long":"103.832095275633"
       },
       {  
          "name":"Genesis Gym",
@@ -593,7 +602,9 @@
             "Physical Fitness",
             "Yoga",
             "Yoga Studio"
-         ]
+         ],
+         "lat":"1.31938922997309",
+         "long":"103.897492670139"
       },
       {  
          "name":"Acro Polates",
@@ -692,7 +703,9 @@
             "Physical Fitness",
             "Yoga",
             "Yoga Studio"
-         ]
+         ],
+         "lat":"1.2987875255951",
+         "long":"103.85196701164499"
       },
       {  
          "name":"PowerMoves",
@@ -791,7 +804,9 @@
             "Physical Fitness",
             "Yoga",
             "Yoga Studio"
-         ]
+         ],
+         "lat":"1.3624253600668002",
+         "long":"103.84759530003001"
       },
       {  
          "name":"Bounce",
@@ -890,7 +905,9 @@
             "Physical Fitness",
             "Yoga",
             "Yoga Studio"
-         ]
+         ],
+         "lat":"1.30149743442988",
+         "long":"103.836444792111"
       },
       {  
          "name":"Upside Motion Pte Ltd",
@@ -989,7 +1006,9 @@
             "Physical Fitness",
             "Yoga",
             "Yoga Studio"
-         ]
+         ],
+         "lat":"1.3014849976274598",
+         "long":"103.83788829913"
       }
    ]
 }
