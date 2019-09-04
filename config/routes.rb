@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   devise_for :users
   root to: 'pages#home'
+  get "reviews/new", to: "reviews#new_no_provider", as: "new_review"
 
   resources :favourites, only: [:index]
 
@@ -11,11 +12,11 @@ Rails.application.routes.draw do
   end
 
   resources :reviews, only: [:show] do
-    resources :review_likes, only: [:create]
+    resources :likes, only: [:create]
   end
 
-	resources :reviews, only: [:index, :edit, :update, :destroy]
+	resources :reviews, only: [:index, :create, :edit, :update, :destroy]
   resources :users, only: [:show, :edit, :update, :destroy]
-  resources :review_likes, only: [:destroy]
+  resources :likes, only: [:destroy]
 
 end

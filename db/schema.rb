@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_04_023136) do
+ActiveRecord::Schema.define(version: 2019_09_04_030057) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,15 @@ ActiveRecord::Schema.define(version: 2019_09_04_023136) do
     t.datetime "updated_at", null: false
     t.index ["provider_id"], name: "index_favourites_on_provider_id"
     t.index ["user_id"], name: "index_favourites_on_user_id"
+  end
+
+  create_table "likes", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "review_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["review_id"], name: "index_likes_on_review_id"
+    t.index ["user_id"], name: "index_likes_on_user_id"
   end
 
   create_table "pg_search_documents", force: :cascade do |t|
@@ -84,15 +93,6 @@ ActiveRecord::Schema.define(version: 2019_09_04_023136) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "review_likes", force: :cascade do |t|
-    t.bigint "user_id"
-    t.bigint "review_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["review_id"], name: "index_review_likes_on_review_id"
-    t.index ["user_id"], name: "index_review_likes_on_user_id"
-  end
-
   create_table "review_photos", force: :cascade do |t|
     t.string "photo_url"
     t.bigint "review_id"
@@ -136,13 +136,13 @@ ActiveRecord::Schema.define(version: 2019_09_04_023136) do
 
   add_foreign_key "favourites", "providers"
   add_foreign_key "favourites", "users"
+  add_foreign_key "likes", "reviews"
+  add_foreign_key "likes", "users"
   add_foreign_key "photos", "providers"
   add_foreign_key "provider_categories", "categories"
   add_foreign_key "provider_categories", "providers"
   add_foreign_key "provider_tags", "providers"
   add_foreign_key "provider_tags", "tags"
-  add_foreign_key "review_likes", "reviews"
-  add_foreign_key "review_likes", "users"
   add_foreign_key "review_photos", "reviews"
   add_foreign_key "reviews", "providers"
   add_foreign_key "reviews", "users"

@@ -16,16 +16,34 @@ class ReviewsController < ApplicationController
   end
 
   def new
+    @provider = Provider.new
     @provider = Provider.find(params[:provider_id]) unless params[:provider_id].nil?
     @user = current_user
     @review = Review.new
+    skip_authorization
+  end
+
+
+  def new_no_provider
+    @user = current_user
+    @provider = Provider.new
+    @review = Review.new
+    skip_authorization
+    render 'reviews/new_review'
   end
 
   def create
-    @provider = Provider.find(params[:provider_id]) unless params[:provider_id].nil?
-    @review = Review.new(review_params)
-    @review.user = current_user
-    @review.provider = @provider
+    if params[:provider_id].nil?
+      @provider = Provider.find(params[:review][:provider])
+      @review = Review.new(review_params)
+      @review.user = current_user
+      @review.provider = @provider
+    else
+      @provider = Provider.find(params[:provider_id])
+      @review = Review.new(review_params)
+      @review.user = current_user
+      @review.provider = @provider
+    end
     authorize @review
     if @review.save
       if params[:review][:photo_url].nil?
@@ -35,7 +53,9 @@ class ReviewsController < ApplicationController
           ReviewPhoto.create(photo_url: photo, review: @review)
         end
       end
+      redirect_to @provider
     else
+      render :new_no_provider if params[:provider_id].nil?
       render :new
     end
   end
