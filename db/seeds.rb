@@ -12,6 +12,7 @@ require 'csv'
 require 'open-uri'
 require 'json'
 require 'pry'
+require 'net/http'
 
 puts "Deleting Photos..."
 Photo.destroy_all
@@ -214,12 +215,12 @@ end
 fitness_tags.uniq!
 fitness_tags.each do |tag|
   new_tag = Tag.new(name: tag, category: Category.find_by(name: 'Fitness'))
-  p new_tag
   new_tag.save!
+  p new_tag
 
   new_provider_tag = ProviderTag.new(tag: new_tag, provider: created_company)
-  p new_provider_tag
   new_provider_tag.save!
+  p new_provider_tag
 end
 
 # seeding new provider favourites
@@ -227,4 +228,5 @@ puts "Creating 10 favourites..."
 10.times do
   new_favourite = Favourite.new(user: User.all.sample, provider: Provider.all.sample)
   new_favourite.save!
+  p new_favourite
 end
