@@ -12,13 +12,18 @@ require 'csv'
 require 'open-uri'
 require 'json'
 require 'pry'
-require 'net/http'
 
+puts "Deleting Photos..."
 Photo.destroy_all
+puts "Deleting Provider Tags..."
 ProviderTag.destroy_all
+puts "Deleting Provider Categories..."
 ProviderCategory.destroy_all
+puts "Deleting Tags..."
 Tag.destroy_all
+puts "Deleting Categories..."
 Category.destroy_all
+puts "Deleting Reviews..."
 Review.destroy_all
 Provider.destroy_all
 
@@ -28,9 +33,9 @@ category_array = %w[Restaurants Activities Beauty Fitness]
 counter = 0
 category_array.each do |_category|
   new_cat = Category.new(name: category_array[counter])
-  p new_cat
   counter += 1
   new_cat.save!
+  p new_cat
 end
 
 # Seed restaurants
@@ -47,12 +52,14 @@ CSV.foreach(file_path, headers: true, header_converters: :symbol) do |row|
     new_tag.save!
     new_provider_tag = ProviderTag.new(tag: new_tag, provider: new_provider)
     new_provider_tag.save!
+    p new_provider_tag
   end
 
   row[:image].split(" ").first(3).each do |photo_url|
     new_photo = Photo.new(provider: new_provider)
     new_photo.remote_photo_url = photo_url
     new_photo.save!
+    p new_photo
   end
   # row[:address].match(/(.*)(Singapore.*)/)
   new_provider.save if Provider.find_by(name: row[:name]).nil?
@@ -78,7 +85,7 @@ def url_should_be_accessible(url)
     Net::HTTP.get_response(URI.parse(url)).is_a?(Net::HTTPSuccess)
   rescue StandardError
     success = false
-  endcreatcreatee
+  end
   success
 end
 
@@ -101,14 +108,17 @@ viator_doc.search('.product-card-main-content').each do |element|
 
   new_provider = Provider.new(name: name, description: description, price: price, country: country)
   new_provider.save!
+  p new_provider
 
   image_urls.each do |url|
     new_photo = Photo.new(provider: new_provider)
     if url_should_be_accessible(url)
       new_photo.remote_photo_url = url
       new_photo.save!
+      p new_photo
     end
   end
+  
 
   new_provider_category = ProviderCategory.new(category: Category.find_by(name: 'Activities'), provider: new_provider)
   new_provider_category.save!
@@ -116,12 +126,14 @@ viator_doc.search('.product-card-main-content').each do |element|
   tag = element.search('.category-card-tag').text
   new_tag = Tag.new(name: tag, category: Category.find_by(name: 'Activities'))
   new_tag.save!
+  p new_tag
   new_provider_tag = ProviderTag.new(tag: new_tag, provider: new_provider)
   new_provider_tag.save!
   counter += 1
   break if counter >= 10
 end
 
+#------BEAUTY AND FITNESS----#
 
 def new_company(name, translated_name, description, address, phone_number)
   company = Provider.new(name: name, translated_name: translated_name, description: description, price: '', avg_rating: '', street_address: address, district: '', city: '', country: '', open_hours: '', phone_number: phone_number, longitude: '', latitude: '')
@@ -132,33 +144,44 @@ end
 
 # BEAUTY COMPANIES
 
-
 # parse beauty.json
 filepath = File.join(__dir__, 'beauty.json')
 searialised_beauty_places = File.read(filepath)
 beauty_places = JSON.parse(searialised_beauty_places)
 
 # create beauty companies
-beauty_tags = nil
+beauty_tags = []
 created_company = ''
-# create beauty companies
 puts 'Creating beauty companies...'
 beauty_places['beauty_companies'].each do |company|
-  # beauty_tags = company['categories'].gsub('  ', '').split(',')
+  company['tags'].each do |tag|
+    beauty_tags<<tag
+  end
   created_company = new_company(company['name'], company['name'], company['description'], company['address'], company['phone'])
-end
-# # create beauty tags
-# beauty_tags.uniq!
-# beauty_tags.each do |tag|
-#   new_tag = Tag.new(name: tag)
-#   new_tag.category = Category.find_by(name: 'Beauty')
-#   puts new_tag
-#   new_tag.save!
+  company['image'].each do |pic|
+    new_photo = Photo.new(provider: created_company)
+    new_photo.remote_photo_url = pic
+    p new_photo
+    new_photo.save!
+  end
 
-#   new_provider_tag = ProviderTag.new(tag: new_tag, provider: created_company)
-#   puts new_provider_tag
-#   new_provider_tag.save!
-# end
+  new_provider_category = ProviderCategory.new(category: Category.find_by(name: 'Beauty'), provider: created_company)
+  new_provider_category.save!
+  p new_provider_category
+
+end
+# create beauty tags
+beauty_tags.uniq!
+beauty_tags.each do |tag|
+  new_tag = Tag.new(name: tag)
+  new_tag.category = Category.find_by(name: 'Beauty')
+  puts new_tag
+  new_tag.save!
+
+  new_provider_tag = ProviderTag.new(tag: new_tag, provider: created_company)
+  puts new_provider_tag
+  new_provider_tag.save!
+end
 
 # FITNESS COMPANIES
 
@@ -184,8 +207,10 @@ fitness_places['fitness_companies'].each do |company|
     p new_photo
     new_photo.save!
   end
+  new_provider_category = ProviderCategory.new(category: Category.find_by(name: 'Fitness'), provider: created_company)
+  new_provider_category.save!
 end
-# create fitness tags
+# crtteate fitness tags
 fitness_tags.uniq!
 fitness_tags.each do |tag|
   new_tag = Tag.new(name: tag, category: Category.find_by(name: 'Fitness'))
