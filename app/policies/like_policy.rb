@@ -1,4 +1,4 @@
-class ReviewLikePolicy < ApplicationPolicy
+class LikePolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
       scope.all
@@ -30,6 +30,6 @@ class ReviewLikePolicy < ApplicationPolicy
   end
 
   def destroy?
-    record.user = user
+    record.user == user && @like != 'anything'
   end
 end
