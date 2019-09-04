@@ -9,7 +9,7 @@ class ProvidersController < ApplicationController
     else
       @providers = @providers.global_search(params[:query])
     end
-    @provider_favourite = ProviderFavourite.new()
+    @favourite = Favourite.new()
   end
 
   def show
