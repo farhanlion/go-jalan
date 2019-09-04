@@ -1,8 +1,8 @@
 <h1>Create a new review</h1>
 <p>Hey <%= @user.first_name %></p>
 <%= simple_form_for [@review] do |f| %>
-  <%= f.input :photo_url, input_html: {value: '', multiple: "true"}, as: :file %>
-  <%= f.input :provider, collection: Provider.all %>
+  <%= f.input :photo_url, label: 'Upload photo/video', input_html: {value: '', multiple: "true"}, as: :file %>
+  <%= f.association :provider, label: 'Tag a provider', input_html: { id: 'providers', class: 'beautiful-dropdown' } %>
   <%= f.input :title %>
   <%= f.input :content %>
   <%= f.input :rating, collection: 0..5, prompt: "Rating", selected: 0  %>
