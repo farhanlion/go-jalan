@@ -1,14 +1,14 @@
-{  
-   "beauty_companies":[  
-      {  
+{
+   "beauty_companies":[
+      {
          "name":"Ark Salon",
          "description":"",
          "address":"Depot Heights Shopping Centre #02-07A, 108 Depot Road, (S)100108",
          "phone":"6270 2172",
-         "image":[  
+         "image":[
             "https://x2.sdimgs.com/sd_static/images/side_banner/188_x_158/1283.jpg?v=1.0.2.278?v=1.0.2.278"
          ],
-         "tags":[  
+         "tags":[
             "Digital Perm",
             "Digital Rebonding",
             "Hair Cornrows",
@@ -20,15 +20,15 @@
          "lat":"1.2811222685210701",
          "long":"103.810031310636"
       },
-      {  
+      {
          "name":"Bliss Hair Salon",
          "description":"",
          "address":"Taman Jurong Shopping Centre, 399 Yung Sheng Road, (S)610399",
          "phone":"6266 5929",
-         "image":[  
+         "image":[
             "https://x2.sdimgs.com/sd_static/images/side_banner/188_x_158/1296.jpg?v=1.0.2.278?v=1.0.2.278"
          ],
-         "tags":[  
+         "tags":[
             "Digital Perm",
             "Digital Rebonding",
             "Hair Cornrows",
@@ -40,30 +40,30 @@
          "lat":"1.3348448747126",
          "long":"103.72046202427799"
       },
-      {  
+      {
          "name":"Dead Sea Singapore -417",
          "description":"Dead Sea Singapore Minus 417 (-417) offers a diversified series of exclusive care products based upon a “Vitamin-Mineral Complex” a scientific development based on active natural ingredients imported from France, combined with rich Dead Sea minerals. The -417 series are preserved by natural ingredients, are Paraben free, enriched by essential and natural oils, do not contain Mineral Oil and have immediate visible results.",
          "address":"Ang Mo Kio (AMK) Hub #B1-80, 53 Ang Mo Kio Avenue 3, (S)569933 View All 10 Branches",
          "phone":"6481 1479",
-         "image":[  
+         "image":[
             ""
          ],
-         "tags":[  
+         "tags":[
             "Dead Sea",
             "Dead Sea Minerals"
          ],
          "lat":"1.36925511350953",
          "long":"103.848464053097"
       },
-      {  
+      {
          "name":"Beijing 101 Hair Consultants Pte Ltd",
          "description":"Beijing 101 Operating Hours\r\n11am - 9pm (Mon-Fri)\r\n10am - 7pm (Sat, Sun & PH)\r\nBeijing 101 Hotline\r\n6-5588-101",
          "address":"JCube #B1-05, 2 Jurong East Central 1, (S)609731 View All 6 Branches",
          "phone":"6558 8101",
-         "image":[  
+         "image":[
             ""
          ],
-         "tags":[  
+         "tags":[
             "Creative Writing",
             "Hair Growth Treatment",
             "Hair Loss",
@@ -75,15 +75,15 @@
          "lat":"1.33326351781135",
          "long":"103.74031748518601"
       },
-      {  
+      {
          "name":"House of Traditional Javanese Massage & Beauty Care",
          "description":"House of Javanese Massage is a renowned family wellness chain established in Singapore since 1999. Javanese massages promotes blood circulation and energy flow. The main essence of the Javanese massage lies in the belief that \"wind\" accumulated in the body is flashed out through applying special Javanese massage strokes. We cater and is renowned for our Javanese body massages, pre & postnatal massages and fertility care , Javanese facial treatment, Totok Wadja and al-natural Javanese slimming treatments. Javanese Massage can improve blood circulation and the lymphatic system is assisted to eliminate body waste and toxics. It further ease tension, stiffness and pain, makes breathing better and easier.",
          "address":"HDB Tampines #09-434, 498G Tampines Street 45, (S)525498 View All 7 Branches",
          "phone":"6252 9330",
-         "image":[  
+         "image":[
             ""
          ],
-         "tags":[  
+         "tags":[
             "Beauty Care",
             "Javanese Massage",
             "Massage",
@@ -95,15 +95,15 @@
          "lat":"1.3622784494412898",
          "long":"103.958121867302"
       },
-      {  
+      {
          "name":"Posh Wellness Pte Ltd",
          "description":"A professional beauty provider for spa, body, face and scalp therapy, established since 1991. We have through the years reckon as a leader in the spa and beauty industry. Our value clients includes those from the Royal Families, while being the sole operator of The Ritz Carlton Spa during the period of 2000 to 2004! We are situated in Marina Square where it is an accessible location. To uphold our beliefs, we employs only therapists and consultants with international qualification. This is to ensure that our clients are attended to with the utmost care, professionalism and dedication.",
          "address":"Marina Square #02-315/316, 6 Raffles Boulevard, (S)039594",
          "phone":"6337 0226",
-         "image":[  
+         "image":[
             ""
          ],
-         "tags":[  
+         "tags":[
             "Cosmetics Store",
             "Hair Wigs",
             "Massage",
@@ -113,15 +113,15 @@
          "lat":"1.29097199909543",
          "long":"103.857575411708"
       },
-      {  
+      {
          "name":"Regain Hair Care Centre",
          "description":"We offer the most affordable hair weave and re-tightening package in town! Try out our effective Tricho treatment today! Founded in 1990, we have a team of skillful hair care consultants and hair weaving specialists. Together they have given people with hair problems the confidence of regaining their looks and youth. With more than 20 years of experience, our consultants are specialists when it comes to hair care, hair weaving, wigs, toupee, hair bonding and hair coloring.\n\n\n\n\nWe are all committed to providing you with the most cost-effective and best results when it comes to solving all of your hair problems.",
          "address":"People's Park Centre #03-43, 101 Upper Cross Street, (S)058357",
          "phone":"6339 9665",
-         "image":[  
+         "image":[
             "https://x2.sdimgs.com/sd_static/images/side_banner/188_x_158/1247.jpg?v=1.0.2.278?v=1.0.2.278"
          ],
-         "tags":[  
+         "tags":[
             "Hair Grooming",
             "Hair Growth Treatment",
             "Hair Loss",
@@ -131,15 +131,15 @@
          "lat":"1.2858058351705801",
          "long":"103.844032214205"
       },
-      {  
+      {
          "name":"Strip & Browhaus",
          "description":"Strip: Ministry Of Waxing, the first international concept waxing boutique since 2002, has thriving outlets in London, New York, Hong Kong, Shanghai, Manila, Bangkok, Jakarta and Kuala Lumpur.",
          "address":"Wheelock Place #05-04, #03-19, 501 Orchard Road, (S)238880 View All 15 Branches",
          "phone":"6734 0040",
-         "image":[  
+         "image":[
             ""
          ],
-         "tags":[  
+         "tags":[
             "Brazilian Waxing",
             "Creative Eyebrow",
             "Hair Removal",

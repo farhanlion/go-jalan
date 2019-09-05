@@ -1,0 +1,25 @@
+<div class="banner w-100 fixed-top">
+  <div class="container d-flex flex-column">
+    <h1>GoJalan <strong>Get a life!</strong></h1>
+    <div class="search">
+      <div class="search-1">
+        <%= form_tag results_path, method: :get, class: "d-flex mx-auto justify-content-center" do %>
+          <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Search for a provider"    %>
+          <%= submit_tag "Search", class: "btn btn-primary ml-3" %>
+        <% end %>
+      </div>
+      <div class="search-2">
+        <%= form_tag reviews_path, method: :get, class: "d-flex mx-auto justify-content-center" do %>
+          <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Search for a review"    %>
+          <%= submit_tag "Search", class: "btn btn-primary ml-3" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

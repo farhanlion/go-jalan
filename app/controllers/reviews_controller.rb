@@ -4,11 +4,6 @@ class ReviewsController < ApplicationController
   skip_after_action :verify_authorized, only: [:show, :new]
   def index
     @reviews = policy_scope(Review)
-    if !params[:query]
-      @reviews
-    else
-      @reviews = @reviews.global_search(params[:query])
-    end
   end
 
   def show
@@ -34,7 +29,7 @@ class ReviewsController < ApplicationController
 
   def create
     if params[:provider_id].nil?
-      @provider = Provider.find(params[:review][:provider])
+      @provider = Provider.find(params[:review][:provider_id])
       @review = Review.new(review_params)
       @review.user = current_user
       @review.provider = @provider

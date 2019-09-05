@@ -1,0 +1,9 @@
+<% Category.first(4).each do |category| %>
+  <p><%= category.name %></p>
+  <ol>
+    <% category.tags.last(10).each do |tag| %>
+      <li><%= tag.name %></li>
+    <% end %>
+  </ol>
+<% end %>
+
