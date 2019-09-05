@@ -1,7 +1,4 @@
 
-
-$background: #9b59b6;
-$tabs-base-color: #8e44ad;
 * {
   margin: 0;
   padding: 0;
@@ -10,8 +7,8 @@ body {
   // padding: 20px;
   text-align: left;
   font-family: Lato;
-  color: #fff;
-  background: $background;
+  background: white;
+  color: black;
 }
 h1 {
   font-weight: normal;
@@ -48,13 +45,13 @@ h1 {
     font-size: 20px;
     font-weight: normal;
     text-transform: uppercase;
-    background: $tabs-base-color;
+    background: white;
     cursor: pointer;
     position: relative;
     top: 4px;
     @include transition(all 0.2s ease-in-out);
     &:hover {
-      background: darken($tabs-base-color, 10);
+      background: white;
     }
   }
   .tab-content{
@@ -68,13 +65,12 @@ h1 {
     position: absolute;
     top: 53px;
     left: 0;
-    background: darken($tabs-base-color, 15);
   }
   //The Magic
   [id^="tab"]:checked + label {
     top: 0;
     padding-top: 17px;
-    background: darken($tabs-base-color, 15);
+    background: white;
   }
   [id^="tab"]:checked ~ [id^="tab-content"] {
     display: block;
@@ -90,10 +86,10 @@ p.link {
     color: #fff;
     padding: 5px 10px;
     margin: 0 5px;
-    background-color: darken($tabs-base-color, 15);
+    background-color: white;
     @include transition(all 0.2s ease-in);
     &:hover {
-      background-color: darken($tabs-base-color, 20);
+      background-color: white;
     }
   }
 }

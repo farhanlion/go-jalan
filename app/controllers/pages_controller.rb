@@ -9,6 +9,7 @@ class PagesController < ApplicationController
     @providers = Provider.global_search(params[:query])
     @providers = Provider.all if @providers.empty?
     @reviews = Review.all if @reviews.empty?
+  end
 
   end
 
@@ -21,5 +22,8 @@ class PagesController < ApplicationController
         lng: provider.longitude
       }
     end
+  end
+
+  def results_tags
   end
 end
