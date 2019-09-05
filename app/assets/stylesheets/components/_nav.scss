@@ -1,0 +1,17 @@
+.nav {
+  background-color: white;
+  justify-content: space-around;
+  height: 60px;
+
+  .nav-icon a {
+    color: #484848;
+  }
+
+  .nav-text a {
+    color: #484848;
+  }
+
+  .active {
+    color: #3F1A3F;
+  }
+}

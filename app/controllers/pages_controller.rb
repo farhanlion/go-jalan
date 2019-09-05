@@ -3,12 +3,14 @@ class PagesController < ApplicationController
 
   def home
   end
-  
+
   def results
     @reviews = Review.global_search(params[:query])
     @providers = Provider.global_search(params[:query])
     @providers = Provider.all if @providers.empty?
     @reviews = Review.all if @reviews.empty?
+
+  end
 
   def nearby
     @providers = policy_scope(Provider)

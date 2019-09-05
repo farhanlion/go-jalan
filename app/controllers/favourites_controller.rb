@@ -2,8 +2,9 @@ class FavouritesController < ApplicationController
   # before_action :set_favourite, only: [:destroy]
 
   def index
+    @user = current_user
     @favs = policy_scope(Favourite)
-    @favs = Favourite.all
+    @favs = Favourite.where(user: current_user)
   end
 
   def create

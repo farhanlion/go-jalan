@@ -10,7 +10,7 @@ Rails.application.routes.draw do
       resources :favourites, only: [:create]
   end
 
-  resources :favourites, only: [:destroy]
+  resources :favourites, only: [:index, :destroy]
 
   resources :reviews, only: [:show] do
     resources :likes, only: [:create]

@@ -1,8 +1,15 @@
-<h1>ProviderFavourites#index</h1>
-<p>Find me in app/views/provider_favourites/index.html.erb</p>
-
-<% @favs.each do |fav| %>
-  <%= fav.user.email %>
-  <%= fav.provider.name %>
-  <br>
+<div class="row d-flex flex-column text-center">
+<h1>My Favourite</h1>
+<% if @favs.nil? %>
+  <p>No favourites yet.</p>
+  <p>Sign up or Login to start</p>
+<% else %>
+  <% @favs.each do |fav| %>
+  <div class="fav-card">
+    <p><%= fav.user.email %> <i class="far fa-heart"></i> <%= fav.provider.name %></p>
+  </div>
+  <% end %>
 <% end %>
+
+
+</div>
