@@ -29,7 +29,7 @@ class ReviewsController < ApplicationController
 
   def create
     if params[:provider_id].nil?
-      @provider = Provider.find(params[:review][:provider])
+      @provider = Provider.find(params[:review][:provider_id])
       @review = Review.new(review_params)
       @review.user = current_user
       @review.provider = @provider

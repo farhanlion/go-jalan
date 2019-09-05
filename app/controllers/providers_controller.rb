@@ -5,10 +5,21 @@ class ProvidersController < ApplicationController
   def index
     @providers = policy_scope(Provider)
     @favourite = Favourite.new()
+    @markers = @providers.map do |provider|
+      {
+        lat: provider.latitude,
+        lng: provider.longitude
+      }
+    end
   end
 
   def show
     skip_authorization
+    @markers =
+      {
+        lat: @provider.latitude,
+        lng: @provider.longitude
+      }
   end
 
   private
