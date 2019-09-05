@@ -1,0 +1,63 @@
+<div class="nav d-flex flex-row w-100 fixed-bottom">
+  <div class="nav-tab text-center">
+    <%= link_to root_path do %>
+    <div class="nav-icon">
+      <p><i class="far fa-compass"></i></p>
+    </div>
+    <div class="nav-text">
+      <p>GoJalan</p>
+    </div>
+    <% end %>
+  </div>
+  <div class="nav-tab text-center">
+    <%= link_to nearby_path do %>
+      <div class="nav-icon">
+        <p><i class="fas fa-map-marker-alt"></i></p>
+      </div>
+      <div class="nav-text">
+        <p>Nearby</p>
+      </div>
+    <% end %>
+  </div>
+  <div class="nav-tab text-center">
+    <%= link_to new_review_path do %>
+      <div class="nav-icon">
+        <p><i class="fas fa-plus-circle"></i></p>
+      </div>
+      <div class="nav-text">
+        <p>Add Review</p>
+      </div>
+    <% end %>
+  </div>
+  <div class="nav-tab text-center">
+    <%= link_to favourites_path do %>
+      <div class="nav-icon">
+        <p><i class="far fa-heart"></i></p>
+      </div>
+      <div class="nav-text">
+        <p>Favourites</p>
+      </div>
+    <% end %>
+  </div>
+  <div class="nav-tab text-center">
+    <% if current_user.nil? %>
+      <%= link_to new_review_path do %>
+        <div class="nav-icon">
+          <p><i class="far fa-user"></i></p>
+        </div>
+        <div class="nav-text">
+          <p>Me</p>
+        </div>
+      <% end %>
+    <% else %>
+      <%= link_to user_path(current_user) do %>
+        <div class="nav-icon">
+          <p><i class="far fa-user"></i></p>
+        </div>
+        <div class="nav-text">
+          <p>Me</p>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
