@@ -2,6 +2,7 @@
 <% if @providers.empty? %>
   <p>No providers to show yet</p>
 <% else %>
+  <p><%= render "shared/map" %></p>
   <% @providers.each do |provider| %>
     <p>Name: <%= link_to provider.name, provider %></p>
     <p>Translated name: <%= provider.translated_name %></p>
@@ -23,6 +24,7 @@
     <p>Hours: <%= provider.open_hours %></p>
     <p>Phone: <%= provider.phone_number %></p>
     <p>Website: <%= provider.website %></p>
+    <p>Coordinates: <%= provider.latitude %>, <%= provider.longitude %></p>
     <p><%= link_to "Review provider", new_provider_review_path(provider) %></p>
     <% if current_user.favourited_providers.include?(provider) %>
       <p><%= link_to 'Unfavourite this provider',favourite_path(provider), method: :delete %></p>
