@@ -1,3 +1,27 @@
+<h1>All results</h1>
+<ul class="tabs" role="tablist">
+  <li>
+    <input type="radio" name="tabs" id="tab1" checked>
+    <label for="tab1" role="tab"  aria-selected="true" aria-controls="panel1" tabindex="0">Reviews</label>
+    <div id="tab-content1"
+             class="tab-content"
+             role="tabpanel"
+             aria-labelledby="description"
+             aria-hidden="false">
+      <!--Reviews results -->
+      <h1>All Reviews</h1>
+      <% if @reviews.length == Review.all.length %>
+        <h2>Your search did not correspond to any reviews. All reviews:</h2>
+      <% end %>
+        <% @reviews.each do |review| %>
+          <%= render "shared/review", review: review %>
+      <p>-----------------------------------------------------------</p>
+        <% end %>
+    </div>
+  </li>
+</ul>
+
+
 <!--Providers results -->
 <h1>All providers corresponding to search</h1>
 <% if @providers.length == Provider.all.length %>
@@ -25,7 +49,11 @@
     <p>Phone: <%= provider.phone_number %></p>
     <p>Website: <%= provider.website %></p>
     <p><%= link_to "Review provider", new_provider_review_path(provider) %></p>
-    <p><%= link_to 'Favourite this provider', provider_favourites_path(provider), method: :post %></p>
+    <% if current_user.favourited_providers.include?(provider) %>
+      <p><%= link_to 'Unfavourite this provider', favourite_path(provider), method: :delete %></p>
+    <% else %>
+      <p><%= link_to 'Favourite this provider', provider_favourites_path(provider), method: :post %></p>
+    <% end %>
     <p>Photos: </p>
     <div class="photos row">
       <% provider.photos.each do |photo| %>
@@ -33,15 +61,4 @@
       <% end %>
     </div>
     <p>---------------------------------------------</p>
-<% end %>
-
-
-<!--Reviews results -->
-<h1>All Reviews</h1>
-<% if @reviews.length == Review.all.length %>
-  <h2>Your search did not correspond to any reviews. All reviews:</h2>
-<% end %>
-  <% @reviews.each do |review| %>
-    <%= render "shared/review", review: review %>
-    <p>-----------------------------------------------------------</p>
 <% end %>
