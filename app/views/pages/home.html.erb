@@ -1,6 +1,7 @@
 <h1>Pages#home</h1>
 <p><%= link_to "All Providers", providers_path %></p>
 <p><%= link_to "All Reviews", reviews_path %></p>
+<p><%= link_to "Nearby", nearby_path %></p>
 <p><%= link_to "Add Review", new_review_path %></p>
 <% if current_user.nil? %>
   <p><%= link_to "Me", new_user_session_path %></p>
