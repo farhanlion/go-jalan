@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
   get "reviews/new", to: "reviews#new_no_provider", as: "new_review"
+  get "nearby", to: "pages#nearby", as: "nearby"
 
   resources :providers, only: [:index, :show] do
       resources :reviews, only: [:new, :create]
