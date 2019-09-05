@@ -16,6 +16,6 @@ class Review < ApplicationRecord
     using: {
       tsearch: { prefix: true } # <-- now `superman batm` will return something!
     }
-  has_many :review_photos
-  has_many :review_likes
+  has_many :review_photos, dependent: :destroy
+  has_many :likes, dependent: :destroy
 end

@@ -6,7 +6,16 @@
          "address":"Depot Heights Shopping Centre #02-07A, 108 Depot Road, (S)100108",
          "phone":"6270 2172",
          "image":[
-
+            "https://x2.sdimgs.com/sd_static/images/side_banner/188_x_158/1283.jpg?v=1.0.2.278?v=1.0.2.278"
+         ],
+         "tags":[
+            "Digital Perm",
+            "Digital Rebonding",
+            "Hair Cornrows",
+            "Hair Dreadlocks",
+            "Hair Studio",
+            "Hair Stylist",
+            "Hair Tattoo"
          ]
       },
       {
@@ -15,7 +24,16 @@
          "address":"Taman Jurong Shopping Centre, 399 Yung Sheng Road, (S)610399",
          "phone":"6266 5929",
          "image":[
-
+            "https://x2.sdimgs.com/sd_static/images/side_banner/188_x_158/1296.jpg?v=1.0.2.278?v=1.0.2.278"
+         ],
+         "tags":[
+            "Digital Perm",
+            "Digital Rebonding",
+            "Hair Cornrows",
+            "Hair Dreadlocks",
+            "Hair Studio",
+            "Hair Stylist",
+            "Hair Tattoo"
          ]
       },
       {
@@ -24,7 +42,11 @@
          "address":"Ang Mo Kio (AMK) Hub #B1-80, 53 Ang Mo Kio Avenue 3, (S)569933 View All 10 Branches",
          "phone":"6481 1479",
          "image":[
-
+            ""
+         ],
+         "tags":[
+            "Dead Sea",
+            "Dead Sea Minerals"
          ]
       },
       {
@@ -33,7 +55,16 @@
          "address":"JCube #B1-05, 2 Jurong East Central 1, (S)609731 View All 6 Branches",
          "phone":"6558 8101",
          "image":[
-
+            ""
+         ],
+         "tags":[
+            "Creative Writing",
+            "Hair Growth Treatment",
+            "Hair Loss",
+            "Hair Loss Treatment",
+            "Hair Treatment",
+            "Medical",
+            "Most Visited Offers"
          ]
       },
       {
@@ -41,17 +72,32 @@
          "description":"House of Javanese Massage is a renowned family wellness chain established in Singapore since 1999. Javanese massages promotes blood circulation and energy flow. The main essence of the Javanese massage lies in the belief that \"wind\" accumulated in the body is flashed out through applying special Javanese massage strokes. We cater and is renowned for our Javanese body massages, pre & postnatal massages and fertility care , Javanese facial treatment, Totok Wadja and al-natural Javanese slimming treatments. Javanese Massage can improve blood circulation and the lymphatic system is assisted to eliminate body waste and toxics. It further ease tension, stiffness and pain, makes breathing better and easier.",
          "address":"HDB Tampines #09-434, 498G Tampines Street 45, (S)525498 View All 7 Branches",
          "phone":"6252 9330",
-         "image":[
 
-         ]
-      },
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Beauty Care",
+            "Javanese Massage",
+            "Massage",
+            "Post Natal Massage",
+            "Pre-Post Natal",
+            "Spa and Massage",
+            "Traditional Massage",
       {
          "name":"Posh Wellness Pte Ltd",
          "description":"A professional beauty provider for spa, body, face and scalp therapy, established since 1991. We have through the years reckon as a leader in the spa and beauty industry. Our value clients includes those from the Royal Families, while being the sole operator of The Ritz Carlton Spa during the period of 2000 to 2004! We are situated in Marina Square where it is an accessible location. To uphold our beliefs, we employs only therapists and consultants with international qualification. This is to ensure that our clients are attended to with the utmost care, professionalism and dedication.",
          "address":"Marina Square #02-315/316, 6 Raffles Boulevard, (S)039594",
          "phone":"6337 0226",
          "image":[
-
+            ""
+         ],
+         "tags":[
+            "Cosmetics Store",
+            "Hair Wigs",
+            "Massage",
+            "Spa and Massage",
+            "Spa Treatment"
          ]
       },
       {
@@ -60,7 +106,14 @@
          "address":"People's Park Centre #03-43, 101 Upper Cross Street, (S)058357",
          "phone":"6339 9665",
          "image":[
-
+            "https://x2.sdimgs.com/sd_static/images/side_banner/188_x_158/1247.jpg?v=1.0.2.278?v=1.0.2.278"
+         ],
+         "tags":[
+            "Hair Grooming",
+            "Hair Growth Treatment",
+            "Hair Loss",
+            "Hair Loss Treatment",
+            "Hair Wigs"
          ]
       },
       {
@@ -69,7 +122,14 @@
          "address":"Wheelock Place #05-04, #03-19, 501 Orchard Road, (S)238880 View All 15 Branches",
          "phone":"6734 0040",
          "image":[
-
+            ""
+         ],
+         "tags":[
+            "Brazilian Waxing",
+            "Creative Eyebrow",
+            "Hair Removal",
+            "Waxing and Threading",
+            "Waxing Hair Removal"
          ]
       }
    ]

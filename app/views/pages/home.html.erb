@@ -1,6 +1,12 @@
 <h1>Pages#home</h1>
 <p><%= link_to "All Providers", providers_path %></p>
 <p><%= link_to "All Reviews", reviews_path %></p>
+<p><%= link_to "Add Review", new_review_path %></p>
+<% if current_user.nil? %>
+  <p><%= link_to "Me", new_user_session_path %></p>
+<% else %>
+  <p><%= link_to "Me", user_path(current_user) %></p>
+<% end %>
 
 <%= form_tag providers_path, method: :get, class: "d-flex mx-auto justify-content-center" do %>
     <%= text_field_tag :query,
