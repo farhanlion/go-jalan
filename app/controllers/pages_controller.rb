@@ -11,8 +11,6 @@ class PagesController < ApplicationController
     @reviews = Review.all if @reviews.empty?
   end
 
-  end
-
   def nearby
     @providers = policy_scope(Provider)
     @favourite = Favourite.new
