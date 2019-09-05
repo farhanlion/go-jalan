@@ -1,5 +1,5 @@
 class FavouritesController < ApplicationController
-  before_action :set_favourite, only: [:destroy]
+  # before_action :set_favourite, only: [:destroy]
 
   def index
     @favs = policy_scope(Favourite)
@@ -10,13 +10,20 @@ class FavouritesController < ApplicationController
     @fav = Favourite.new(provider: Provider.find(params[:provider_id]), user: current_user)
     authorize @fav
     @fav.save!
-    redirect_to favourites_path
+    redirect_to providers_path
   end
 
   def destroy
-    authorize @fav
-    @fav.destroy
-    redirect_to user_path(current_user)
+    @provider = Provider.find(params[:id])
+    @fav = Favourite.find_by(provider: @provider)
+    if @fav.nil?
+      skip_authorization
+      flash[:notice] = 'You have already unliked this review.'
+    else
+      authorize @fav
+      @fav.destroy
+    end
+    redirect_to providers_path
   end
 
   private

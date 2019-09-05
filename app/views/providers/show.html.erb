@@ -22,12 +22,27 @@
 <p>Hours: <%= @provider.open_hours %></p>
 <p>Phone: <%= @provider.phone_number %></p>
 <p>Website: <%= @provider.website %></p>
+<p>Coordinates: <%= @provider.latitude %>, <%= @provider.longitude %></p>
+<p>--------------------------</p>
+<h2>Map</h2>
+<div
+  id="map"
+  style="width: 100%;
+  height: 300px;"
+  data-markers="<%= @markers.to_json %>"
+  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+></div>
+
 <h2>Reviews for this provider</h2>
 <p>--------------------------</p>
 <% @provider.reviews.each do |review| %>
   <%= render "shared/review", review: review %>
 <% end %>
 <%= link_to "Add a review", new_provider_review_path(@provider) %>
-<%= link_to 'Favourite this provider', provider_favourites_path(@provider), method: :post %>
+<% if current_user.favourited_providers.include?(@provider) %>
+  <p><%= link_to 'Unfavourite this provider', favourite_path(@provider), method: :delete %></p>
+<% else %>
+  <p><%= link_to 'Favourite this provider', provider_favourites_path(@provider), method: :post %></p>
+<% end %>
 <p>--------------------------</p>
 <%= link_to "back", providers_path %>
