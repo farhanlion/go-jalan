@@ -27,7 +27,7 @@
     <p>Coordinates: <%= provider.latitude %>, <%= provider.longitude %></p>
     <p><%= link_to "Review provider", new_provider_review_path(provider) %></p>
     <% if current_user.favourited_providers.include?(provider) %>
-      <p><%= link_to 'Unfavourite this provider', favourite_path(provider), method: :delete %></p>
+      <p><%= link_to 'Unfavourite this provider',favourite_path(provider), method: :delete %></p>
     <% else %>
       <p><%= link_to 'Favourite this provider', provider_favourites_path(provider), method: :post %></p>
     <% end %>
