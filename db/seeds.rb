@@ -14,19 +14,19 @@ require 'json'
 require 'pry'
 require 'net/http'
 
-# puts "Deleting Photos..."
-# Photo.destroy_all
-# puts "Deleting Provider Tags..."
-# ProviderTag.destroy_all
-# puts "Deleting Provider Categories..."
-# ProviderCategory.destroy_all
-# puts "Deleting Tags..."
-# Tag.destroy_all
-# puts "Deleting Categories..."
-# Category.destroy_all
-# puts "Deleting Reviews..."
-# Review.destroy_all
-# Provider.destroy_all
+puts "Deleting Photos..."
+Photo.destroy_all
+puts "Deleting Provider Tags..."
+ProviderTag.destroy_all
+puts "Deleting Provider Categories..."
+ProviderCategory.destroy_all
+puts "Deleting Tags..."
+Tag.destroy_all
+puts "Deleting Categories..."
+Category.destroy_all
+puts "Deleting Reviews..."
+Review.destroy_all
+Provider.destroy_all
 
 puts "database cleaned"
 
@@ -122,7 +122,7 @@ viator_doc.search('.product-card-main-content').each do |element|
   image_urls = viator_image_search(activity_page)
 
   new_provider = Provider.new(name: name, description: description, price: price, country: country)
-  new_provider.save!
+  new_provider.save
   p new_provider
 
   image_urls.each do |url|
