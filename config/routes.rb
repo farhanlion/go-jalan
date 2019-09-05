@@ -21,4 +21,6 @@ Rails.application.routes.draw do
   resources :likes, only: [:destroy]
 
   get "/results", to: "pages#results", as: :results
+  get "/results_tags", to: "pages#results_tags", as: :results_tags
+  get "/results_location", to: "pages#results_location", as: :results_location
 end

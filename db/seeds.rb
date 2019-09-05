@@ -12,10 +12,9 @@ Category.destroy_all
 Review.destroy_all
 Provider.destroy_all
 
-
 category_array = %w[Restaurants Activities Beauty Fitness]
 counter = 0
-category_array.each do |_category|
+category_array.each do |category|
   new_cat = Category.new(name: category_array[counter])
   counter += 1
   new_cat.save!
@@ -29,13 +28,18 @@ CSV.foreach(file_path, headers: true, header_converters: :symbol) do |row|
   new_provider = Provider.new(name: row[:name], description: row[:description], open_hours: row[:hours], price: row[:price], country: 'Singapore', street_address: row[:address])
   new_provider_category = ProviderCategory.new(category: Category.find_by(name: 'Restaurants'), provider: new_provider)
   new_provider_category.save!
-  row[:good_for].split(' ').each do |tag|
-    new_tag = Tag.new(name: tag)
-    new_tag.category = Category.find_by(name: 'Restaurants')
-    new_tag.save!
-    new_provider_tag = ProviderTag.new(tag: new_tag, provider: new_provider)
-    new_provider_tag.save!
-    p new_provider_tag
+
+  row[:good_for].split(',').each do |tag|
+    new_tag = Tag.new(name: tag.strip)
+    if !Tag.all.include?(new_tag)
+      new_tag.category = Category.find_by(name: 'Restaurants')
+      new_tag.save!
+      new_provider_tag = ProviderTag.new(tag: new_tag, provider: new_provider)
+      new_provider_tag.save!
+    else
+      new_provider_tag = ProviderTag.new(tag: Tag.find_by(name: tag), provider: new_provider)
+      new_provider_tag.save!
+    end
   end
 
   post_code = row[:address].match(/Singapore \((.*)\)/)[1]
@@ -56,9 +60,8 @@ CSV.foreach(file_path, headers: true, header_converters: :symbol) do |row|
     new_photo = Photo.new(provider: new_provider)
     new_photo.remote_photo_url = photo_url
     new_photo.save!
-    p new_photo
   end
-  # row[:address].match(/(.*)(Singapore.*)/)
+
   new_provider.save if Provider.find_by(name: row[:name]).nil?
   counter += 1 if new_provider.save
   break if counter > 10
@@ -105,14 +108,13 @@ viator_doc.search('.product-card-main-content').each do |element|
 
   new_provider = Provider.new(name: name, description: description, price: price, country: country)
   new_provider.save
-  p new_provider
+  new_provider
 
   image_urls.each do |url|
     new_photo = Photo.new(provider: new_provider)
     if url_should_be_accessible(url)
       new_photo.remote_photo_url = url
       new_photo.save!
-      p new_photo
     end
   end
 
@@ -120,11 +122,16 @@ viator_doc.search('.product-card-main-content').each do |element|
   new_provider_category.save!
 
   tag = element.search('.category-card-tag').text
-  new_tag = Tag.new(name: tag, category: Category.find_by(name: 'Activities'))
-  new_tag.save!
-  p new_tag
-  new_provider_tag = ProviderTag.new(tag: new_tag, provider: new_provider)
-  new_provider_tag.save!
+  new_tag = Tag.new(name: tag)
+  if !Tag.all.include?(new_tag)
+    new_tag.category = Category.find_by(name: 'Restaurants')
+    new_tag.save!
+    new_provider_tag = ProviderTag.new(tag: new_tag, provider: new_provider)
+    new_provider_tag.save!
+  else
+    new_provider_tag = ProviderTag.new(tag: Tag.find_by(name: tag), provider: new_provider)
+    new_provider_tag.save!
+  end
   counter += 1
   break if counter >= 10
 end
@@ -154,30 +161,31 @@ beauty_places['beauty_companies'].each do |company|
   new_provider.latitude = latitude
   new_provider.longitude = longitude
 
-  company['image'].each do |pic|
-    new_photo = Photo.new(provider: new_provider)
-    new_photo.remote_photo_url = pic
-    new_photo.save!
-  end
+  # company['image'].each do |pic|
+  #   new_photo = Photo.new(provider: new_provider)
+  #   new_photo.remote_photo_url = pic
+  #   new_photo.save!
+  # end
 
   new_provider_category = ProviderCategory.new(category: Category.find_by(name: 'Fitness'), provider: new_provider)
   new_provider_category.save!
 
-  fitness_tags = []
   company['tags'].each do |tag|
-    fitness_tags << tag
-  end
-  fitness_tags.uniq!
-  fitness_tags.each do |tag|
-    new_tag = Tag.new(name: tag, category: Category.find_by(name: 'Fitness'))
-    new_tag.save!
-    new_provider_tag = ProviderTag.new(tag: new_tag, provider: new_provider)
-    new_provider_tag.save!
+    new_tag = Tag.new(name: tag)
+    if !Tag.all.include?(new_tag)
+      new_tag.category = Category.find_by(name: 'Beauty')
+      new_tag.save!
+      new_provider_tag = ProviderTag.new(tag: new_tag, provider: new_provider)
+      new_provider_tag.save!
+    else
+      new_provider_tag = ProviderTag.new(tag: Tag.find_by(name: tag), provider: new_provider)
+      new_provider_tag.save!
+    end
   end
 end
 
 
-FITNESS COMPANIES
+#FITNESS COMPANIES
 puts 'Creating fitness companies...'
 
 filepath = File.join(__dir__, 'fitness.json')
@@ -210,16 +218,17 @@ fitness_places['fitness_companies'].each do |company|
   new_provider_category = ProviderCategory.new(category: Category.find_by(name: 'Fitness'), provider: new_provider)
   new_provider_category.save!
 
-  fitness_tags = []
   company['tags'].each do |tag|
-    fitness_tags << tag
-  end
-  fitness_tags.uniq!
-  fitness_tags.each do |tag|
-    new_tag = Tag.new(name: tag, category: Category.find_by(name: 'Fitness'))
-    new_tag.save!
-    new_provider_tag = ProviderTag.new(tag: new_tag, provider: new_provider)
-    new_provider_tag.save!
+    new_tag = Tag.new(name: tag)
+    if !Tag.all.include?(new_tag)
+      new_tag.category = Category.find_by(name: 'Fitness')
+      new_tag.save!
+      new_provider_tag = ProviderTag.new(tag: new_tag, provider: new_provider)
+      new_provider_tag.save!
+    else
+      new_provider_tag = ProviderTag.new(tag: Tag.find_by(name: tag), provider: new_provider)
+      new_provider_tag.save!
+    end
   end
 end
 
@@ -228,5 +237,4 @@ end
 # 10.times do
 #   new_favourite = Favourite.new(user: User.all.sample, provider: Provider.all.sample)
 #   new_favourite.save!
-#   p new_favourite
 # end
