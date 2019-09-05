@@ -9,11 +9,22 @@ class ProvidersController < ApplicationController
     else
       @providers = @providers.global_search(params[:query])
     end
-    @favourite = Favourite.new()
+    @favourite = Favourite.new
+    @markers = @providers.map do |provider|
+      {
+        lat: provider.latitude,
+        lng: provider.longitude
+      }
+    end
   end
 
   def show
     skip_authorization
+    @markers =
+      {
+        lat: @provider.latitude,
+        lng: @provider.longitude
+      }
   end
 
   private
