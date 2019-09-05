@@ -28,6 +28,10 @@
   <%= render "shared/review", review: review %>
 <% end %>
 <%= link_to "Add a review", new_provider_review_path(@provider) %>
-<%= link_to 'Favourite this provider', provider_favourites_path(@provider), method: :post %>
+<% if current_user.favourited_providers.include?(@provider) %>
+  <p><%= link_to 'Unfavourite this provider', favourite_path(@provider), method: :delete %></p>
+<% else %>
+  <p><%= link_to 'Favourite this provider', provider_favourites_path(@provider), method: :post %></p>
+<% end %>
 <p>--------------------------</p>
 <%= link_to "back", providers_path %>

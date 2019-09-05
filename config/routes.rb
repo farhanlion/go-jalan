@@ -4,8 +4,6 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   get "reviews/new", to: "reviews#new_no_provider", as: "new_review"
 
-  resources :favourites, only: [:index]
-
   resources :providers, only: [:index, :show] do
       resources :reviews, only: [:new, :create]
       resources :favourites, only: [:create]
