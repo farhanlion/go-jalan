@@ -20,6 +20,8 @@ Rails.application.routes.draw do
   resources :users, only: [:show, :edit, :update, :destroy]
   resources :likes, only: [:destroy]
 
+  resources :categories, only: [:show]
+
   get "/results", to: "pages#results", as: :results
   get "/results_tags", to: "pages#results_tags", as: :results_tags
   get "/results_location", to: "pages#results_location", as: :results_location
