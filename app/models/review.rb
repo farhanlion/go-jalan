@@ -18,4 +18,17 @@ class Review < ApplicationRecord
     }
   has_many :review_photos, dependent: :destroy
   has_many :likes, dependent: :destroy
+
+
+  scope :best, -> { where.not(title: nil) }
+
+
+  def next
+    self.class.best.where("id > ?", self.id).first
+  end
+
+  def previous
+    self.class.best.where("id < ?", self.id).last
+  end
+
 end

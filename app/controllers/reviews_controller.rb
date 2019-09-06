@@ -7,6 +7,9 @@ class ReviewsController < ApplicationController
   end
 
   def show
+    @review = Review.find(params[:id])
+    @next = @review.next
+    @previous = @review.previous
     authorize @review
   end
 
@@ -17,7 +20,6 @@ class ReviewsController < ApplicationController
     @review = Review.new
     skip_authorization
   end
-
 
   def new_no_provider
     @user = current_user
