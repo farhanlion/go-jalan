@@ -2,11 +2,14 @@
     <% if review.review_photos.first != nil %>
         <% if review.review_photos.first.photo_url.resource_type == "video" %>
           <%= link_to review_path(review) do %>
-            <div class="review-card-small image-card d-flex flex-column align-items start m-2" style="background-image: linear-gradient(rgba(0,0,0,0.22), rgba(0,0,0,0.22)), url('<%= cl_video_tag(review.review_photos.first.photo_url.file.public_id,
+            <div class="review-card-small video-card d-flex flex-column align-items start m-2">
+              <div class="video">
+                <%= cl_video_tag(review.review_photos.first.photo_url.file.public_id,
                 :loop => true, :controls => true, :autoplay => true,
                 :transformation => [
-                  :height=>221, :crop=>"pad"],
-                :fallback_content => "Your browser does not support HTML5 video tags." ) %>')">
+                  :height=>221, width: 177, :crop=>"pad"],
+                :fallback_content => "Your browser does not support HTML5 video tags." ) %>
+              </div>
               <div class="username-div mb-auto p-2">
                 <%= review.user.email.match(/(.*)@.*/)[1] %>
               </div>

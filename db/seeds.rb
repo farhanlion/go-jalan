@@ -160,13 +160,13 @@ beauty_places['beauty_companies'].each do |company|
   new_provider.latitude = latitude
   new_provider.longitude = longitude
 
-  # company['image'].each do |pic|
-  #   new_photo = Photo.new(provider: new_provider)
-  #   new_photo.remote_photo_url = pic
-  #   new_photo.save!
-  # end
+  company['image'].each do |pic|
+    new_photo = Photo.new(provider: new_provider)
+    new_photo.remote_photo_url = pic
+    new_photo.save!
+  end
 
-  new_provider_category = ProviderCategory.new(category: Category.find_by(name: 'Fitness'), provider: new_provider)
+  new_provider_category = ProviderCategory.new(category: Category.find_by(name: 'Beauty'), provider: new_provider)
   new_provider_category.save!
 
   company['tags'].each do |tag|
