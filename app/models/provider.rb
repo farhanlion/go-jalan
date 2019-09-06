@@ -19,4 +19,28 @@ class Provider < ApplicationRecord
     using: {
       tsearch: { prefix: true }
     }
+
+  def add_rating
+    total_reviews = reviews.count
+    new_rating = reviews.last.rating
+    if total_reviews.zero?
+      self.avg_rating = new_rating
+    else
+      total_rating = self.avg_rating * (total_reviews - 1)
+      self.avg_rating = (total_rating + new_rating) / (total_reviews)
+    end
+    self.save
+  end
+
+  def delete_rating(review)
+    total_reviews = reviews.count
+    avg_rating = self.avg_rating
+    rating = review.rating
+    if (total_reviews - 1) == 0
+      self.avg_rating = 0
+    else
+      self.avg_rating = (avg_rating - rating) / (total_reviews - 1)
+    end
+    self.save
+  end
 end

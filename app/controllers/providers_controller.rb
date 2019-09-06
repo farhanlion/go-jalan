@@ -8,7 +8,8 @@ class ProvidersController < ApplicationController
     @markers = @providers.map do |provider|
       {
         lat: provider.latitude,
-        lng: provider.longitude
+        lng: provider.longitude,
+        infoWindow: render_to_string(partial: "components/map_popup", locals: { provider: provider })
       }
     end
   end
@@ -18,7 +19,8 @@ class ProvidersController < ApplicationController
     @markers =
       {
         lat: @provider.latitude,
-        lng: @provider.longitude
+        lng: @provider.longitude,
+        infoWindow: render_to_string(partial: "components/map_popup", locals: { provider: @provider })
       }
   end
 
