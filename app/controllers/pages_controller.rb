@@ -3,6 +3,7 @@ class PagesController < ApplicationController
   before_action :loc
 
   def home
+    @reviews = Review.best
   end
 
   def results

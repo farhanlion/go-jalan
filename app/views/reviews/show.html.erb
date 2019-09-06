@@ -1,0 +1,16 @@
+<% if @previous %>
+  <%= link_to "previous", review_path(@previous) %>
+<% end %>
+
+<br>
+
+<%= @review.content %>
+<% @review.review_photos.each do |photo| %>
+  <%= cl_image_tag(photo.photo_url, width: 400, height: 300, crop: :fill) %>
+<% end %>
+
+<br>
+
+<% if @next %>
+  <%= link_to "next", @next %>
+<% end %>

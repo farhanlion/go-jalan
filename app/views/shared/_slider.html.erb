@@ -1,6 +1,6 @@
 <div class="slider responsive lazy">
   <ul class="list-inline">
-    <% Category.all.each do |category| %>
+    <% Category.first(4).each do |category| %>
       <li class="list-inline-item no-wrap">
         <%= render "components/category_card", category: category %>
       </li>
