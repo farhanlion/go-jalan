@@ -1,7 +1,6 @@
 require 'csv'
 require 'open-uri'
 require 'json'
-require 'pry'
 require 'net/http'
 
 Photo.destroy_all
@@ -89,7 +88,7 @@ def url_should_be_accessible(url)
   success
 end
 
-# Seed 10 activities
+# Seed 10 activitiesHey
 puts 'Creating activities...'
 file_path = File.join(__dir__, 'viator.html')
 counter = 1

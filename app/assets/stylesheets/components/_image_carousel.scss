@@ -7,24 +7,24 @@ body {
   font-weight: lighter;
 }
 
-.container {
-  position: absolute;
-  left: 50%;
-  margin-left: -200px;
-  top: 50%;
-  margin-top: -225px;
-  width: 400px;
-  height: 450px;
-}
+// .container {
+//   position: absolute;
+//   left: 50%;
+//   margin-left: -200px;
+//   top: 50%;
+//   margin-top: -225px;
+//   width: 400px;
+//   height: 450px;
+// }
 
-.container section {
-  display: none;
-  height: 100%;
-  padding: 15px;
-  background: #449df5;
-  color: #fff;
-  text-align: center;
-}
+// .container section {
+//   display: none;
+//   height: 100%;
+//   padding: 15px;
+//   background: #449df5;
+//   color: #fff;
+//   text-align: center;
+// }
 
 .container section h1 {
   margin-bottom: 0;
@@ -45,6 +45,14 @@ body {
   cursor: pointer;
   font-size: 1.5em;
   bottom: 0;
+}
+
+.carousel-item{
+  img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
 }
 
 .container section label:nth-child(odd) { right: 120px; }

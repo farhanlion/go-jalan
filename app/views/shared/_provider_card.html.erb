@@ -1,0 +1,13 @@
+<%= link_to provider_path(provider) do%>
+	<div class="card-provider">
+	  <% if provider.photos.count != 0 %>
+	  	<%= cl_image_tag(provider.photos[0].photo )%>
+	  <% end %>
+	  <div class="card-provider-infos">
+	  	<p><%=  %></p>
+	    <h2><%= provider.name%></h2>
+	     <p><%= provider.street_address %></p>
+
+	  </div>
+	</div>
+<% end %>
