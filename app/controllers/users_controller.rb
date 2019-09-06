@@ -18,6 +18,10 @@ before_action :set_user, only: [:show, :edit, :update, :destroy]
     redirect_to @user
   end
 
+  def username
+    return self.email.match(/(.*)@.*/)[1]
+  end
+
   private
 
   def set_user
@@ -27,5 +31,4 @@ before_action :set_user, only: [:show, :edit, :update, :destroy]
   def user_params
     params.required(:user).permit(:first_name, :last_name, :email, :avatar)
   end
-
 end
