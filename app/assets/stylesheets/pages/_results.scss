@@ -23,7 +23,7 @@ h1 {
   }
 }
 .tabs {
-  width: 650px;
+  width:100%;
   float: none;
   list-style: none;
   position: relative;
@@ -61,7 +61,7 @@ h1 {
     width: 100%;
     font-size: 17px;
     line-height: 25px;
-    padding: 25px;
+    padding-top: 25px;
     position: absolute;
     top: 53px;
     left: 0;
