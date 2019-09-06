@@ -2,7 +2,9 @@
   <ul class="list-inline">
     <% Category.first(4).each do |category| %>
       <li class="list-inline-item no-wrap">
-        <%= render "components/category_card", category: category %>
+        <%= link_to category_path(category) do %>
+          <%= render "components/category_card", category: category %>
+        <% end %>
       </li>
     <% end %>
   </ul>
