@@ -1,7 +1,6 @@
 require 'csv'
 require 'open-uri'
 require 'json'
-require 'pry'
 require 'net/http'
 
 Photo.destroy_all
