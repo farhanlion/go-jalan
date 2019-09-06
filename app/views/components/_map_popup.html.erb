@@ -1,0 +1,15 @@
+<div class="map-popup">
+  <h6><%= link_to provider.name, provider_path(provider) %></h6>
+  <p>
+    <% if provider.avg_rating.nil? %>
+      No Rating yet.
+    <% else %>
+      <% provider.avg_rating.to_i.times do |star| %>
+        <i class="fas fa-star"></i>
+      <% end %>
+      <% (5 - provider.avg_rating).to_i.times do |unstar| %>
+        <i class="far fa-star"></i>
+      <% end %>
+    <% end %>
+  </p>
+</div>

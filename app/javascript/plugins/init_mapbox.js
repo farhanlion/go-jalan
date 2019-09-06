@@ -13,14 +13,18 @@ const buildMap = () => {
 const addMarkersToMap = (map, markers) => {
   if (markers.length > 1) {
     markers.forEach((marker) => {
+      const popup = new mapboxgl.Popup().setHTML(marker.infoWindow);
       new mapboxgl.Marker()
         .setLngLat([ marker.lng, marker.lat ])
+        .setPopup(popup)
         .addTo(map);
     });
   }
   else  {
+    const popup = new mapboxgl.Popup().setHTML(markers.infoWindow);
     new mapboxgl.Marker()
         .setLngLat([ markers.lng, markers.lat ])
+        .setPopup(popup)
         .addTo(map);
   }
 };

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_04_030057) do
+ActiveRecord::Schema.define(version: 2019_09_06_043150) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -79,7 +79,6 @@ ActiveRecord::Schema.define(version: 2019_09_04_030057) do
     t.string "translated_name"
     t.text "description"
     t.string "price"
-    t.float "avg_rating"
     t.string "street_address"
     t.string "district"
     t.string "city"
@@ -91,6 +90,7 @@ ActiveRecord::Schema.define(version: 2019_09_04_030057) do
     t.float "latitude"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float "avg_rating", default: 0.0, null: false
   end
 
   create_table "review_photos", force: :cascade do |t|
