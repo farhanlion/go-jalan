@@ -1,0 +1,58 @@
+input[type="radio"] { display: none; }
+
+input[type="radio"]:checked + section { display: block; }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: lighter;
+}
+
+.container {
+  position: absolute;
+  left: 50%;
+  margin-left: -200px;
+  top: 50%;
+  margin-top: -225px;
+  width: 400px;
+  height: 450px;
+}
+
+.container section {
+  display: none;
+  height: 100%;
+  padding: 15px;
+  background: #449df5;
+  color: #fff;
+  text-align: center;
+}
+
+.container section h1 {
+  margin-bottom: 0;
+  font-family: 'Nunito', sans-serif;
+  font-weight: lighter;
+  font-size: 2em;
+}
+
+.container section p {
+  width: 75%;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.container section label {
+  position: absolute;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 1.5em;
+  bottom: 0;
+}
+
+.container section label:nth-child(odd) { right: 120px; }
+
+.container section label:nth-child(even) { left: 120px; }
+
+.container section > i {
+  font-size: 6em !important;
+  margin-top: 50px;
+  margin-bottom: 25px;
+}

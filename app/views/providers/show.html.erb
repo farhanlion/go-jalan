@@ -1,10 +1,11 @@
-<% @provider.photos.each do |photo| %>
-  <%= cl_image_tag(photo.photo, width: 300, height: 300, crop: :fill) %>
-<% end %>
-<h1>This is a Provider page</h1>
+<div class="row">
+  <%= render "components/image_carousel", provider: @provider %>
+</div>
+
 <h2><%= @provider.name %></h2>
 <p>Translated name: <%= @provider.translated_name %></p>
 <p>Description: <%= @provider.description %></p>
+<p>Rating: <%= @provider.avg_rating %></p>
 <p>Tags: <% @provider.provider_tags.each do |t| %>
     <%= t.tag.name %>
   <% end %>
@@ -13,7 +14,7 @@
     <%= c.category.name %>
   <% end %>
 </p>
-<p>Rating: <%= @provider.avg_rating %></p>
+
 <p>Price: <%= @provider.price %></p>
 <p>Address: <%= @provider.street_address %></p>
 <p>District: <%= @provider.district %></p>
