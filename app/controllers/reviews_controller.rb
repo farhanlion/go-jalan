@@ -44,12 +44,12 @@ class ReviewsController < ApplicationController
     authorize @review
     if @review.save
       if params[:review][:photo_url].nil?
-        redirect_to @provider
       else
         params[:review][:photo_url].each do |photo|
           ReviewPhoto.create(photo_url: photo, review: @review)
         end
       end
+      @provider.add_rating
       redirect_to @provider
     else
       render :new_no_provider if params[:provider_id].nil?
@@ -73,6 +73,7 @@ class ReviewsController < ApplicationController
     @review.review_photos.each do |photo|
       photo.destroy
     end
+    @review.provider.delete_rating(@review)
     @review.destroy
     redirect_to @review.provider
   end

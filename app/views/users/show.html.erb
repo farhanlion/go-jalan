@@ -1,26 +1,81 @@
-<h1>Hi <%= @user.first_name %>!</h1>
-<% if @user.avatar.filename.nil? %>
-  <p><%= image_tag "avatar-default.png", width: 100, height: 100, crop: :fill %></p>
-<% else %>
-  <p><%= cl_image_tag(@user.avatar, width: 100, height: 100, crop: :fill) %></p>
-<% end %>
-<p>First name: <%= @user.first_name %></p>
-<p>Last name: <%= @user.last_name %></p>
-<p>Email: <%= @user.email%></p>
-<p><%= link_to "Edit profile", edit_user_path(@user) %></p>
-<p><%= link_to "Change password", edit_user_registration_path %></p>
-<h2>My Reviews</h2>
-<% if @reviews.nil? %>
-  <p>You don't have any reviews yet.</p>
-<% else %>
-  <% @reviews.each do |review| %>
-    <%= render "shared/review", review: review %>
-  <% end %>
-<% end %>
-<h2>My Favourites</h2>
-  <% current_user.favourites.each do |fav| %>
-     <div class="border-bottom">
-       <p><%= fav.provider.name %></p>
-      <%= link_to 'Delete this favourite', favourite_path(fav), method: :delete %>
-     </div>
-  <% end %>
+<div class="container w-100">
+  <div class="row">
+    <div class="col">
+      <h1>Hi <%= @user.first_name %>!</h1>
+    </div>
+  </div>
+  <div class="row border-bottom">
+    <div class="col-3">
+      <div class="user-avatar">
+        <% if @user.avatar.filename.nil? %>
+          <p><%= image_tag("avatar-default.png", class: "avatar-large", crop: :fill) %></p>
+        <% else %>
+          <p><%= cl_image_tag(@user.avatar, class: "avatar-large") %></p>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-9 pl-5">
+      <div class="user-info">
+        <p class="mb-1"><%= @user.first_name %> <%= @user.last_name %></p>
+        <p class="mb-1"><%= @user.email%></p>
+        <div class="user-links">
+          <ul class="list-inline">
+            <li class="list-inline-item"><%= link_to "Edit profile", edit_user_path(@user) %></li>
+            <li class="list-inline-item"><%= link_to "Change password", edit_user_registration_path %></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row border-bottom">
+    <ul class="tabs" role="tablist">
+        <li>
+            <input type="radio" name="tabs" id="tab1" checked />
+            <label for="tab1"
+                   role="tab"
+                   aria-selected="true"
+                   aria-controls="panel1"
+                   tabindex="0">My Reviews</label>
+            <div id="tab-content1"
+                 class="tab-content"
+                 role="tabpanel"
+                 aria-labelledby="description"
+                 aria-hidden="false">
+              <% if @reviews.nil? %>
+                <p>You don't have any reviews yet.</p>
+              <% else %>
+                <% @reviews.each do |review| %>
+                  <%= render "shared/review", review: review %>
+                <% end %>
+              <% end %>
+          </div>
+        </li>
+
+         <li>
+            <input type="radio" name="tabs" id="tab2" />
+            <label for="tab2"
+                   role="tab"
+                   aria-selected="false"
+                   aria-controls="panel2"
+                   tabindex="0">My Favourites</label>
+            <div id="tab-content2"
+                 class="tab-content"
+                 role="tabpanel"
+                 aria-labelledby="specification"
+                 aria-hidden="true">
+                <% current_user.favourites.each do |fav| %>
+                   <div class="border-bottom">
+                     <p><%= fav.provider.name %></p>
+                    <%= link_to 'Delete this favourite', favourite_path(fav), method: :delete %>
+                   </div>
+                <% end %>
+             </div>
+        </li>
+    </ul>
+</div>
+
+
+
+
+
+
