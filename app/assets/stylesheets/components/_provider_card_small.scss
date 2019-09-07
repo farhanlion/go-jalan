@@ -1,0 +1,30 @@
+.provider-card-small {
+
+  p {
+    margin: 0;
+    line-height: 1.1;
+    font-size : 1em;
+  }
+  h5 {
+    margin: 0;
+  }
+}
+
+.provider-image {
+    position: relative;
+
+  img {
+
+  }
+  i {
+    position: absolute;
+    left: 9px;
+    top: 9px;
+    color: $white;
+  }
+
+}
+
+.provider-rating {
+  width: 50px;
+}
