@@ -1,59 +1,58 @@
-<h1>Search results</h1>
+<div></div><h1>Search results</h1>
 <p>Filter by:</p>
-  <p><%= link_to "tags", results_tags_path %></p>
-  <p><%= link_to "location", results_location_path %></p>
-
+<p><%= link_to "tags", results_tags_path %></p>
+<p><%= link_to "location", results_location_path %></p>
 <ul class="tabs" role="tablist">
-    <li>
-        <input type="radio" name="tabs" id="tab1" checked />
-        <label for="tab1"
-               role="tab"
-               aria-selected="true"
-               aria-controls="panel1"
-               tabindex="0">Reviews</label>
-        <div id="tab-content1"
-             class="tab-content"
-             role="tabpanel"
-             aria-labelledby="description"
-             aria-hidden="false">
+  <li>
+    <input type="radio" name="tabs" id="tab1" checked />
+    <label for="tab1"
+      role="tab"
+      aria-selected="true"
+      aria-controls="panel1"
+    tabindex="0">Reviews</label>
+    <div id="tab-content1"
+      class="tab-content"
+      role="tabpanel"
+      aria-labelledby="description"
+      aria-hidden="false">
       <!--Reviews results -->
       <h2>Reviews corresponding to search</h2>
-          <% if @reviews.length == Review.all.length %>
-            <h3>Your search did not correspond to any reviews. All reviews:</h3>
-          <% end %>
-          <% @reviews.each do |review| %>
-            <%= render "shared/review", review: review %>
-            <p>-----------------------------------------------------------</p>
-          <% end %>
+      <% if @reviews.length == Review.all.length %>
+      <h3>Your search did not correspond to any reviews. All reviews:</h3>
+      <% end %>
+      <% @reviews.each do |review| %>
+      <%= render "shared/review", review: review %>
+      <p>-----------------------------------------------------------</p>
+      <% end %>
+    </div>
+  </li>
+  <li>
+    <input type="radio" name="tabs" id="tab2" />
+    <label for="tab2"
+      role="tab"
+      aria-selected="false"
+      aria-controls="panel2"
+    tabindex="0">Providers</label>
+    <div id="tab-content2"
+      class="tab-content"
+      role="tabpanel"
+      aria-labelledby="specification"
+      aria-hidden="true">
+      <!--Providers results -->
+      <% if @providers.length == Provider.all.length %>
+      <h3>Your search did not correspond to any provider. All providers:</h3>
+      <% end %>
+      <div class="all-providers">
+        
+      <% @providers.each do |provider| %>
+      
+        <%= render "shared/provider_card", provider: provider %>
+      
+      <% end %>
       </div>
-    </li>
-
-     <li>
-        <input type="radio" name="tabs" id="tab2" />
-        <label for="tab2"
-               role="tab"
-               aria-selected="false"
-               aria-controls="panel2"
-               tabindex="0">Providers</label>
-        <div id="tab-content2"
-             class="tab-content"
-             role="tabpanel"
-             aria-labelledby="specification"
-             aria-hidden="true">
-          <!--Providers results -->
-          <% if @providers.length == Provider.all.length %>
-            <h3>Your search did not correspond to any provider. All providers:</h3>
-          <% end %>
-            <% @providers.each do |provider| %>
-             <%= render "shared/provider_card", provider: provider %>
-          <% end %>
-         </div>
-    </li>
+    </div>
+  </li>
 </ul>
-
-
 <br style="clear: both;" />
-
 <p class="link">See the <a href="https://codepen.io/wallaceerick/pen/IGxim">3D Box</a> demo!</p>
-
 </ul>
