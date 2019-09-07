@@ -21,11 +21,16 @@
                 :fallback_content => "Your browser does not support HTML5 video tags." ) %>
     </div>
   <% else %>
-    <%= cl_image_tag(photo.photo_url, width: 400, height: 300, crop: :fill) %>
+    <%= cl_image_tag(photo.photo_url, width: 500, height: 6000, crop: :fill) %>
   <% end %>
 <% end %>
 
 <%= @review.content %>
+<% if @review.likes.find_by(user: current_user).nil? %>
+  <p><%= link_to "Like this review", review_likes_path(@review), method: :post %></p>
+<% else %>
+  <p><%= link_to "Unlike this review", like_path(@review), method: :delete %></p>
+<% end %>
 
 <br>
 

@@ -1,5 +1,6 @@
 <div class="row d-flex flex-column text-center">
-<h1>My Favourite</h1>
+<h1>My Favourites</h1>
+<h2>Providers I faved</h2>
 <% if @favs.nil? %>
   <p>No favourites yet.</p>
   <p>Sign up or Login to start</p>
@@ -9,6 +10,13 @@
     <p><%= fav.user.email %> <i class="far fa-heart"></i> <%= fav.provider.name %></p>
   </div>
   <% end %>
+ <h2>Reviews I liked</h2>
+   <div class="review-likes">
+    <% current_user.likes.each do |like| %>
+      <%= render "components/review_card_small", review: like.review %>
+    <% end %>
+  </div>
+
 <% end %>
 
 
