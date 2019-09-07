@@ -15,4 +15,8 @@ class User < ApplicationRecord
     end
     favourited_providers
   end
+
+  def username
+   return self.email.match(/(.*)@.*/)[1]
+  end
 end
