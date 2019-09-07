@@ -42,10 +42,7 @@
       </div>
       <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
         <% current_user.favourites.each do |fav| %>
-           <div class="border-bottom">
-             <p><%= fav.provider.name %></p>
-            <%= link_to 'Delete this favourite', favourite_path(fav), method: :delete %>
-           </div>
+             <%= render "components/provider_card_small", fav: fav, user: @user %>
         <% end %>
       </div>
     </div>
