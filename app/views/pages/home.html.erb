@@ -1,17 +1,18 @@
-<div class="row">
-  <%= render "shared/banner" %>
-</div>
-<div class="row">
-  <%= render "shared/slider" %>
-</div>
-<div class="row">
-  <%= render "components/review_card_small" %>
-</div>
-<br>
-<br>
-<div class="row">
-  <p><%= link_to "All Providers", providers_path %></p>
-  <p><%= link_to "All Reviews", reviews_path %></p>
-</div>
 
-
+  <div class="row">
+    <%= render "shared/banner" %>
+  </div>
+  <div class="row">
+    <%= render "shared/slider" %>
+  </div>
+  <div class="d-flex p-0 m-0">
+    <% @reviews.each do |review| %>
+      <div class="col-sm-5 p-0 m-0">
+         <%= render "components/review_card_small", review: review %>
+      </div>
+    <% end %>
+  </div>
+  <div class="row">
+    <p><%= link_to "All Providers", providers_path %></p>
+    <p><%= link_to "All Reviews", reviews_path %></p>
+  </div>

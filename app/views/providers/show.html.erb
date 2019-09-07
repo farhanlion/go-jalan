@@ -15,15 +15,15 @@
   <li class="nav-item">
     <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Details</a>
   </li>
- 
+
 </ul>
 <div class="tab-content" id="pills-tabContent">
   <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-    
+
 <h2>Reviews for this provider</h2>
 <p>--------------------------</p>
 <% @provider.reviews.each do |review| %>
-  <%= render "shared/review", review: review %>
+  <%= render "components/review_card_small", review: review %>
 <% end %>
 <%= link_to "Add a review", new_provider_review_path(@provider) %>
 <% if current_user.favourited_providers.include?(@provider) %>
@@ -37,35 +37,35 @@
   </div>
   <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
     <div class="container">
-     
 
-      
-      
-      
-      <div class ="price-container d-flex">  
+
+
+
+
+      <div class ="price-container d-flex">
       <div class="price-title w-25">Price</div>
       <div class="price-info w-75"><%= @provider.price %></div>
       </div>
 
-      <div class ="tags-container d-flex">  
+      <div class ="tags-container d-flex">
       <div class="tags-title w-25">Good for</div>
         <div class="tags-info w-75">
           <p>
           <% @provider.provider_tags.each do |tag| %>
             <%= tag.tag.name %>
           <% end %>
-            
+
           </p>
         </div>
       </div>
 
 
-<div class ="phone-container d-flex">  
+<div class ="phone-container d-flex">
       <div class="phone-title w-25">Phone</div>
       <div class="phone-info w-75"><%= @provider.phone_number %></div>
       </div>
 
-       <div class ="address-container d-flex">  
+       <div class ="address-container d-flex">
       <div class="address-title w-25">Address</div>
       <div class="address-info w-75"><%= @provider.street_address %></div>
       </div>

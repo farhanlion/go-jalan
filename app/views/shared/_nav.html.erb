@@ -1,38 +1,38 @@
-<div class="nav-bar bg-white fixed-bottom w-100">
-  <ul class="list-inline d-flex justify-content-around pl-2 pr-2">
+<div class="nav-bar fixed-bottom w-100 pt-1">
+  <ul class="list-inline d-flex justify-content-around">
     <li class="list-inline-item text-center">
       <%= link_to root_path do %>
-      <i class="far fa-compass"></i>
-      <p>GoJalan</p>
+      <i class="far fa-compass icon"></i>
+      <p>Home</p>
       <% end %>
     </li>
     <li class="list-inline-item text-center">
       <%= link_to nearby_path do %>
-        <i class="fas fa-map-marker-alt"></i>
+        <i class="fas fa-map-marker-alt icon"></i>
         <p>Nearby</p>
     <% end %>
     </li>
     <li class="list-inline-item text-center">
       <%= link_to new_review_path do %>
-        <i class="fas fa-plus-circle"></i>
-        <p>Add Review</p>
+        <i class="fas fa-plus-circle icon"></i>
+        <p>Review</p>
     <% end %>
     </li>
     <li class="list-inline-item text-center">
       <%= link_to favourites_path do %>
-        <i class="far fa-heart"></i>
-        <p>Favourites</p>
+        <i class="far fa-heart icon"></i>
+        <p>Favs</p>
     <% end %>
     </li>
     <li class="list-inline-item text-center">
       <% if current_user.nil? %>
       <%= link_to new_review_path do %>
-          <i class="far fa-user"></i>
+          <i class="far fa-user icon"></i>
           <p>Me</p>
       <% end %>
     <% else %>
       <%= link_to user_path(current_user) do %>
-          <i class="far fa-user"></i>
+          <i class="far fa-user icon"></i>
           <p>Me</p>
       <% end %>
     <% end %>

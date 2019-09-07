@@ -18,10 +18,6 @@ before_action :set_user, only: [:show, :edit, :update, :destroy]
     redirect_to @user
   end
 
-  def username
-    return self.email.match(/(.*)@.*/)[1]
-  end
-
   private
 
   def set_user
