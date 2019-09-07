@@ -1,63 +1,41 @@
-<div class="nav d-flex flex-row w-100 fixed-bottom">
-  <div class="nav-tab text-center">
-    <%= link_to root_path do %>
-    <div class="nav-icon">
-      <p><i class="far fa-compass"></i></p>
-    </div>
-    <div class="nav-text">
+<div class="nav-bar bg-white fixed-bottom w-100">
+  <ul class="list-inline d-flex justify-content-around pl-2 pr-2">
+    <li class="list-inline-item text-center">
+      <%= link_to root_path do %>
+      <i class="far fa-compass"></i>
       <p>GoJalan</p>
-    </div>
-    <% end %>
-  </div>
-  <div class="nav-tab text-center">
-    <%= link_to nearby_path do %>
-      <div class="nav-icon">
-        <p><i class="fas fa-map-marker-alt"></i></p>
-      </div>
-      <div class="nav-text">
+      <% end %>
+    </li>
+    <li class="list-inline-item text-center">
+      <%= link_to nearby_path do %>
+        <i class="fas fa-map-marker-alt"></i>
         <p>Nearby</p>
-      </div>
     <% end %>
-  </div>
-  <div class="nav-tab text-center">
-    <%= link_to new_review_path do %>
-      <div class="nav-icon">
-        <p><i class="fas fa-plus-circle"></i></p>
-      </div>
-      <div class="nav-text">
-        <p>Add Review</p>
-      </div>
-    <% end %>
-  </div>
-  <div class="nav-tab text-center">
-    <%= link_to favourites_path do %>
-      <div class="nav-icon">
-        <p><i class="far fa-heart"></i></p>
-      </div>
-      <div class="nav-text">
-        <p>Favourites</p>
-      </div>
-    <% end %>
-  </div>
-  <div class="nav-tab text-center">
-    <% if current_user.nil? %>
+    </li>
+    <li class="list-inline-item text-center">
       <%= link_to new_review_path do %>
-        <div class="nav-icon">
-          <p><i class="far fa-user"></i></p>
-        </div>
-        <div class="nav-text">
+        <i class="fas fa-plus-circle"></i>
+        <p>Add Review</p>
+    <% end %>
+    </li>
+    <li class="list-inline-item text-center">
+      <%= link_to favourites_path do %>
+        <i class="far fa-heart"></i>
+        <p>Favourites</p>
+    <% end %>
+    </li>
+    <li class="list-inline-item text-center">
+      <% if current_user.nil? %>
+      <%= link_to new_review_path do %>
+          <i class="far fa-user"></i>
           <p>Me</p>
-        </div>
       <% end %>
     <% else %>
       <%= link_to user_path(current_user) do %>
-        <div class="nav-icon">
-          <p><i class="far fa-user"></i></p>
-        </div>
-        <div class="nav-text">
+          <i class="far fa-user"></i>
           <p>Me</p>
-        </div>
       <% end %>
     <% end %>
-  </div>
+    </li>
+  </ul>
 </div>
