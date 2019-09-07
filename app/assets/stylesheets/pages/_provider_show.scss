@@ -1,0 +1,88 @@
+$purple: #3F1A3F;
+$yellow: #FBBA33;
+
+.provider-all-info {
+	width:100%;
+	padding-left:10px; 
+}
+
+.provider-all-info p {
+	font-family: "Raleway", "Helvetica", "sans-serif";
+	font-weight: 300;
+}
+
+.provider-all-info h2 {
+	margin-top: 35px;
+    margin-bottom: 14px;
+    margin-left: 6px;
+    font-weight: 400;
+    font-size: 40px;
+}
+
+.provider-basic-info h2 {	
+    color: $purple
+}
+
+.provider-basic-info p {
+	font-size: 20px;
+}
+
+.provider-basic-info p:first-letter {  
+	display: block;
+	  float: left;
+	  margin:0px;
+	 color:$yellow;
+	  font-size:80px;
+	  margin-top: -20px;
+	  margin-bottom: -20px;
+	  padding-right: 5px
+}
+
+
+.provider-tabs {
+	justify-content: space-evenly;
+    border-top: line;
+    border-bottom: line;
+
+}  
+
+.provider-tab-link {
+	margin: 5px 0px 5px 0px;
+	padding: 10px 0px 10px 0px;
+}
+
+.provider-tab-link.active {
+	margin: 5px 0px 5px 0px;
+	padding: 10px 0px 10px 0px;
+}
+
+
+
+.provider-tab {
+	width: 50%;
+	text-align: center;
+	font-size:25px;
+	font-family: "Raleway", "Helvetica", "sans-serif";
+	font-weight: 300;
+	border-top-style: solid;
+    border-color: gray;
+    border-top-width: 0.02px;
+    border-bottom-style: solid;
+    border-bottom-width: 0.02px;
+}
+
+.provider-tab-link.active {
+	background-color: $purple !important;
+}
+
+.provider-tab-link:not(.active) {
+	color: gray;
+}
+
+.details-container {
+	margin-bottom: 20px;
+	font-size:17px;
+	font-family: "Raleway", "Helvetica", "sans-serif";
+	font-weight: 300;
+}
+
