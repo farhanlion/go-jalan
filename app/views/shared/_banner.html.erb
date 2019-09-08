@@ -1,13 +1,13 @@
 <div class="banner fixed-top">
-  <div class="container d-flex flex-column">
+  <div class="banner-container d-flex flex-column">
     <h1>GoJalan <strong>Get a life!</strong></h1>
     <div class="search">
       <%= form_tag results_path, method: :get, class: "d-flex mx-auto justify-content-center" do %>
         <%= text_field_tag :query,
           params[:query],
           class: "form-control",
-          placeholder: "Search for a provider or review"    %>
-        <%= submit_tag "Search", class: "btn btn-primary ml-3" %>
+          placeholder: "Find something to do... "    %>
+        <%= submit_tag "Search", class: "btn btn-primary ml-2" %>
       <% end %>
     </div>
   </div>

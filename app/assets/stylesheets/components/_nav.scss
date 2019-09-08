@@ -1,8 +1,9 @@
 .nav-bar {
-  background-color: white;
+  background-color: $yellow;
   font-family: $body-font;
   font-weight: bold;
   font-size: 13px;
+  height:15%;
 
   p {
     margin: 0;
@@ -11,8 +12,13 @@
   }
 
   ul {
+    height:100%;
     margin: 0;
     padding: 0;
+    li{
+      width:100%;
+      margin:0;
+    }
   }
 
   .nav-text a {
