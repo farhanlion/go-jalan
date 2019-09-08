@@ -1,10 +1,16 @@
 .nav-bar {
-  background-color: $yellow;
-  font-family: $body-font;
-  font-weight: bold;
-  font-size: 13px;
-  height:15%;
-
+  background-color: white;
+    font-family: "Raleway", "Helvetica", "sans-serif";
+    font-weight: bold;
+    font-size: 15px;
+    width: 100%;
+    border-top-style: solid;
+    border-color: gray; 
+    border-width: 1px;
+    margin: auto;
+    margin-bottom: 10px;
+    height: 9%;
+    padding-top: 3.25%;
   p {
     margin: 0;
     padding: 0;
@@ -15,10 +21,17 @@
     height:100%;
     margin: 0;
     padding: 0;
-    li{
-      width:100%;
-      margin:0;
-    }
+  }
+
+  .nav-icon {
+    font-size: 23px;
+    margin-bottom: 6%;
+  }
+
+  .nav-buttons{
+    width:100%;
+    margin:auto;
+
   }
 
   .nav-text a {

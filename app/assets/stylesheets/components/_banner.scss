@@ -46,9 +46,11 @@
       background-color: #ffffff14;
       color: white;
       font-weight: 600;
+      transition: 0.2s;
       &:focus{
         background-color: white;
         color: black;
+        transition: 0.2s;
       }
 
     }
@@ -62,6 +64,7 @@
     .form-control:focus + .btn{
       background-color: $purple;
       box-shadow: 0 0px 1px rgba(0, 0, 0, 5);
+      transition: 0.2s;
 
     }
 
@@ -73,6 +76,7 @@
       border-radius: 6px;
       border-color: $yellow;
       border-width: 0.385px;
+      transition: 0.2s;
     }
   }
   
@@ -86,3 +90,4 @@
 
 
 }
+
