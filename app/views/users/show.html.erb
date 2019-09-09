@@ -42,7 +42,7 @@
       </div>
       <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
         <% current_user.favourites.each do |fav| %>
-             <%= render "components/provider_card_small", fav: fav, user: @user %>
+             <%= render "components/provider_card_small", provider: fav.provider %>
         <% end %>
       </div>
     </div>
