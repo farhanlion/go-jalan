@@ -7,16 +7,15 @@
         <%= cl_image_tag(@user.avatar, class: "avatar-large align-self-center ml-3 mb-3 mr-3") %>
       <% end %>
       <div class="media-body">
-        <% if @user.first_name.nil? %>
-          <h5 class="mt-0 mb-0"><%= %w(Funky Cool Dreamy Awesome Marvel).sample %> Jalan</h5>
-        <% else %>
-          <h5 class="mt-0 mb-0"><%= @user.first_name %> <%= @user.last_name %></h5>
+        <h5 class="mt-0 mb-0"><%= @user.first_name %> <%= @user.last_name %></h5>
+        <p class="profile-desc mr-2"><%= @user.description %></p>
+        <% if current_user == @user %>
+          <p><%= @user.email%></p>
         <% end %>
-        <% if @user.description.nil? %>
-          <p class="profile-desc mr-2">User does not have a description yet.</p>
-        <% else %>
-          <p class="profile-desc mr-2"><%= @user.description %></p>
-        <% end %>
+        <ul class="list-inline">
+            <li class="list-inline-item"><%= link_to "Edit profile", edit_user_path(@user) %></li>
+            <li class="list-inline-item"><%= link_to "Change password", edit_user_registration_path %></li>
+          </ul>
       </div>
     </div>
   </div>
