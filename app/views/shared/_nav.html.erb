@@ -40,7 +40,7 @@
           <i class="far fa-user icon nav-icon"></i>
           <p>Me</p>
       <% end %>
-    <% elsif current_page?(user_path(current_user))%>
+    <% elsif current_page?('/profile')%>
       <%= link_to user_path(current_user) do %>
           <i class="far fa-user icon nav-icon active-page"></i>
           <p class="active-page">Me</p>
