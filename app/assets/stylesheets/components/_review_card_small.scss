@@ -1,9 +1,12 @@
 .review-card-small {
-  width: 190px;
-  height: 230px;
+  width: 50vw;
+  height: 235px;
   position: relative;
   font-family: Helvetica;
   margin: 0;
+  padding: 0;
+  border: 1px solid white;
+  overflow: hidden;
 }
 
 .image-card {
@@ -24,6 +27,9 @@
 }
 
 .video-card {
+  .video {
+    width: 100%;
+  }
   .content {
   position: absolute;
   top: 180px;
