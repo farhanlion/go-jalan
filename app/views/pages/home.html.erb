@@ -1,36 +1,28 @@
-<div class="all-home">
-  
-  <div class="row">
+<div class="home m-0 p-0 mw-100">
+  <div class="row m-0 p-0">
     <%= render "shared/banner" %>
   </div>
+
   <div class="row scroll-menu">
     <%= render "shared/slider" %>
   </div>
-  <div class="d-flex p-0 m-0">
-    <% @reviews.each do |review| %>
-      <div class="col-sm-5 p-0 m-0">
-         <%= render "components/review_card_small", review: review %>
-      </div>
-    <% end %>
+
+
+  <div class="review-cards d-flex">
+    <div class="row mw-100 p-0 m-0">
+      <% @reviews.each do |review| %>
+        <div class="review-card col-6 mw-50 p-0 m-0">
+           <%= render "components/review_card_small", review: review %>
+        </div>
+      <% end %>
+    </div>
   </div>
 
-  <div class="all-reviews">
-    <h2>Reviews</h2>
-    <p>#3F1A3F</p>
-    <p>#FBBA33</p>
-  </div>
-  
 </div>
 
+<% if current_page?('/') %>
+  <%= true %>
+<% end %>
 
+<br><br><br><br><br>
 
-
-
-
-
-
-
-  <div class="links mt-5">
-    <p><%= link_to "All Providers ", providers_path %></p>
-    <p><%= link_to "All Reviews", reviews_path %></p>
-  </div>

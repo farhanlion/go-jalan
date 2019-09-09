@@ -1,37 +1,52 @@
-<div class="nav-bar fixed-bottom">
+<div class="nav-bar fixed-bottom mw-100">
   <ul class="list-inline d-flex justify-content-around">
-    <li class="list-inline-item text-center nav-buttons active">
+    <li class="list-inline-item text-center">
       <%= link_to root_path do %>
-      <i class="far fa-compass icon nav-icon"></i>
-      <p>Home</p>
+        <% if current_page?('/') %>
+          <i class="far fa-compass icon nav-icon active-page"></i>
+          <p class="active-page">Home</p>
+        <% else %>
+          <i class="far fa-compass icon nav-icon"></i>
+          <p>Home</p>
+        <% end %>
       <% end %>
     </li>
-    <li class="list-inline-item text-center nav-buttons">
+    <li class="list-inline-item text-center ">
       <%= link_to nearby_path do %>
         <i class="fas fa-map-marker-alt icon nav-icon"></i>
         <p>Nearby</p>
     <% end %>
     </li>
-    <li class="list-inline-item text-center nav-buttons">
+    <li class="list-inline-item text-center ">
       <%= link_to new_review_path do %>
         <i class="fas fa-plus-circle icon nav-icon"></i>
         <p>Review</p>
     <% end %>
     </li>
-    <li class="list-inline-item text-center nav-buttons">
-      <%= link_to activity_path do %>
-        <i class="far fa-heart icon nav-icon"></i>
-        <p>Activity</p>
-    <% end %>
+    <li class="list-inline-item text-center ">
+      <%= link_to favourites_path do %>
+        <% if current_page?('/favourites') %>
+          <i class="far fa-heart icon nav-icon active-page"></i>
+          <p class="active-page">Favs</p>
+        <% else %>
+          <i class="far fa-heart icon nav-icon"></i>
+          <p>Favs</p>
+        <% end %>
+      <% end %>
     </li>
-    <li class="list-inline-item text-center nav-buttons">
+    <li class="list-inline-item text-center ">
       <% if current_user.nil? %>
-      <%= link_to new_review_path do %>
+        <%= link_to new_review_path do %>
           <i class="far fa-user icon nav-icon"></i>
           <p>Me</p>
       <% end %>
+    <% elsif current_page?(user_path(current_user))%>
+      <%= link_to user_path(current_user) do %>
+          <i class="far fa-user icon nav-icon active-page"></i>
+          <p class="active-page">Me</p>
+      <% end %>
     <% else %>
-      <%= link_to profile_path do %>
+     <%= link_to user_path(current_user) do %>
           <i class="far fa-user icon nav-icon"></i>
           <p>Me</p>
       <% end %>
