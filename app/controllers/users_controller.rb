@@ -1,11 +1,24 @@
 class UsersController < ApplicationController
 skip_before_action :authenticate_user!, only: [:show]
-before_action :set_user, only: [:show, :edit, :update, :destroy]
+before_action :set_user, only: [:edit, :update, :destroy]
 
-  def show
+  def profile
     @user = current_user
     @reviews = @user.reviews
     authorize @user
+  end
+
+  def show
+    skip_authorization
+    if User.exists?(params[:id])
+      @user = User.find(params[:id])
+      if @user == current_user
+        redirect_to profile_path
+      end
+      @reviews = Review.where(user: params[:id])
+    else
+      redirect_to root_path
+    end
   end
 
   def edit
@@ -25,6 +38,6 @@ before_action :set_user, only: [:show, :edit, :update, :destroy]
   end
 
   def user_params
-    params.required(:user).permit(:first_name, :last_name, :email, :avatar)
+    params.required(:user).permit(:first_name, :last_name, :description, :email, :avatar)
   end
 end
