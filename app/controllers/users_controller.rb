@@ -5,6 +5,9 @@ before_action :set_user, only: [:edit, :update, :destroy]
   def profile
     @user = current_user
     @reviews = @user.reviews
+    @providers = @user.favourites.map do |fav|
+      fav.provider
+    end
     authorize @user
   end
 
