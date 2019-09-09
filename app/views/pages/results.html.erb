@@ -31,15 +31,10 @@
 	</div>
 	<div class="tab-panel fade" id="pills-providers" role="tabpanel" aria-labelledby="pills-providers-tab">
 		<div class="providers-container">
-		<% if @providers.length == Provider.all.length %>
-      <h3>Your search did not correspond to any provider. All providers:</h3>
-      <% end %>
       <div class="all-providers">
 
-      <% @providers.each do |provider| %>
-
-        <%= render "shared/provider_card", provider: provider %>
-
+      <% @providers.each do |provider| %>      
+         <%= render "components/provider_card_small", provider: provider %>
       <% end %>
       </div>
 		</div>

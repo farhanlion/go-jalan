@@ -13,6 +13,10 @@ class UserPolicy < ApplicationPolicy
     true
   end
 
+  def profile?
+    true
+  end
+
   def new?
     true
   end
