@@ -14,7 +14,7 @@
 
 <% @review.review_photos.each do |photo| %>
  <% if photo.photo_url.resource_type == "video" %>
-    <div class="video border">
+    <div class="big-review-card-video border">
       <%= cl_video_tag(photo.photo_url.file.public_id,
                 :loop => true, :controls => true, :autoplay => true,
                 :transformation => [width: 500, height: 600, crop: :fill],
