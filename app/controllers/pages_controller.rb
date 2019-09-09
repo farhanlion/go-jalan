@@ -28,6 +28,11 @@ class PagesController < ApplicationController
     end
   end
 
+  def activity
+    @likes = current_user.likes
+    @favs = current_user.favourites
+  end
+
   def loc
     if request.location
       result = request.location
