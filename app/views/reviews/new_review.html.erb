@@ -1,4 +1,10 @@
-<h1>Create a new review</h1>
+<%= simple_form_for [@review] do |f| %>
+  <%= f.input :photo_url, label: 'Add review', input_html: {value: '', multiple: "true"}, as: :file %>
+<% end %>
+
+
+
+<h1>Upload a video</h1>
 <p>Hey <%= @user.first_name %></p>
 <%= simple_form_for [@review] do |f| %>
   <%= f.input :photo_url, label: 'Upload photo/video', input_html: {value: '', multiple: "true"}, as: :file %>
