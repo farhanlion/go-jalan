@@ -15,13 +15,11 @@ class PagesController < ApplicationController
     @providers = @providers.global_search(params[:query]) if params[:query].present?
     @tags = []
     prov_ids = []
-
     if params[:category].present?
       params[:category].each do |category|
         prov_ids << ProviderCategory.where(category_id: category).pluck(:provider_id)
       end
       @providers = @providers.where(id: prov_ids.flatten.uniq)
-
       @providers.each do |provider|
         @tags << provider.tags
       end
@@ -32,10 +30,9 @@ class PagesController < ApplicationController
       params[:tag].each do |tag|
         prov_ids << ProviderTag.where(tag_id: tag).pluck(:provider_id)
       end
-      @providers = @providers.where(id: prov_ids.flatten.uniq)
-
     end
-    # @reviews = Review.all if @reviews.empty?
+    @providers = @providers.where(id: prov_ids.flatten.uniq)
+    @providers = @providers.sort_by(&:avg_rating).reverse! if params["sort"]=="rating"
   end
 
   def nearby
@@ -67,5 +64,6 @@ class PagesController < ApplicationController
     end
   end
 
-  def results_tags; end
+  def results_tags
+  end
 end

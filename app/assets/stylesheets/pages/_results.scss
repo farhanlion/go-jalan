@@ -87,3 +87,13 @@
     display: flex;
     justify-content: space-evenly;
 }
+
+
+.sort-bit{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    .dropdown-item {
+        width: 23%;
+    }
+}
