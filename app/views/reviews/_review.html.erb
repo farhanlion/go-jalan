@@ -23,5 +23,15 @@
   <div class="ml-2 mt-2 big-review-card-content small">
     <p><%= review.content %></p>
   </div>
+
+  <% if current_user.likes.find_by(review: @review).nil? %>
+    <%= link_to review_likes_path(review),method: :post do %>
+       <i class="far fa-heart active"></i>
+    <% end %>
+  <% else %>
+    <%= link_to like_path(review), method: :delete do %>
+      <i class="fas fa-heart"></i>
+    <% end %>
+  <% end %>
 </div>
 
