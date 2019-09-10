@@ -9,12 +9,14 @@
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= stylesheet_pack_tag 'application', media: 'all' %>
+
   </head>
   <body>
     <div class="container d-flex flex-column">
       <%= render 'shared/flashes' %>
       <%= yield %>
       <br><br><br><br><br><br>
+       <%= render "reviews/new_review" %>
       <%= render "shared/nav" %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
