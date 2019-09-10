@@ -23,7 +23,7 @@
           <p>You haven't favourite anything yet.</p>
         <% else %>
           <% current_user.favourites.each do |fav| %>
-               <%= render "components/provider_card_small", fav: fav, user: @user %>
+               <%= render "components/provider_card_small", provider: fav.provider %>
           <% end %>
         <% end %>
       </div>
