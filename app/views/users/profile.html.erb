@@ -15,6 +15,7 @@
         <ul class="list-inline">
             <li class="list-inline-item"><%= link_to "Edit profile", edit_user_path(@user) %></li>
             <li class="list-inline-item"><%= link_to "Change password", edit_user_registration_path %></li>
+            <li class="list-inline-item"><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
           </ul>
       </div>
     </div>
