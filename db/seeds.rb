@@ -283,22 +283,22 @@ video_url_arr = %w(w6q1nsxv2l7axdeuxd51 little-damage_iyvk0q sugar-cane-tower_lc
 # end
 
 
-# # Seed new favs
-puts 'Creating 10 favs for the first user...'
-counter = 1
-10.times do
-  new_favourite = Favourite.new(user: User.first, provider: Provider.find(counter))
-  new_favourite.save!
-  counter += 1
-end
+# # # Seed new favs
+# puts 'Creating 10 favs for the first user...'
+# counter = 1
+# 10.times do
+#   new_favourite = Favourite.new(user: User.first, provider: Provider.find(counter))
+#   new_favourite.save!
+#   counter += 1
+# end
 
-# Seed new likes
-# puts "Creating 10 likes for the first user..."
-counter = 1
-10.times do
-  new_like = Like.new(user: User.first, review: Review.find(counter))
-  new_like.save!
-  counter += 1
-end
+# # Seed new likes
+# # puts "Creating 10 likes for the first user..."
+# counter = 1
+# 10.times do
+#   new_like = Like.new(user: User.first, review: Review.find(counter))
+#   new_like.save!
+#   counter += 1
+# end
 
 
