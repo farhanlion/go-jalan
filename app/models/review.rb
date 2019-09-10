@@ -7,7 +7,7 @@ class Review < ApplicationRecord
   validates :rating, presence: true, inclusion: { in: [1, 2, 3, 4, 5] }
   include PgSearch::Model
   pg_search_scope :global_search,
-    against: [:title, :content],
+    against: [:content],
     associated_against: {
       provider: [:name, :description, :street_address, :district, :country],
       tags: [:name],
