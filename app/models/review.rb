@@ -11,7 +11,7 @@ class Review < ApplicationRecord
     associated_against: {
       provider: [:name, :description, :street_address, :district, :country],
       tags: [:name],
-      categories: [:name]
+      categories: [:name],
     },
     using: {
       tsearch: { prefix: true } # <-- now `superman batm` will return something!

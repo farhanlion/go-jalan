@@ -53,7 +53,7 @@
 
 }
 
-.filter-tabs {
+.search-tabs {
 	justify-content: space-evenly;
 	font-family: $body-font;
 	margin-top: 2%;
@@ -65,7 +65,7 @@
 	}
 }
 
-.filter-tab-link {
+.search-tab-link {
 	color: black !important;
 	background-color: white !important;
 	border-style: none;
@@ -81,4 +81,9 @@
 .all-providers {
 	margin-bottom: 19%;
 
+}
+
+.filters {
+    display: flex;
+    justify-content: space-evenly;
 }
