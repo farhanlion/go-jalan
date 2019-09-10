@@ -22,7 +22,8 @@ const checkForm = () => {
     button.disabled = false;
   }
 
-form.addEventListener('change', evt => {
+if(form){
+  form.addEventListener('change', evt => {
   evt.preventDefault();
   if (checkForm()) {
     enableButton();
@@ -32,6 +33,9 @@ form.addEventListener('change', evt => {
   }
 });
 
+}
+
+if(provider){
 provider.onchange = function () {
   if (checkForm()) {
     enableButton();
@@ -41,7 +45,10 @@ provider.onchange = function () {
   }
 }
 
-rating.onchange = function () {
+}
+
+if(rating){
+  rating.onchange = function () {
   if (checkForm()) {
     enableButton();
   }
@@ -50,12 +57,19 @@ rating.onchange = function () {
   }
 }
 
+}
+
 const triggerForm = () => {
  document.querySelector(".fa-plus-circle").addEventListener('click', () => {
     document.querySelector("#review_photo_url").click();
   });
 
-  document.querySelector("#review_photo_url").addEventListener('change', preview_image );
+
+  const inputBox = document.querySelector("#review_photo_url")
+
+  if(inputBox){
+  inputBox.addEventListener('change', preview_image );
+  }
 
   function preview_image(event) {
    var reader = new FileReader();
@@ -73,9 +87,12 @@ const triggerForm = () => {
 };
 
 const close = document.querySelector(".closebtn")
+if(close){
 close.addEventListener('click',  () => {
   closeForm();
 });
+
+}
 
 export { triggerForm };
 

@@ -1,9 +1,7 @@
-<h1>All Reviews</h1>
-<% if @reviews.empty? %>
-  <p>No reviews to show yet</p>
-<% else %>
-  <% @reviews.each do |review| %>
-    <%= render "shared/review", review: review %>
-    <p>-----------------------------------------------------------</p>
-  <% end %>
-<% end %>
+<div id="reviews">
+  <%= render @reviews %>
+</div>
+<div id="infinite-scrolling">
+  <%= will_paginate %>
+</div>
+

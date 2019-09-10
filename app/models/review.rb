@@ -1,4 +1,5 @@
 class Review < ApplicationRecord
+  extend OrderAsSpecified
   belongs_to :provider
   belongs_to :user
   has_many :tags, through: :provider
@@ -19,16 +20,9 @@ class Review < ApplicationRecord
   has_many :review_photos, dependent: :destroy
   has_many :likes, dependent: :destroy
 
-
-  scope :best, -> {  }
-
+  scope :best, -> { where.not(review_photo: []) }
 
   def next
     self.class.best.where("id > ?", self.id).first
   end
-
-  def previous
-    self.class.best.where("id < ?", self.id).last
-  end
-
 end
