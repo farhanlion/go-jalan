@@ -4,11 +4,8 @@
 	white-space: nowrap;
 	margin: auto;
 	justify-content: space-evenly;
-	
+	&::-webkit-scrollbar {
+	 width: 0 !important;
+	 }
 }
 
-
-.all-reviews {
-	margin-top: 10px;
-	padding-left: 10px;
-}

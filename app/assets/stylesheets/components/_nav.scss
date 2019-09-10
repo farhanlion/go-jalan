@@ -32,12 +32,13 @@
   .nav-text a {
     color: #484848;
   }
-
-  .active {
-    color: #3F1A3F;
-  }
 }
 
 .icon {
   color: $light-gray !important;
+}
+
+.active-page {
+  color: $purple !important;
+  font-weight: bold;
 }
