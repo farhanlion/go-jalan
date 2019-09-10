@@ -26,11 +26,11 @@
 
   <% if current_user.likes.find_by(review: @review).nil? %>
     <%= link_to review_likes_path(review),method: :post do %>
-       <i class="far fa-heart active"></i>
+       <i class="fab fa-hotjar active"></i>
     <% end %>
   <% else %>
     <%= link_to like_path(review), method: :delete do %>
-      <i class="fas fa-heart"></i>
+      <i class="fab fa-hotjar"></i>
     <% end %>
   <% end %>
 </div>
