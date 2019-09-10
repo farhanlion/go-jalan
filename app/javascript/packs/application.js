@@ -28,3 +28,4 @@ seeMore();
 triggerForm();
 
 updateBannerOnScroll();
+
