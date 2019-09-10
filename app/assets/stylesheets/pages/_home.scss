@@ -4,4 +4,8 @@
 	white-space: nowrap;
 	margin: auto;
 	justify-content: space-evenly;
+	&::-webkit-scrollbar {
+	 width: 0 !important;
+	 }
 }
+
