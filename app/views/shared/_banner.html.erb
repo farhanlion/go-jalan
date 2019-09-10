@@ -1,7 +1,10 @@
 <div class="banner fixed-top">
   <div class="banner-container d-flex flex-column">
+    <div class="logo">
+      <%= image_tag 'gojalan-logo-trans', id: "logo" %>
+    </div>
     <div class="banner-text">
-       <h1>GoJalan <strong>Get a life!</strong></h1>
+       <h1><strong>Get a life!</strong></h1>
     </div>
     <div class="search">
       <%= form_tag results_path, method: :get, class: "d-flex mx-auto justify-content-center" do %>
