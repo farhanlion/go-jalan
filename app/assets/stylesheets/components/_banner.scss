@@ -2,7 +2,7 @@
   background-size: cover;
   background-position: center;
   width: 100vw;
-  height: 30vh;
+  height: 25vh;
   background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("banner.jpg");
   z-index: 11;
 
@@ -13,14 +13,14 @@
 
   .banner-container h1 {
     margin-left: 0;
-    margin-top: 23%;
+    margin-top: 20%;
     margin-bottom: 0;
     color: white;
     font-family: $body-font;
     font-size: 40px;
     font-weight: 500;
     vertical-align: center;
-    text-align: center;
+    text-align: left;
     color:$yellow;
 
     strong {
@@ -31,7 +31,7 @@
   }
 
   .search {
-    padding-top: 30px;
+    padding-top: 5%;
     width: 96%;
     font-family: $body-font;
   }
@@ -71,4 +71,11 @@
 
 .fa-search {
   color: $yellow;
+}
+
+#logo {
+  width: 100px;
+  position: fixed;
+  top: 5px;
+  left: 10px;
 }

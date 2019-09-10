@@ -1,0 +1,25 @@
+<div class="d-flex m-0 p-0">
+  <%= cl_image_tag(review.user.avatar, class: "avatar-medium m-3 ml-4") %>
+  <div class="p-0 mt-3 ml-1">
+    <p class="m-0 p-0 font-weight-bold"><%= review.user.username %></p>
+    <p class="m-0 p-0 small"><%= link_to review.provider.name, provider_path(review.provider) %></p>
+  </div>
+</div>
+
+<% review.review_photos.each do |photo| %>
+ <% if photo.photo_url.resource_type == "video" %>
+    <div class="big-review-card-video border">
+      <%= cl_video_tag(photo.photo_url.file.public_id,
+                :loop => true, :controls => true, :autoplay => true,
+                :transformation => [width: 500, height: 600, crop: :fill],
+                :fallback_content => "Your browser does not support HTML5 video tags." ) %>
+    </div>
+  <% else %>
+    <%= cl_image_tag(photo.photo_url, width: 400, height: 300, crop: :fill) %>
+  <% end %>
+<% end %>
+
+<div class="ml-2 mt-2 big-review-card-content small">
+  <p><%= review.content %></p>
+</div>
+
