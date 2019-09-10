@@ -13,17 +13,22 @@
     </li>
     <li class="list-inline-item text-center ">
       <%= link_to nearby_path do %>
-        <i class="fas fa-map-marker-alt icon nav-icon"></i>
-        <p>Nearby</p>
-    <% end %>
+        <% if current_page?('/nearby') %>
+          <i class="fas fa-map-marker-alt icon nav-icon active-page"></i>
+          <p class="active-page">Nearby</p>
+        <% else %>
+          <i class="fas fa-map-marker-alt icon nav-icon"></i>
+          <p>Nearby</p>
+        <% end %>
+      <% end %>
     </li>
-    <li class="list-inline-item text-center nav-buttons">
+    <li class="list-inline-item text-center">
         <i class="fas fa-plus-circle icon nav-icon"></i>
         <p>Review</p>
     </li>
     <li class="list-inline-item text-center ">
       <%= link_to activity_path do %>
-        <% if current_page?('/favourites') %>
+        <% if current_page?('/activity') %>
           <i class="far fa-heart icon nav-icon active-page"></i>
           <p class="active-page">Activity</p>
         <% else %>
@@ -38,26 +43,17 @@
           <i class="far fa-user icon nav-icon"></i>
           <p>Me</p>
       <% end %>
-    <% elsif current_page?('/profile')%>
-      <%= link_to user_path(current_user) do %>
-          <i class="far fa-user icon nav-icon active-page"></i>
-          <p class="active-page">Me</p>
+      <% elsif current_page?('/profile')%>
+        <%= link_to user_path(current_user) do %>
+            <i class="far fa-user icon nav-icon active-page"></i>
+            <p class="active-page">Me</p>
+        <% end %>
+      <% else %>
+       <%= link_to user_path(current_user) do %>
+            <i class="far fa-user icon nav-icon"></i>
+            <p>Me</p>
+        <% end %>
       <% end %>
-    <% else %>
-     <%= link_to user_path(current_user) do %>
-          <i class="far fa-user icon nav-icon"></i>
-          <p>Me</p>
-      <% end %>
-    <% end %>
     </li>
   </ul>
 </div>
-
-
-
-
-
-<script type="text/javascript">
-
-
-</script>

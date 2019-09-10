@@ -1,12 +1,12 @@
 .nav-bar {
     background-color: white;
     font-family: $body-font;
-    font-weight: 500;
-    font-size: 13px;
+    font-weight: 400;
+    font-size: 0.6em;
     width: 100%;
     border-top: 1px solid #ced4da;
-    height: 9%;
-    padding-top: 3.25%;
+    height: 6%;
+    padding-top: 1%;
   p {
     margin: 0;
     padding: 0;
@@ -20,17 +20,13 @@
   }
 
   .nav-icon {
-    font-size: 23px;
+    font-size: 1.2em;
     margin-bottom: 6%;
   }
 
-  .nav-buttons {
-    width:100%;
-    margin:auto;
-  }
-
-  .nav-text a {
+  a {
     color: #484848;
+    text-decoration: none;
   }
 }
 
