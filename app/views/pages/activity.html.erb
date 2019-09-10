@@ -11,11 +11,15 @@
         <% if @likes.empty? %>
           <p>You haven't liked any reviews yet.</p>
         <% else %>
-          <% @likes.each do |like| %>
-            <div class="like">
-              <%= render "components/review_card_small", review: like.review %>
+          <div class="review-cards d-flex">
+            <div class="row mw-100 p-0 m-0">
+              <% @likes.reviews.each do |review| %>
+                <div class="review-card col-6 mw-50 p-0 m-0">
+                   <%= render "components/review_card_small", review: review %>
+                </div>
+              <% end %>
             </div>
-          <% end %>
+          </div>
         <% end %>
       </div>
       <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
@@ -23,7 +27,7 @@
           <p>You haven't favourite anything yet.</p>
         <% else %>
           <% current_user.favourites.each do |fav| %>
-               <%= render "components/provider_card_small", fav: fav, user: @user %>
+               <%= render "components/provider_card_small", provider: fav.provider %>
           <% end %>
         <% end %>
       </div>

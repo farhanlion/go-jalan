@@ -11,7 +11,7 @@ class FavouritesController < ApplicationController
     @fav = Favourite.new(provider: Provider.find(params[:provider_id]), user: current_user)
     authorize @fav
     @fav.save!
-    redirect_to providers_path
+    redirect_to @fav.provider
   end
 
   def destroy
@@ -24,7 +24,7 @@ class FavouritesController < ApplicationController
       authorize @fav
       @fav.destroy
     end
-    redirect_to providers_path
+    redirect_to @provider
   end
 
   private

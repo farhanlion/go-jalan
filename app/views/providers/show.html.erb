@@ -1,14 +1,25 @@
 <div class="row">
+  <% if current_user.favourites.find_by(provider: @provider).nil? %>
+      <%= link_to provider_favourites_path(@provider), id: 'fav', method: :post do %>
+        <i class="far fa-heart active"></i>
+      <% end %>
+    <% else %>
+      <%= link_to favourite_path(@provider),  id: 'fav', method: :delete do %>
+        <i class="fas fa-heart"></i>
+      <% end %>
+    <% end %>
+</div>
+<div class="row">
   <%= render "components/image_carousel", provider: @provider %>
 </div>
 <div class="provider-all-info">
   <div class="provider-basic-info">
-    
+
     <h2><%= @provider.name %></h2>
     <% if @provider.translated_name != nil %>
     <p>Translated name: <%= @provider.translated_name %></p>
     <% end %>
-    <div class="rating-review"> 
+    <div class="rating-review">
       <p class="text-left p-0 provider-rating"><i class="fas fa-star star-icon"></i><%= @provider.avg_rating%></p>
       <p id="review-count">(<%= @provider.reviews.count%> reviews)</p>
 
@@ -24,27 +35,23 @@
     <li class="nav-item provider-tab">
       <a class="nav-link provider-tab-link" id="pills-details-tab" data-toggle="pill" href="#pills-details" role="tab" aria-controls="pills-details" aria-selected="false">Details</a>
     </li>
-    
+
   </ul>
   <div class="tab-content" id="pills-tabContent">
     <div class="tab-pane fade show active" id="pills-reviews" role="tabpanel" aria-labelledby="pills-reviews-tab">
-      <h2>Reviews for this provider</h2>
-      <p>--------------------------</p>
-      <% @provider.reviews.each do |review| %>
-      <%= render "shared/review", review: review %>
-      <% end %>
-      <%= link_to "Add a review", new_provider_review_path(@provider) %>
-      <% if current_user.favourited_providers.include?(@provider) %>
-      <p><%= link_to 'Unfavourite this provider', favourite_path(@provider), method: :delete %></p>
-      <% else %>
-      <p><%= link_to 'Favourite this provider', provider_favourites_path(@provider), method: :post %></p>
-      <% end %>
-      <p>--------------------------</p>
-      <%= link_to "back", providers_path %>
+      <div class="review-cards d-flex">
+        <div class="row mw-100 p-0 m-0">
+          <% @provider.reviews.each do |review| %>
+            <div class="review-card col-6 mw-50 p-0 m-0">
+               <%= render "components/review_card_small", review: review %>
+            </div>
+          <% end %>
+        </div>
+      </div>
     </div>
     <div class="tab-panel fade" id="pills-details" role="tabpanel" aria-labelledby="pills-details-tab">
       <div class="details-container">
-        
+
         <div class ="price-container d-flex">
           <div class="price-title w-25">Price</div>
           <div class="price-info w-75"><%= @provider.price %></div>

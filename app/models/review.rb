@@ -3,11 +3,11 @@ class Review < ApplicationRecord
   belongs_to :user
   has_many :tags, through: :provider
   has_many :categories, through: :provider
-  validates :title, presence: true
-  validates :rating, presence: true, inclusion: { in: [0, 1, 2, 3, 4, 5] }
+  validates :content, presence: true
+  validates :rating, presence: true, inclusion: { in: [1, 2, 3, 4, 5] }
   include PgSearch::Model
   pg_search_scope :global_search,
-    against: [:title, :content],
+    against: [:content],
     associated_against: {
       provider: [:name, :description, :street_address, :district, :country],
       tags: [:name],
@@ -20,7 +20,7 @@ class Review < ApplicationRecord
   has_many :likes, dependent: :destroy
 
 
-  scope :best, -> { where.not(title: nil) }
+  scope :best, -> {  }
 
 
   def next

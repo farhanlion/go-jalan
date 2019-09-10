@@ -13,44 +13,47 @@
     </li>
     <li class="list-inline-item text-center ">
       <%= link_to nearby_path do %>
-        <i class="fas fa-map-marker-alt icon nav-icon"></i>
-        <p>Nearby</p>
-    <% end %>
+        <% if current_page?('/nearby') %>
+          <i class="fas fa-map-marker-alt icon nav-icon active-page"></i>
+          <p class="active-page">Nearby</p>
+        <% else %>
+          <i class="fas fa-map-marker-alt icon nav-icon"></i>
+          <p>Nearby</p>
+        <% end %>
+      <% end %>
     </li>
-    <li class="list-inline-item text-center ">
-      <%= link_to new_review_path do %>
+    <li class="list-inline-item text-center">
         <i class="fas fa-plus-circle icon nav-icon"></i>
         <p>Review</p>
-    <% end %>
     </li>
     <li class="list-inline-item text-center ">
-      <%= link_to favourites_path do %>
-        <% if current_page?('/favourites') %>
+      <%= link_to activity_path do %>
+        <% if current_page?('/activity') %>
           <i class="far fa-heart icon nav-icon active-page"></i>
-          <p class="active-page">Favs</p>
+          <p class="active-page">Activity</p>
         <% else %>
           <i class="far fa-heart icon nav-icon"></i>
-          <p>Favs</p>
+          <p>Activity</p>
         <% end %>
       <% end %>
     </li>
     <li class="list-inline-item text-center ">
       <% if current_user.nil? %>
-        <%= link_to new_review_path do %>
+        <%= link_to  new_user_session_path do %>
           <i class="far fa-user icon nav-icon"></i>
           <p>Me</p>
       <% end %>
-    <% elsif current_page?('/profile')%>
-      <%= link_to user_path(current_user) do %>
-          <i class="far fa-user icon nav-icon active-page"></i>
-          <p class="active-page">Me</p>
+      <% elsif current_page?('/profile')%>
+        <%= link_to user_path(current_user) do %>
+            <i class="far fa-user icon nav-icon active-page"></i>
+            <p class="active-page">Me</p>
+        <% end %>
+      <% else %>
+       <%= link_to user_path(current_user) do %>
+            <i class="far fa-user icon nav-icon"></i>
+            <p>Me</p>
+        <% end %>
       <% end %>
-    <% else %>
-     <%= link_to user_path(current_user) do %>
-          <i class="far fa-user icon nav-icon"></i>
-          <p>Me</p>
-      <% end %>
-    <% end %>
     </li>
   </ul>
 </div>

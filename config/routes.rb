@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   devise_for :users
   root to: 'pages#home'
-  get "reviews/new", to: "reviews#new_no_provider", as: "new_review"
+  # get "reviews/new", to: "reviews#new_no_provider", as: "new_review"
   get "nearby", to: "pages#nearby", as: "nearby"
   get "activity", to: "pages#activity", as: "activity"
   get "profile", to: "users#profile", as: "profile"

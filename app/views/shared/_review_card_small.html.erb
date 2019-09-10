@@ -1,11 +1,10 @@
 <div class="border small_review_card">
   <div class="d-flex">
-    <%= @reviews.last.title %>
     <%= @reviews.last.content %>
   </div>
   <% @reviews.last.review_photos.each do |photo|
   %>
-    <%= cl_image_tag(photo.photo_url, width: 300, height: 300, crop: :fill) %>
+    <%= cl_image_tag(photo.photo_url, width: 300, height: 300, crop: :cover repeat: false) %>
   <% end %>
 
 </div>
