@@ -2,7 +2,6 @@
 <p>Hey <%= @user.first_name %></p>
 <%= simple_form_for [@provider, @review] do |f| %>
   <%= f.input :photo_url, input_html: {value: '', multiple: "true"}, as: :file %>
-  <%= f.input :title %>
   <%= f.input :content %>
   <%= f.input :rating, collection: 0..5, prompt: "Rating", selected: 0  %>
   <%= f.submit "Review", class: "btn btn-primary" %>
