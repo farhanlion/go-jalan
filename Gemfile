@@ -1,11 +1,15 @@
 source 'https://rubygems.org'
 ruby '2.6.3'
 
+gem 'bootsnap', require: false
+gem 'will_paginate', '~> 3.1.7'
+# gem 'bootstrap-sass', '~> 3.0.3.0'
+gem 'bootstrap-will_paginate', '~> 0.0.10'
+gem 'coffee-rails'
 gem 'pg_search', '~> 2.3.0'
 gem 'cloudinary', '~> 1.9.1'
 gem 'carrierwave', '~> 1.2'
 gem 'geocoder'
-gem 'bootsnap', require: false
 gem 'devise'
 gem 'jbuilder', '~> 2.0'
 gem 'pg', '~> 0.21'
@@ -13,7 +17,9 @@ gem 'puma'
 gem 'rails', '5.2.3'
 gem 'redis'
 gem 'pundit'
+gem 'jquery'
 gem 'jquery-rails'
+gem 'order_as_specified'
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.6.1'

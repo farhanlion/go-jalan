@@ -4,13 +4,26 @@ class ReviewsController < ApplicationController
   skip_after_action :verify_authorized, only: [:show, :new]
   def index
     @reviews = policy_scope(Review)
+    @reviews = Review.best.paginate(page: params[:page], per_page: 5).order('created_at DESC')
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def show
     @review = Review.find(params[:id])
-    @next = @review.next
-    @previous = @review.previous
-    authorize @review
+    reviews_ids = []
+    until @review.next.nil?
+      reviews_ids << @review.id
+      @review = @review.next
+    end
+    @reviews = Review.order_as_specified(id: reviews_ids).where(id: reviews_ids).paginate(page: params[:page], per_page: 5)
+    respond_to do |format|
+      format.html
+      format.js
+    end
+    skip_authorization
   end
 
   def new

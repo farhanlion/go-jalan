@@ -12,4 +12,4 @@ const infiniteScroll = () => {
   }
 }
 
-export { infiniteScroll };
+// export { infiniteScroll };

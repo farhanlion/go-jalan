@@ -3,7 +3,7 @@ class PagesController < ApplicationController
   before_action :loc
 
   def home
-    @reviews = Review.best
+    @reviews = joins(:review_photos)
   end
 
   def results
