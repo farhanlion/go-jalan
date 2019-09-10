@@ -55,9 +55,12 @@
 	Sort
 	</button>
 	<div class="dropdown-menu">
-		
-		<input class="dropdown-item" name="sort" type="radio" >Rating<br>
-		<input class="dropdown-item" name="sort" type="radio" >Price<br>
+		<div class="sort-bit">
+			<input class="dropdown-item" value="rating" name="sort" type="radio" >Rating<br>
+		</div>
+		<div class="sort-bit">
+			<input class="dropdown-item" value="price" name="sort" type="radio" >Price<br>
+		</div>
 	</div>
 </div>
 <% end %>
