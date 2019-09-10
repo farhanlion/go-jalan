@@ -1,7 +1,8 @@
-const form = document.querySelector('form')
+const form = document.getElementById('new_review')
 const content = document.getElementById("review_content");
 const provider = document.getElementById("review_provider_id");
-const rating= document.getElementById("review_rating");
+const rating = document.getElementById("review_rating");
+const button = document.querySelector("#review-form .btn");
 
 function closeForm() {
   document.querySelector("#review-form").style.display = "none";
@@ -18,7 +19,7 @@ const checkForm = () => {
 };
 
   const enableButton = () => {
-    document.querySelector(".btn").disabled = false;
+    button.disabled = false;
   }
 
 form.addEventListener('change', evt => {
@@ -27,7 +28,7 @@ form.addEventListener('change', evt => {
     enableButton();
   }
   else {
-    document.querySelector(".btn").disabled = true;
+    button.disabled = true;
   }
 });
 
@@ -36,7 +37,7 @@ provider.onchange = function () {
     enableButton();
   }
   else {
-    document.querySelector(".btn").disabled = true;
+    button.disabled = true;
   }
 }
 
@@ -45,7 +46,7 @@ rating.onchange = function () {
     enableButton();
   }
   else {
-    document.querySelector(".btn").disabled = true;
+    button.disabled = true;
   }
 }
 
@@ -67,7 +68,6 @@ const triggerForm = () => {
    document.querySelector("#review-form").style.display = "block";
     $(document).ready(function() {
     $('.beautiful-dropdown').select2();
-    // document.querySelector(".btn").disabled = true;
   });
   }
 };

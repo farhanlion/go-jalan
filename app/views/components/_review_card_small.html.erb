@@ -15,7 +15,7 @@
           <% end %>
       <% else %>
         <%= link_to review_path(review) do %>
-        <div class="review-card-small image-card d-flex flex-column align-items-start" style="background-image: linear-gradient(rgba(0,0,0,0.22), rgba(0,0,0,0.22)), url('<%= cl_image_path review.review_photos.first.photo_url, height: 221, width: 177, crop: :fill %>')">
+        <div class="review-card-small image-card d-flex flex-column align-items-start" style="background-image: linear-gradient(rgba(0,0,0,0.22), rgba(0,0,0,0.22)), url('<%= cl_image_path review.review_photos.first.photo_url, height: 235, width: 210, crop: :fill %>')">
           <div class="username-div mb-auto p-2">
             <%= review.user.username %>
           </div>
