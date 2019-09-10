@@ -22,13 +22,13 @@
         <p>Review</p>
     </li>
     <li class="list-inline-item text-center ">
-      <%= link_to favourites_path do %>
+      <%= link_to activity_path do %>
         <% if current_page?('/favourites') %>
           <i class="far fa-heart icon nav-icon active-page"></i>
-          <p class="active-page">Favs</p>
+          <p class="active-page">Activity</p>
         <% else %>
           <i class="far fa-heart icon nav-icon"></i>
-          <p>Favs</p>
+          <p>Activity</p>
         <% end %>
       <% end %>
     </li>
