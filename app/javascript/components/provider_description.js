@@ -13,7 +13,7 @@
 			} else {
 
 			description.style.display="-webkit-box"
-			description.style.height="65px"
+			description.style.height="41px"
 			see_more.innerText = "See More"
 			}
 
@@ -21,5 +21,5 @@
 
 	}
 
-} 
+}
 export { seeMore };
