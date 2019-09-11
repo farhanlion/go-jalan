@@ -1,4 +1,4 @@
-<div class="provider-card-small d-flex justify-content-between bg-white border-bottom border-top w-100 ml-2 mr-2 mt-2 mb-2">
+<div class="provider-card-small d-flex justify-content-between bg-white border-bottom border-top w-100">
   <div class="provider-image">
     <% if current_user.favourites.find_by(provider: provider).nil? %>
       <%= link_to provider_favourites_path(provider), method: :post do %>

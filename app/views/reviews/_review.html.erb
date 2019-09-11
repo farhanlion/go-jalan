@@ -3,7 +3,7 @@
     <%= cl_image_tag(review.user.avatar, class: "avatar-medium mt-3 mx-3") %>
     <div class="p-0 mt-3 ml-1 flex-grow-1">
       <p class="m-0 p-0 font-weight-bold"><%= review.user.username %></p>
-      <p class="m-0 p-0 small" style="display: -webkit-box; width: 50vw;>Review for <%= link_to review.provider.name, provider_path(review.provider) %></p>
+      <p class="m-0 p-0 small" style="display: -webkit-box; width: 50vw">Review for <%= link_to review.provider.name, provider_path(review.provider) %></p>
     </div>
     <div class="review-star mt-3 mr-3">
       <ul class="list-inline">
@@ -16,15 +16,15 @@
 
   <% review.review_photos.each do |photo| %>
    <% if photo.photo_url.resource_type == "video" %>
-      <div class="big-review-card-video border mt-3">
+      <div class="big-review-card-video mt-3 mw-100">
         <%= cl_video_tag(photo.photo_url.file.public_id,
                   :loop => true, :controls => true, :autoplay => true,
-                  :transformation => [width: 500, height: 889, crop: :fill],
+                  :transformation => [width: 430, height: 500, crop: :fill, gravity: :center],
                   :fallback_content => "Your browser does not support HTML5 video tags." ) %>
       </div>
     <% else %>
-    <div class="big-review-card-video border mt-3">
-      <%= cl_image_tag(photo.photo_url, width: 500, height: 889, crop: :fill) %>
+    <div class="big-review-card-video border mt-3 mw-100">
+      <%= cl_image_tag(photo.photo_url, width: 430, height: 500, gravity: :center, crop: :fill) %>
       </div>
     <% end %>
   <% end %>
@@ -66,6 +66,5 @@
   </div>
 
 </div>
-
 
 
