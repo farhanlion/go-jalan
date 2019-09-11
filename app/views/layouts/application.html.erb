@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title><%= content_for?(:title) ? yield(:title) : "Go Jalan ... Get a life!" %></title>
-    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Discover your best day everyday." %>">
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "The coolest way for you to get a life!" %>">
+    <%= favicon_link_tag asset_url('favicon.png') %>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= stylesheet_pack_tag 'application', media: 'all' %>
-
   </head>
   <body>
       <%= render 'shared/flashes' %>
