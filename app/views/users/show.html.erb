@@ -20,21 +20,16 @@
       </div>
     </div>
   </div>
-  <div class="row border-top">
-    <% if @reviews.nil? %>
-          <p>You don't have any reviews yet.</p>
-        <% else %>
-          <% @reviews.each do |review| %>
-            <div class="review ml-2">
-              <%= render "components/review_card_small", review: review %>
-            </div>
-          <% end %>
-        <% end %>
-  </div>
 </div>
 
-
-
-
-
-
+<% if @reviews.nil? %>
+      <p>You don't have any reviews yet.</p>
+<% else %>
+  <div class="row mw-100 p-0 m-0">
+    <% @reviews.each do |review| %>
+      <div class="review-card col-6 mw-50 p-0 m-0">
+         <%= render "components/review_card_small", review: review %>
+      </div>
+    <% end %>
+  </div>
+<% end %>

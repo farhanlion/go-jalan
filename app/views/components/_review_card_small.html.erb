@@ -2,10 +2,10 @@
         <% if review.review_photos.first.photo_url.resource_type == "video" %>
           <%= link_to review_path(review) do %>
             <div class="review-card-small video-card d-flex flex-column align-items-start">
-              <div class="video">
+              <div class="review-card-small-video mw-100">
                 <%= cl_video_tag(review.review_photos.first.photo_url.file.public_id,
                 :loop => true, :controls => true, :autoplay => true,
-                :transformation => [width: 210, height: 235, crop: :fill],
+                :transformation => [height: 235, width: 210, crop: :fill,gravity: :center],
                 :fallback_content => "Your browser does not support HTML5 video tags." ) %>
               </div>
               <div class="username-div mb-auto p-2">
