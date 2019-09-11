@@ -1,0 +1,5 @@
+meta_product_name: "GoJalan"
+meta_title: "GoJalan - Get a life!"
+meta_description: "The coolest way for you to get a life!"
+meta_image: "gojalan-social.png" # should exist in `app/assets/images/`
+twitter_account: "@gojalanco"   # required for Twitter Cards
