@@ -5,10 +5,19 @@
   height: 200px;
   background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), asset-url("banner.jpg");
   z-index: 11;
-
+  .logo {
+    width: 95%;
+    align-self: center;
+    margin-top: 1.5%;
+  }
+  
   .banner-container {
     margin-left: 1px;
     margin-right: 10px;
+    .banner-text {
+      width: 96%;
+      align-self: center;
+    }
   }
 
   h1 {
@@ -30,6 +39,7 @@
     padding-top: .45em;
     width: 96%;
     font-family: $body-font;
+    align-self: center;
   }
 
 
@@ -41,8 +51,8 @@
 
   #logo {
   width: 100px;
-  padding-top: .1em;
-  padding-left: 10px;
+  padding-top: 0em;
+  padding-left: 0px
   }
 }
 

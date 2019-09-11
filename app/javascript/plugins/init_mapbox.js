@@ -13,7 +13,6 @@ const buildMap = () => {
 };
 
 const addMarkersToMap = (map, markers) => {
-  console.log(markers)
   if (markers.length > 0) {
     markers.forEach((marker) => {
       const popup = new mapboxgl.Popup().setHTML(marker.infoWindow);
