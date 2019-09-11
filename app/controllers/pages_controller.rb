@@ -15,7 +15,7 @@ class PagesController < ApplicationController
     @providers = @providers.global_search(params[:query]) if params[:query].present?
     @tags = []
     prov_ids = []
-    
+
     if params[:category].present?
       params[:category].each do |category|
         prov_ids << ProviderCategory.where(category_id: category).pluck(:provider_id)
@@ -35,13 +35,15 @@ class PagesController < ApplicationController
     @providers = @providers.where(id: prov_ids.flatten.uniq)
     end
     @providers = @providers.sort_by(&:avg_rating).reverse! if params["sort"]=="rating"
-    @markers = @providers.map do |provider|
+    @markers = @providers.geocoded.map do |provider|
+   if provider.latitude
       {
         lat: provider.latitude,
         lng: provider.longitude,
         infoWindow: render_to_string(partial: 'components/map_popup', locals: { provider: provider })
 
       }
+    end
     end
   end
 
