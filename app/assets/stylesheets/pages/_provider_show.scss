@@ -6,7 +6,7 @@
 }
 
 .provider-all-info p {
-	font-family: "Raleway", "Helvetica", "sans-serif";
+	font-family: $body-font;
 	font-weight: 300;
 }
 
@@ -134,7 +134,7 @@ i.inactive {
 .details-container {
 	margin-bottom: 20px;
 	font-size: 1em;
-	font-family: "Raleway", "Helvetica", "sans-serif";
+	font-family: $body-font;
 	font-weight: 300;
 }
 
