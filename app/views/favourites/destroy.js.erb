@@ -1,2 +1,2 @@
 document.querySelector("[data-id='<%=@fav.provider.id%>']").remove()
-document.querySelector("[data-card-id='<%=@fav.provider.id%>']").insertAdjacentHTML("afterbegin", '<%= j render "favourites/add", provider: @fav.provider , favourite: @fav  %>')
+document.querySelector("[data-card-id='<%=@fav.provider.id%>']").insertAdjacentHTML("afterbegin", '<%= j render "favourites/add", provider: @fav.provider , favourite: @fav, display_id: @display_id  %>')

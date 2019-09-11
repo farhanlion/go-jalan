@@ -35,6 +35,14 @@ class PagesController < ApplicationController
     @providers = @providers.where(id: prov_ids.flatten.uniq)
     end
     @providers = @providers.sort_by(&:avg_rating).reverse! if params["sort"]=="rating"
+    @markers = @providers.map do |provider|
+      {
+        lat: provider.latitude,
+        lng: provider.longitude,
+        infoWindow: render_to_string(partial: 'components/map_popup', locals: { provider: provider })
+
+      }
+    end
   end
 
   def nearby

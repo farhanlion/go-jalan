@@ -33,4 +33,13 @@ updateBannerOnScroll();
 
 goBack();
 
+const mapBtn = document.querySelector('#pills-map-tab')
 
+if (mapBtn){
+	mapBtn.addEventListener('click', ()=>{
+	setTimeout(function(){ map.resize() }, 50);
+
+	
+})
+
+}

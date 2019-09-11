@@ -8,6 +8,7 @@ class FavouritesController < ApplicationController
   end
 
   def create
+    @display_id = request.referer.include?('providers') 
     @fav = Favourite.new(provider: Provider.find(params[:provider_id]), user: current_user)
     authorize @fav
     @fav.save!
@@ -17,6 +18,7 @@ class FavouritesController < ApplicationController
   end
 
   def destroy
+    @display_id = request.referer.include?('providers') 
     @fav = Favourite.find(params[:id])
     @provider = @fav.provider
     if @fav.nil?

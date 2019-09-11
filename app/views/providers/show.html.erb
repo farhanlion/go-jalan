@@ -1,10 +1,10 @@
-<div class="row">
+<div data-card-id='<%=@provider.id%>' class="row">
   <% if current_user.favourites.find_by(provider: @provider).nil? %>
-      <%= link_to provider_favourites_path(@provider), id: 'fav', method: :post do %>
+      <%= link_to provider_favourites_path(@provider), data:{id: @provider.id}, id: 'fav', method: :post, remote: true do  %>
         <i class="far fa-heart inactive"></i>
       <% end %>
     <% else %>
-      <%= link_to favourite_path(@provider),  id: 'fav', method: :delete do %>
+      <%= link_to favourite_path(current_user.favourites.find_by(provider: @provider)),  id: 'fav', method: :delete, remote: :true do %>
         <i class="fas fa-heart active"></i>
       <% end %>
     <% end %>
@@ -41,7 +41,7 @@
   </ul>
   <div class="tab-content" id="pills-tabContent">
     <div class="tab-pane fade show active" id="pills-reviews" role="tabpanel" aria-labelledby="pills-reviews-tab">
-      <div class="review-cards d-flex">
+      <div class="review-cards">
         <div class="row mw-100 p-0 m-0">
           <% @provider.reviews.each do |review| %>
             <div class="review-card col-6 mw-50 p-0 m-0">
