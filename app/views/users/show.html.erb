@@ -1,3 +1,12 @@
+<!— Write content for the title —>
+<% content_for(:title) do %>
+  <%= @user.first_name %> - User profile
+<% end %>
+<!— write content for the description —>
+<% content_for(:description) do %>
+  <%= @user.description %>
+<% end %>
+
 <div class="profile d-flex flex-column w-100">
   <div class="row pt-3 pl-3">
     <div class="media">
