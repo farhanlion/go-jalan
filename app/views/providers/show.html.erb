@@ -1,11 +1,11 @@
 <div class="row">
   <% if current_user.favourites.find_by(provider: @provider).nil? %>
       <%= link_to provider_favourites_path(@provider), id: 'fav', method: :post do %>
-        <i class="far fa-heart active"></i>
+        <i class="far fa-heart inactive"></i>
       <% end %>
     <% else %>
       <%= link_to favourite_path(@provider),  id: 'fav', method: :delete do %>
-        <i class="fas fa-heart"></i>
+        <i class="fas fa-heart active"></i>
       <% end %>
     <% end %>
 </div>
@@ -20,7 +20,9 @@
     <p>Translated name: <%= @provider.translated_name %></p>
     <% end %>
     <div class="rating-review">
-      <p class="text-left p-0 provider-rating"><i class="fas fa-star star-icon"></i><%= @provider.avg_rating%></p>
+      <p class="text-left p-0 provider-rating">
+        <i class="fas fa-star star-icon"></i><%= @provider.avg_rating.round(1) %>
+      </p>
       <p id="review-count">(<%= @provider.reviews.count%> reviews)</p>
 
 
@@ -72,7 +74,7 @@
         </div>
         <div class ="address-container d-flex">
           <div class="address-title w-25">Address</div>
-          <div class="address-info w-75"><%= @provider.street_address %></div>
+          <div class="address-info w-75"><%= @provider.street_address.titlecase %></div>
         </div>
       </div>
       <div

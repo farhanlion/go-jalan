@@ -2,20 +2,20 @@
   <h1>Edit review</h1>
     <% @review.review_photos.each do |photo| %>
    <% if photo.photo_url.resource_type == "video" %>
-      <div class="big-review-card-video border">
+
         <%= cl_video_tag(photo.photo_url.file.public_id,
                   :loop => true, :controls => true, :autoplay => true,
-                  :transformation => [width: 72, height: 128, crop: :fill],
+                  :transformation => [width: 154, height: 256, crop: :fill],
                   :fallback_content => "Your browser does not support HTML5 video tags." ) %>
-      </div>
+
     <% else %>
-      <%= cl_image_tag(photo.photo_url, width: 72, height: 128, crop: :fill) %>
+      <%= cl_image_tag(photo.photo_url, width: 154, height: 256, crop: :fill) %>
     <% end %>
   <% end %>
 
     <%= simple_form_for [@review] do |f|%>
       <%= f.input :content %>
-      <%= f.input :rating %>
+      <%= f.input :rating,collection: 1..5, prompt: "Rating", input_html: {required: 'required'} %>
       <%= f.button :submit, value: "Update", class: "btn btn-primary" %>
     <% end %>
 

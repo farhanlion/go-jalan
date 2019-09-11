@@ -11,6 +11,7 @@ import { initStarRating } from '../plugins/init_star_rating';
 import { triggerForm } from '../components/review-form';
 import {seeMore} from '../components/provider_description.js';
 import { updateBannerOnScroll } from '../components/banner';
+import {goBack} from '../components/back.js'
 // <<<<<<< HEAD
 // import { infiniteScroll } from '../plugins/react_visit.js'
 // =======
@@ -28,4 +29,6 @@ seeMore();
 triggerForm();
 
 updateBannerOnScroll();
+
+goBack();
 

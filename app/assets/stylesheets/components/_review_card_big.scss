@@ -1,6 +1,36 @@
+.big-review {
+  border-width: 1px;
+  border-color: #3F1A3F;
+  border-style: solid;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  height: 90vh;
+}
+
 .big-review-card-video {
   width: 100vw;
   height: 74vh;
   overflow-x: hidden;
   overflow-y: hidden;
+}
+
+.review-star {
+  width: 30%;
+  text-align: right;
+  i {
+    color: $purple;
+  }
+}
+
+.hot {
+  i {
+    font-size: 1.4em;
+  }
+}
+
+.edit-ja {
+  i {
+    color: $light-gray;
+  }
 }
