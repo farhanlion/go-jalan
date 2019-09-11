@@ -1,6 +1,6 @@
 .big-review {
   border-width: 1px;
-  border-color: #3F1A3F;
+  border-color: rgba(200, 200, 200, .6);
   border-style: solid;
   border-bottom: none;
   border-left: none;
@@ -10,9 +10,10 @@
 
 .big-review-card-video {
   width: 100vw;
-  height: 74vh;
+  height: 90vh;
   overflow-x: hidden;
   overflow-y: hidden;
+  border: 0 !important;
 }
 
 .review-star {
