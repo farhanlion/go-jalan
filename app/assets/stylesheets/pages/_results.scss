@@ -5,7 +5,7 @@
     align-items: center;
 	color:black;
 
-	.arrow-icon {
+	.back-icon {
 		font-size: 25px;
 		margin-right: 18px;
     	margin-left: 18px;
@@ -94,6 +94,15 @@
     justify-content: left;
     align-items: center;
     .dropdown-item {
+        width: 23%;
+    }
+}
+
+.category-bit {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    input {
         width: 23%;
     }
 }

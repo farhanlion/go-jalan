@@ -2,11 +2,11 @@
   <div class="provider-image">
     <% if current_user.favourites.find_by(provider: provider).nil? %>
       <%= link_to provider_favourites_path(provider), method: :post do %>
-        <i class="far fa-heart active"></i>
+        <i class="far fa-heart inactive"></i>
       <% end %>
     <% else %>
       <%= link_to favourite_path(provider), method: :delete do %>
-        <i class="fas fa-heart inactive"></i>
+        <i class="fas fa-heart active"></i>
       <% end %>
     <% end %>
     <%= link_to provider_path(provider) do %>

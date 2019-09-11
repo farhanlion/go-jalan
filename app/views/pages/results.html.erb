@@ -34,7 +34,9 @@
 	</button>
 	<div class="dropdown-menu">
 		<%Category.all.each do |category|%>
-		<input class="dropdown-item" value="<%= category.id%>" type="checkbox" name="category[]"> <%= category.name%>
+		<div class="category-bit">	
+			<input class="dropdown-item" value="<%= category.id%>" type="checkbox" name="category[]"> <%= category.name%>
+		</div>
 		<%end%>
 	</div>
 </div>
