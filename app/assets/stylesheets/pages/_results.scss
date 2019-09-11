@@ -1,5 +1,7 @@
 .search-section {
-	margin-top: 3%;
+	padding-top: 2%;
+    padding-bottom: 2%;
+    background-color:$purple;
     width: 100%;
     justify-content: space-evenly;
     align-items: center;
@@ -9,7 +11,7 @@
 		font-size: 25px;
 		margin-right: 18px;
     	margin-left: 18px;
-    	color: $lighter-gray;
+    	color: white;
 	}
 
     .form-control {
@@ -17,6 +19,8 @@
     	border-radius: 10px;
     	font-family: $body-font;
     	font-weight: 400;
+        background-color: $lighter-gray;
+        height: auto;
 
     	&:focus{
     	border-color: $purple;
@@ -26,16 +30,16 @@
 
 	
 	.form-control:focus + .btn{
-		background-color: $purple;
-		color: white;
+		background-color: $yellow;
+		color: black;
 		
 	}
 	
 
     .btn {
     	width: 20%;
-    	color: black;
-    	background-color: white;
+    	color: white;
+    	background-color: $purple;
     	border-style: none;
     	padding-left: 10px;
     	padding-right: 10px;
@@ -56,8 +60,8 @@
 .search-tabs {
 	justify-content: space-evenly;
 	font-family: $body-font;
-	margin-top: 2%;
-	padding:0;
+	padding-top:5px;
+    background-color: $purple;
 	.search-tab{
 		display: flex;
 		align-items:center;
@@ -66,15 +70,20 @@
 }
 
 .search-tab-link {
-	color: black !important;
-	background-color: white !important;
+	color: white !important;
+    background-color: $purple!important;
 	border-style: none;
 	font-weight:400;
 	font-size: 17px;
 	&.active{
-    		text-decoration: underline;
-    		font-weight: 600;
-    		// font-size: 20px;
+        background-color: $purple;
+        color:$yellow !important;
+		text-decoration: none !important;
+        font-size: 20px;
+		font-weight: 600;
+        margin-bottom:2px;
+        border-top-style: solid;
+		// font-size: 20px;
     	}
 }
 
@@ -106,3 +115,18 @@
         width: 23%;
     }
 }
+
+.filter-tabs{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: $purple;
+    .btn{
+
+        color: white !important;
+    }
+    .btn-group {
+        flex-grow: 1;
+    }
+}
+
+

@@ -11,12 +11,14 @@ class FavouritesController < ApplicationController
     @fav = Favourite.new(provider: Provider.find(params[:provider_id]), user: current_user)
     authorize @fav
     @fav.save!
-    redirect_to @fav.provider
+    render do |format|
+      format.js
+    end
   end
 
   def destroy
-    @provider = Provider.find(params[:id])
-    @fav = Favourite.find_by(provider: @provider)
+    @fav = Favourite.find(params[:id])
+    @provider = @fav.provider
     if @fav.nil?
       skip_authorization
       flash[:notice] = 'You have already unliked this review.'
@@ -24,7 +26,9 @@ class FavouritesController < ApplicationController
       authorize @fav
       @fav.destroy
     end
-    redirect_to @provider
+    render do |format|
+      format.js
+    end
   end
 
   private

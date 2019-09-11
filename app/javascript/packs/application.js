@@ -12,6 +12,7 @@ import { triggerForm } from '../components/review-form';
 import {seeMore} from '../components/provider_description.js';
 import { updateBannerOnScroll } from '../components/banner';
 import {goBack} from '../components/back.js'
+import {likeHeart} from '../components/hearts.js'
 // <<<<<<< HEAD
 // import { infiniteScroll } from '../plugins/react_visit.js'
 // =======
@@ -31,4 +32,5 @@ triggerForm();
 updateBannerOnScroll();
 
 goBack();
+
 

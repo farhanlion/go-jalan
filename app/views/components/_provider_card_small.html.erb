@@ -1,13 +1,9 @@
 <div class="provider-card-small d-flex justify-content-between bg-white border-bottom border-top w-100 ml-2 mr-2 mt-2 mb-2">
-  <div class="provider-image">
+  <div data-card-id="<%=provider.id%>" class="provider-image">
     <% if current_user.favourites.find_by(provider: provider).nil? %>
-      <%= link_to provider_favourites_path(provider), method: :post do %>
-        <i class="far fa-heart inactive"></i>
-      <% end %>
+      <%= render "favourites/add", provider: provider %>
     <% else %>
-      <%= link_to favourite_path(provider), method: :delete do %>
-        <i class="fas fa-heart active"></i>
-      <% end %>
+      <%= render "favourites/remove", favourite: current_user.favourites.find_by(provider: provider) %>
     <% end %>
     <%= link_to provider_path(provider) do %>
     <%= cl_image_tag provider.photos[0].photo , width: 100, height: 100 %>
