@@ -3,7 +3,7 @@
           <%= link_to review_path(review) do %>
             <div class="review-card-small video-card d-flex flex-column align-items-start">
               <div class="video">
-                <%= cl_image_tag("#{review.review_photos.first.photo_url.file.public_id}.gif", :video_sampling=>"1.1s", :delay=>"200", :width=>210, :height=>235, :effect=>"loop", :crop=>"scale", :resource_type=>"video") %>
+                <%= cl_image_tag("#{review.review_photos.first.photo_url.file.public_id}.gif", :video_sampling=>"0.3s", :delay=>"300", :width=>210, :height=>235, :effect=>"loop", :crop=>"scale", :resource_type=>"video") %>
                 <%#= cl_image_tag("#{review.review_photos.first.photo_url.file.public_id}.gif", :width=>210, :height=>235, :flags=>"animated", :fetch_format=>:auto, :crop=>"scale", :resource_type=>"video") %>
                 <%#= cl_video_tag(review.review_photos.first.photo_url.file.public_id,
                 :loop => true, :controls => true, :autoplay => true,
