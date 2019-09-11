@@ -1,5 +1,5 @@
 .nav-bar {
-    background-color: white;
+    background-color: $dark-purple;
     font-family: $body-font;
     font-weight: 400;
     font-size: 1.2em;
@@ -9,6 +9,7 @@
     height: 7%;
     padding-top: 2%;
     z-index: 11;
+    padding-bottom: 11%;
 
   p {
     font-size: 0.6em;
@@ -16,7 +17,7 @@
     margin: 0;
     padding: 0;
     padding-top: 2px;
-    color: $light-gray;
+    color: $white;
   }
 
   ul {
@@ -41,10 +42,10 @@
 // }
 
 .icon {
-  color: $light-gray !important;
+  color: $white !important;
 }
 
 .active-page {
-  color: $purple !important;
+  color: $yellow !important;
   font-weight: bold;
 }

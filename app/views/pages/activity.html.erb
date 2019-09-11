@@ -1,50 +1,69 @@
 <!— Write content for the title —>
 <% content_for(:title) do %>
-  Your GoJalan activity ...
+Your GoJalan activity ...
 <% end %>
 <!— write content for the description —>
 <% content_for(:description) do %>
-  Your likes & favourites
+Your likes & favourites
 <% end %>
-
-
+<div class="activity-top-section d-flex">
+  
+  <i class="fas fa-arrow-left back-icon" ></i>
+  
+  <ul class="nav nav-pills activity-tabs" id="pills-tab" role="tablist">
+    <li class="nav-item activity-tab">
+      <a class="nav-link activity-tab-link active" id="pills-likes-tab" data-toggle="pill" href="#pills-likes" role="tab" aria-controls="pills-likes" aria-selected="true">My Likes</a>
+    </li>
+    <li class="nav-item activity-tab">
+      <a class="nav-link activity-tab-link" id="pills-favourites-tab" data-toggle="pill" href="#pills-favourites" role="tab" aria-controls="pills-favourites" aria-selected="false">My Favourites</a>
+    </li>
+    
+  </ul>
+</div>
+<div class="tab-content" id="pills-tabContent">
+  <div class="tab-pane fade show active" id="pills-likes" role="tabpanel" aria-labelledby="pills-likes-tab">
+    <% if @likes.empty? %>
+    <p>You haven't liked any reviews yet.</p>
+    <% else %>
+    <div class="review-cards w-100">
+      <div class="row mw-100 p-0 m-0">
+        <% @likes.each do |like| %>
+        <div class="review-card col-6 mw-50 p-0 m-0">
+          <%= render "components/review_card_small", review: like.review %>
+        </div>
+        <% end %>
+      </div>
+    </div>
+    <% end %>
+  </div>
+  <div class="tab-pane fade" id="pills-favourites" role="tabpanel" aria-labelledby="pills-favourites-tab">
+    <% if @favs.empty? %>
+    <p>You haven't favourite anything yet.</p>
+    <% else %>
+    <% current_user.favourites.each do |fav| %>
+    <%= render "components/provider_card_small", provider: fav.provider %>
+    <% end %>
+    <% end %>
+  </div>
+</div>
+<!--
 <div class="activity d-flex flex-column w-100">
   <div class="row d-flex flex-column h-10 w-100">
+  </div>
+  <nav>
+    <div class="nav nav-tabs justify-content-space-evenly activity-tabs" id="nav-tab" role="tablist">
+      <a class="nav-item nav-link activity-tab-link active" id="nav-likes-tab" data-toggle="tab" href="#nav-likes" role="tab" aria-controls="nav-likes" aria-selected="true">My Likes</a>
+      <a class="nav-item nav-link activity-tab-link" id="nav-favourites-tab" data-toggle="tab" href="#nav-favourites" role="tab" aria-controls="nav-favourites" aria-selected="false">My Favourites</a>
     </div>
-    <nav>
-      <div class="nav nav-tabs justify-content-space-evenly search-tabs" id="nav-tab" role="tablist">
-        <a class="nav-item nav-link search-tab-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">My Likes</a>
-        <a class="nav-item nav-link search-tab-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">My Favourites</a>
-      </div>
-    </nav>
-
-    <div class="tab-content mt-3 m-0 p-0 w-100" id="nav-tabContent">
-      <div class="tab-pane fade show active w-100" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-        <% if @likes.empty? %>
-          <p>You haven't liked any reviews yet.</p>
-        <% else %>
-          <div class="review-cards w-100">
-            <div class="row mw-100 p-0 m-0">
-              <% @likes.each do |like| %>
-                <div class="review-card col-6 mw-50 p-0 m-0">
-                   <%= render "components/review_card_small", review: like.review %>
-                </div>
-              <% end %>
-            </div>
-          </div>
-        <% end %>
-      </div>
-
-      <div class="tab-pane fade w-100" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-        <% if @favs.empty? %>
-          <p>You haven't favourite anything yet.</p>
-        <% else %>
-          <% current_user.favourites.each do |fav| %>
-               <%= render "components/provider_card_small", provider: fav.provider %>
-          <% end %>
-        <% end %>
-      </div>
+  </nav>
+  <div class="tab-content mt-3 m-0 p-0 w-100" id="nav-tabContent">
+    <div class="tab-pane fade show active w-100" id="nav-likes" role="tabpanel" aria-labelledby="nav-likes-tab">
+      
+    </div>
+    <div class="tab-pane fade w-100" id="nav-favourites" role="tabpanel" aria-labelledby="nav-favourites-tab">
+      
     </div>
   </div>
 </div>
-
+</div>
+-->

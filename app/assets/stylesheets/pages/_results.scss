@@ -8,11 +8,11 @@
 	color:black;
 
 	.back-icon {
-		font-size: 25px;
-		margin-right: 18px;
-    	margin-left: 18px;
-    	color: white;
-	}
+        font-size: 25px;
+        margin-right: 18px;
+        margin-left: 18px;
+        color: white;
+    }
 
     .form-control {
     	width: 76%;
@@ -62,10 +62,25 @@
 	font-family: $body-font;
 	padding-top:5px;
     background-color: $dark-purple;
+    height: 62px;
 
 	.search-tab{
 		display: flex;
 		align-items:center;
+        margin-top:-8px;
+        width: 30%;
+        div{
+            display: inline-block;
+            // border: 2px solid #f00;
+            font-size:14px;
+        }
+        #map-icon {
+           margin-bottom: -7px; 
+        }
+        #map-icon-text {
+            margin-bottom: -8px;
+        font-size: 14px;
+        }
 
 	}
 }
@@ -76,6 +91,8 @@
 	border-style: none;
 	font-weight:400;
 	font-size: 17px;
+    width:100%;
+    text-align:center;
 	&.active{
         border:none;
         background-color: $dark-purple;
@@ -122,14 +139,20 @@
     display: flex;
     justify-content: space-evenly;
     background-color: $dark-purple;
-    .btn{
-
-        color: white !important;
-    }
     .btn-group {
-        flex-grow: 1;
+        width:30%;
+    }
+    .btn{
+        width:100%;
+        color: white !important;
     }
 }
 
+#pills-map-tab {
+    text-align: center;
+    display: grid;
+    padding-top: 9px;
+    margin-top:-3px;
+}
 
 

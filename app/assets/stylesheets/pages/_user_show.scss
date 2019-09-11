@@ -1,4 +1,5 @@
 .profile {
+
   h1 {
     margin: 0;
   }
@@ -28,4 +29,28 @@
     overflow: hidden;
     text-overflow: ellipsis;
   }
+}
+
+.profile-dropdown{
+  position: relative;
+}
+  .profile-dropdown-content{
+    position: absolute;
+    top: 0px;
+    left: -127px;
+    transform: translate3d(-4px, 27px, 0px);
+  }
+
+.my-posts-title{
+  font-weight:600;
+  padding-left: 4%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin:0;
+}
+
+.my-reviews{
+      border-top-style: solid;
+    border-top-color: #f4f4f4;
+    border-top-width: 1px;
 }

@@ -8,6 +8,7 @@
   z-index: 100;
   transition: 0.5s;
   overflow-y: hidden;
+  
 
   .closebtn {
     position: absolute;
@@ -15,4 +16,14 @@
     right: 30px;
     font-size: 3em;
   }
+}
+
+.output_image {
+  display:flex;
+  justify-content:center;
+}
+
+.review_photo_url{
+  text-align:center;
+  padding-top:5px;
 }
