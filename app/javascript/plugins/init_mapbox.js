@@ -13,7 +13,8 @@ const buildMap = () => {
 };
 
 const addMarkersToMap = (map, markers) => {
-  if (markers.length > 1) {
+  console.log(markers)
+  if (markers.length > 0) {
     markers.forEach((marker) => {
       const popup = new mapboxgl.Popup().setHTML(marker.infoWindow);
       new mapboxgl.Marker()
@@ -22,24 +23,15 @@ const addMarkersToMap = (map, markers) => {
         .addTo(map);
     });
   }
-  else  {
-    const popup = new mapboxgl.Popup().setHTML(markers.infoWindow);
-    new mapboxgl.Marker()
-        .setLngLat([ markers.lng, markers.lat ])
-        .setPopup(popup)
-        .addTo(map);
-  }
 };
 
 const fitMapToMarkers = (map, markers) => {
   const bounds = new mapboxgl.LngLatBounds();
   if (markers.length > 1) {
     markers.forEach(marker => bounds.extend([ marker.lng, marker.lat ]));
+    map.fitBounds(bounds, { padding: 70, maxZoom: 15 });
+
   }
-  else {
-    bounds.extend([ markers.lng, markers.lat ]);
-  }
-  map.fitBounds(bounds, { padding: 70, maxZoom: 15 });
 };
 
 const getLocate = (map) => {
