@@ -1,13 +1,17 @@
-<div class="d-flex p-2 justify-content-between">
-  <i class="fas fa-arrow-left back-icon" ></i>
-  <p class="m-0 p-0">Reviews</p>
-  <div></div>
+<div class="d-flex p-2" style="
+	background-color: #3f1a3f;
+	color: white;
+	height: 4%;
+	align-items: center;">
+	<i class="fas fa-arrow-left back-icon" ></i>
+	<p class="m-0 pr-4 w-100 text-center"style="
+		font-size: 19px;"
+		>Reviews</p>
+	<div></div>
 </div>
-
 <div id="reviews">
-  <%= render @reviews %>
+	<%= render @reviews %>
 </div>
 <div id="infinite-scrolling">
-  <%= will_paginate %>
+	<%= will_paginate %>
 </div>
-
