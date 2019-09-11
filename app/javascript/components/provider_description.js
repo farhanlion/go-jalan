@@ -4,9 +4,7 @@
         if (see_more) {
 
 		see_more.addEventListener("click", () => {
-			console.log(description.style.display)
 			if (description.style.display == "-webkit-box") {
-		   console.log(description.style.display)
 			description.style.display ="block"
 			description.style.height="100%"
 			see_more.innerText = "See less"

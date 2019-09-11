@@ -14,9 +14,8 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-    border-radius: 5px; 
+    border-radius: 5px;
 }
-
 
   h5 {
     margin: 0;
@@ -33,13 +32,9 @@
   }
   i {
     position: absolute;
-    left: 9px;
+    left: 10px;
     top: 9px;
-    color: $white;
-    font-size: 16px;
-    .active {
-      color: $purple;
-    }
+    font-size: 1.1em;
   }
 
 }
@@ -62,7 +57,7 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-    border-radius: 5px; 
+    border-radius: 5px;
 }
 
 .provider-price {

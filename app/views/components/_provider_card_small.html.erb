@@ -6,7 +6,7 @@
       <% end %>
     <% else %>
       <%= link_to favourite_path(provider), method: :delete do %>
-        <i class="fas fa-heart"></i>
+        <i class="fas fa-heart inactive"></i>
       <% end %>
     <% end %>
     <%= link_to provider_path(provider) do %>
@@ -16,7 +16,7 @@
 <%= link_to provider_path(provider), class: "to-provider" do %>
 
   <div class="d-flex" style="text-align: left;">
-    
+
   <div class="provider-info flex-grow-1 ml-2 mb-2">
     <p style="height:17px"><small><%= provider.categories.first.name %></small></p>
     <h6><%= provider.name %></h6>

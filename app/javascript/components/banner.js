@@ -8,7 +8,7 @@ const updateBannerOnScroll = () => {
         console.log(window.scrollY)
         console.log(window.innerHeight)
 
-      if (window.scrollY >= (window.innerHeight * 0.5)) {
+      if (window.scrollY >= (window.innerHeight * 0.25)) {
         banner.classList.add('banner-background-hide');
         bannerText.classList.add('banner-content-hide');
         search.classList.add('search-white');

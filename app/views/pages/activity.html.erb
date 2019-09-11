@@ -13,9 +13,9 @@
         <% else %>
           <div class="review-cards d-flex">
             <div class="row mw-100 p-0 m-0">
-              <% @likes.reviews.each do |review| %>
+              <% @likes.each do |like| %>
                 <div class="review-card col-6 mw-50 p-0 m-0">
-                   <%= render "components/review_card_small", review: review %>
+                   <%= render "components/review_card_small", review: like.review %>
                 </div>
               <% end %>
             </div>
