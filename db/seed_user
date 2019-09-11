@@ -10,8 +10,6 @@ Tag.destroy_all
 Category.destroy_all
 Review.destroy_all
 Provider.destroy_all
-User.destroy_all
-
 
 category_array = %w[Restaurants Activities Beauty Fitness]
 category_array.each do |category|
@@ -239,6 +237,7 @@ persons << {
   last_name: 'Ting',
   email: 'edwintwx@gmail.com',
   description: 'Digital Marketing Professional across China and Singapore, who loves technology and wants to build products that can change people\'s life.'
+  photo_url: 'v1568190883/gojalan/avatars/edwin_khmnpp.jpg'
 }
 
 persons << {
@@ -246,6 +245,7 @@ persons << {
   last_name: 'Cheung',
   email: 'grace.cheung@example.com',
   description: 'I was studying Chemical Engineering in University. Upon chancing a basic coding module in my course, it got me really interested in coding',
+  photo_url: 'v1568190753/gojalan/avatars/grace_yxv6ht.png'
 }
 
 persons << {
@@ -253,6 +253,7 @@ persons << {
   last_name: 'Wong',
   email: 'claire_wong427@gmail.com',
   description: 'I have just graduated from University, learning to code to explore new career opportunities & see where I can go from there.',
+  photo_url: 'v1568190616/gojalan/avatars/claire_zzddvb.jpg'
 }
 
 persons << {
@@ -260,6 +261,7 @@ persons << {
   last_name: 'Hung',
   email: 'terence_hung@example.com',
   description: 'Hello! I\'m Terence, founder and video director at Ted Media. I\'m learning to code so I can launch new businesses that can make a positive impact.'
+  photo_url: 'v1568190818/gojalan/avatars/terence_qn7mcp.jpg'
 }
 
 persons << {
@@ -267,10 +269,11 @@ persons << {
   last_name: 'Oh',
   email: "meixuanong@yahoo.com",
   description: 'Initially, I was working as a technical presales. First at IBM Storage and then for Dropbox Business under Ingram Micro.'
+  photo_url: 'v1568190611/gojalan/avatars/meixuan_rwu1vn.jpg'
 }
 
 persons.each do |person|
-  new_user = User.new(first_name: person[:first_name], last_name: person[:last_name], email: person[:email], description: person[:description], password: "password")
+  new_user = User.new(first_name: person[:first_name], last_name: person[:last_name], email: person[:email], description: person[:description], password: "password", avatar: person[:photo_url])
   new_user.save!
 end
 
