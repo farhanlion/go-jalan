@@ -24,7 +24,7 @@
   </div>
   <div class="provide-more d-flex flex-column align-items-end ml-2 mr-2">
     <div class="provider--card-rating mb-auto">
-      <p class="text-left p-0"><i class="fas fa-star"></i> <%= provider.avg_rating %></p>
+      <p class="text-left p-0"><i class="fas fa-star"></i> <%= provider.avg_rating.round(1) %></p>
     </div>
     <div class="provider-price text-left pr-1">
       <%= provider.price %>

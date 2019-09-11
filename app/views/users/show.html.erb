@@ -1,3 +1,12 @@
+<!— Write content for the title —>
+<% content_for(:title) do %>
+  <%= @user.first_name %> - User profile
+<% end %>
+<!— write content for the description —>
+<% content_for(:description) do %>
+  <%= @user.description %>
+<% end %>
+
 <div class="profile d-flex flex-column w-100">
   <div class="row pt-3 pl-3">
     <div class="media">
@@ -20,21 +29,16 @@
       </div>
     </div>
   </div>
-  <div class="row border-top">
-    <% if @reviews.nil? %>
-          <p>You don't have any reviews yet.</p>
-        <% else %>
-          <% @reviews.each do |review| %>
-            <div class="review ml-2">
-              <%= render "components/review_card_small", review: review %>
-            </div>
-          <% end %>
-        <% end %>
-  </div>
 </div>
 
-
-
-
-
-
+<% if @reviews.nil? %>
+      <p>You don't have any reviews yet.</p>
+<% else %>
+  <div class="row mw-100 p-0 m-0">
+    <% @reviews.each do |review| %>
+      <div class="review-card col-6 mw-50 p-0 m-0">
+         <%= render "components/review_card_small", review: review %>
+      </div>
+    <% end %>
+  </div>
+<% end %>

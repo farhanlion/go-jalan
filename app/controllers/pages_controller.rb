@@ -68,4 +68,5 @@ class PagesController < ApplicationController
 
   def results_tags
   end
+
 end
