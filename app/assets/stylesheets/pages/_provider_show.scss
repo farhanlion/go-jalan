@@ -15,13 +15,17 @@ a#fav {
   top: 10px;
   right: 10px;
   z-index: 10;
+
+  i {
+    font-size: 1.5em;
+  }
 }
-.fa-heart {
-  color: $purple !important;
+i.active {
+  color: $yellow !important;
 }
 
-.fa-heart{
-  color: $purple !important;
+i.inactive {
+  color: $yellow !important;
 }
 
 .rating-review{
@@ -34,8 +38,8 @@ a#fav {
 }
 
 .provider-all-info h2 {
-	margin-top: 2px;
-  margin-bottom: 2px;
+	margin-top: 10px;
+  margin-bottom: 10px;
   margin-left: 3px;
   margin-right: 3px;
   font-weight: 400;
@@ -54,6 +58,8 @@ a#fav {
 
 .rating-review i{
   color: purple;
+  padding-right: 3px;
+  font-size: 1.3em;
 }
 
 #review-count {

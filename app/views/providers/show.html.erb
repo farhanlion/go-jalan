@@ -1,11 +1,11 @@
 <div class="row">
   <% if current_user.favourites.find_by(provider: @provider).nil? %>
       <%= link_to provider_favourites_path(@provider), id: 'fav', method: :post do %>
-        <i class="far fa-heart active"></i>
+        <i class="far fa-heart inactive"></i>
       <% end %>
     <% else %>
       <%= link_to favourite_path(@provider),  id: 'fav', method: :delete do %>
-        <i class="fas fa-heart"></i>
+        <i class="fas fa-heart active"></i>
       <% end %>
     <% end %>
 </div>
