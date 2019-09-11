@@ -1,0 +1,25 @@
+.activity-tabs {
+	justify-content: space-evenly;
+	font-family: $body-font;
+	padding-top:5px;
+    background-color: $dark-purple;
+}
+
+.activity-tab-link {
+	color: white !important;
+    background-color: $dark-purple!important;
+	border-style: none;
+	font-weight:400;
+	font-size: 17px;
+	&.active{
+        border:none;
+        background-color: $dark-purple;
+        color:$yellow !important;
+		text-decoration: none !important;
+        font-size: 20px;
+        margin-bottom:2px;
+        border-top-style: solid !important;
+        border-color:$yellow!important;
+		// font-size: 20px;
+    	}
+}

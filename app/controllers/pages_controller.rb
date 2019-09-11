@@ -15,6 +15,7 @@ class PagesController < ApplicationController
     @providers = @providers.global_search(params[:query]) if params[:query].present?
     @tags = []
     prov_ids = []
+    
     if params[:category].present?
       params[:category].each do |category|
         prov_ids << ProviderCategory.where(category_id: category).pluck(:provider_id)
@@ -24,14 +25,24 @@ class PagesController < ApplicationController
         @tags << provider.tags
       end
       @tags = @tags.flatten.uniq
+      @providers = @providers.where(id: prov_ids.flatten.uniq)
     end
+
     if params[:tag].present?
       params[:tag].each do |tag|
         prov_ids << ProviderTag.where(tag_id: tag).pluck(:provider_id)
       end
-    end
     @providers = @providers.where(id: prov_ids.flatten.uniq)
+    end
     @providers = @providers.sort_by(&:avg_rating).reverse! if params["sort"]=="rating"
+    @markers = @providers.map do |provider|
+      {
+        lat: provider.latitude,
+        lng: provider.longitude,
+        infoWindow: render_to_string(partial: 'components/map_popup', locals: { provider: provider })
+
+      }
+    end
   end
 
   def nearby

@@ -1,15 +1,17 @@
 .search-section {
-	margin-top: 3%;
+	padding-top: 2%;
+    padding-bottom: 2%;
+    background-color:$dark-purple;
     width: 100%;
     justify-content: space-evenly;
     align-items: center;
 	color:black;
 
-	.arrow-icon {
+	.back-icon {
 		font-size: 25px;
 		margin-right: 18px;
     	margin-left: 18px;
-    	color: $lighter-gray;
+    	color: white;
 	}
 
     .form-control {
@@ -17,25 +19,27 @@
     	border-radius: 10px;
     	font-family: $body-font;
     	font-weight: 400;
+        background-color: $lighter-gray;
+        height: auto;
 
     	&:focus{
-    	border-color: $purple;
+    	border-color: $dark-purple;
     	}
 		
     }
 
 	
 	.form-control:focus + .btn{
-		background-color: $purple;
-		color: white;
+		background-color: $yellow;
+		color: black;
 		
 	}
 	
 
     .btn {
     	width: 20%;
-    	color: black;
-    	background-color: white;
+    	color: white;
+    	background-color: $dark-purple;
     	border-style: none;
     	padding-left: 10px;
     	padding-right: 10px;
@@ -47,7 +51,7 @@
     	&:active{
     		text-decoration: underline;
     		font-weight: 600;
-    		color:$purple;
+    		color:$dark-purple;
     	}
     }
 
@@ -56,8 +60,9 @@
 .search-tabs {
 	justify-content: space-evenly;
 	font-family: $body-font;
-	margin-top: 2%;
-	padding:0;
+	padding-top:5px;
+    background-color: $dark-purple;
+
 	.search-tab{
 		display: flex;
 		align-items:center;
@@ -66,15 +71,21 @@
 }
 
 .search-tab-link {
-	color: black !important;
-	background-color: white !important;
+	color: white !important;
+    background-color: $dark-purple!important;
 	border-style: none;
 	font-weight:400;
 	font-size: 17px;
 	&.active{
-    		text-decoration: underline;
-    		font-weight: 600;
-    		// font-size: 20px;
+        border:none;
+        background-color: $dark-purple;
+        color:$yellow !important;
+		text-decoration: none !important;
+        font-size: 20px;
+        margin-bottom:2px;
+        border-top-style: solid !important;
+        border-color:$yellow!important;
+		// font-size: 20px;
     	}
 }
 
@@ -97,3 +108,28 @@
         width: 23%;
     }
 }
+
+.category-bit {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    input {
+        width: 23%;
+    }
+}
+
+.filter-tabs{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: $dark-purple;
+    .btn{
+
+        color: white !important;
+    }
+    .btn-group {
+        flex-grow: 1;
+    }
+}
+
+
+

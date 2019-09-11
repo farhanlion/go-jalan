@@ -1,0 +1,3 @@
+<%= link_to provider_favourites_path(provider), id:"#{'fav' if @display_id }", :data => { :'id' => provider.id }, method: :post, remote: :true do %>
+        <i class="far fa-heart inactive"></i>
+<% end %>
