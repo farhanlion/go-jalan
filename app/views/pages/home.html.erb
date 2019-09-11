@@ -2,24 +2,18 @@
   <div class="row m-0 p-0">
     <%= render "shared/banner" %>
   </div>
-
   <div class="scroll-menu .cat-slider">
     <%= render "shared/slider" %>
   </div>
-
-
   <div class="reviews pl-2"><h3>Ja <small>(pronounced <em>jah</em>)</small></h3></div>
   <div class="review-cards d-flex flex-column align-content-left">
     <div class="row mw-100 p-0 m-0">
       <% @reviews.each do |review| %>
-        <div class="review-card col-6 mw-50 p-0 m-0">
-           <%= render "components/review_card_small", review: review %>
-        </div>
+      <div class="review-card col-6 mw-50 p-0 m-0">
+        <%= render "components/review_card_small", review: review %>
+      </div>
       <% end %>
     </div>
   </div>
-
 </div>
-
 <br><br><br><br><br>
-

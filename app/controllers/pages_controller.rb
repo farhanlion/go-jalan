@@ -25,7 +25,6 @@ class PagesController < ApplicationController
       end
       @tags = @tags.flatten.uniq
     end
-
     if params[:tag].present?
       params[:tag].each do |tag|
         prov_ids << ProviderTag.where(tag_id: tag).pluck(:provider_id)
