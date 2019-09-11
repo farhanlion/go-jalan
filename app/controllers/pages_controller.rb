@@ -9,6 +9,7 @@ class PagesController < ApplicationController
   end
 
   def results
+    
     @providers = Provider.all
     @reviews = Review.all
     @reviews = Review.global_search(params[:query]) if params[:query].present?

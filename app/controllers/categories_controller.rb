@@ -7,5 +7,6 @@ class CategoriesController < ApplicationController
       @providers << provider_cat.provider
     end
     skip_authorization
+    redirect_to "/results?utf8=✓&query=#{@category.name}"
   end
 end

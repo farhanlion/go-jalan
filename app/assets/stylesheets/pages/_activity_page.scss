@@ -37,6 +37,8 @@
     text-align:center;
     border-top-style: solid !important;
     border-color:white!important;
+    padding-top: 6px;
+    padding-bottom:1px; 
     &.active{
         border:none;
         background-color: $dark-purple;
