@@ -1,8 +1,7 @@
 <div class="slider">
-  <h3>Categories</h3>
-  <ul class="list-inline">
+  <ul class="list-inline w-100 ml-1">
     <% Category.first(4).each do |category| %>
-      <li class="list-inline-item no-wrap mr-0">
+      <li class="list-inline-item no-wrap">
         <%= link_to category_path(category) do %>
           <%= render "components/category_card", category: category %>
         <% end %>

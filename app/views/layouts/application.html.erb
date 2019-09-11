@@ -26,12 +26,14 @@
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= stylesheet_pack_tag 'application', media: 'all' %>
   </head>
-  <body>
-      <%= render 'shared/flashes' %>
-      <%= yield %>
-      <br><br><br><br><br><br>
-       <%= render "reviews/new_review" %>
-      <%= render "shared/nav" %>
+  <body class="d-flex justify-content-center">
+      <div class="container mx-0 my-0 p-0 bg-white", style="max-width: 450px">
+        <%= render 'shared/flashes' %>
+        <%= yield %>
+        <br><br>
+        <%= render "reviews/new_review" %>
+        <%= render "shared/nav" %>
+      </div>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
   </body>

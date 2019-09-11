@@ -1,11 +1,11 @@
 .review-card-small {
-  width: 50vw;
+  width: 100%;
   height: 235px;
   position: relative;
   font-family: Helvetica;
   margin: 0;
   padding: 0;
-  border: 1px solid white;
+  border: 3px solid white;
   overflow: hidden;
 }
 
@@ -27,8 +27,9 @@
 }
 
 .video-card {
-  .video {
-    width: 100%;
+  .review-card-small-video {
+    max-width: 100%;
+    height: auto;
   }
   .content {
   position: absolute;
@@ -47,10 +48,6 @@
   }
 }
 
-.avatar {
-  width: 30px;
-  height: 30px;
-}
 
 .purple-card {
   background: $purple;
