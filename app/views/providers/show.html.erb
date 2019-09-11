@@ -1,5 +1,9 @@
-<div data-card-id='<%=@provider.id%>' class="row">
-  <% if current_user.favourites.find_by(provider: @provider).nil? %>
+<div class="w-100">
+  <div class="w-100">
+    <%= render "components/image_carousel", provider: @provider %>
+  </div>
+  <div data-card-id='<%=@provider.id%>'>
+    <% if current_user.favourites.find_by(provider: @provider).nil? %>
       <%= link_to provider_favourites_path(@provider), data:{id: @provider.id}, id: 'fav', method: :post, remote: true do  %>
         <i class="far fa-heart inactive"></i>
       <% end %>
@@ -8,10 +12,9 @@
         <i class="fas fa-heart active"></i>
       <% end %>
     <% end %>
+  </div>
 </div>
-<div class="row">
-  <%= render "components/image_carousel", provider: @provider %>
-</div>
+
 <div class="provider-all-info">
   <div class="provider-basic-info">
 
