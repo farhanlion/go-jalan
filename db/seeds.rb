@@ -3,21 +3,21 @@ require 'open-uri'
 require 'json'
 require 'net/http'
 
-Photo.destroy_all
-ProviderTag.destroy_all
-ProviderCategory.destroy_all
-Tag.destroy_all
-Category.destroy_all
-Review.destroy_all
-Provider.destroy_all
-User.destroy_all
+# Photo.destroy_all
+# ProviderTag.destroy_all
+# ProviderCategory.destroy_all
+# Tag.destroy_all
+# Category.destroy_all
+# Review.destroy_all
+# Provider.destroy_all
+# User.destroy_all
 
 
-category_array = %w[Restaurants Activities Beauty Fitness]
-category_array.each do |category|
-  new_cat = Category.new(name: category)
-  new_cat.save!
-end
+# category_array = %w[Restaurants Activities Beauty Fitness]
+# category_array.each do |category|
+#   new_cat = Category.new(name: category)
+#   new_cat.save!
+# end
 
 # Seed restaurants
 puts 'Creating restaurants...'
