@@ -31,18 +31,29 @@
 
   <div class="utility d-flex flex-row justify-content-between">
     <div class="hot ml-3 mt-3">
-      <% if current_user.likes.find_by(review: review).nil? %>
-        <%= link_to review_likes_path(review),method: :post do %>
-           <i class="fab fa-hotjar mr-2"></i>
-            <% if @review.likes.size == 0 %>
-              Be the first to like this
-            <% else %>
-              Liked by <%= pluralize(review.likes.size, "person") %>
-            <% end %>
+      <% if user_signed_in? %>
+        <% if current_user.likes.find_by(review: review).nil? %>
+          <%= link_to review_likes_path(review),method: :post do %>
+             <i class="fab fa-hotjar mr-2"></i>
+              <% if @review.likes.size == 0 %>
+                Be the first to like this
+              <% else %>
+                Liked by <%= pluralize(review.likes.size, "person") %>
+              <% end %>
+          <% end %>
+        <% else %>
+          <%= link_to like_path(review), method: :delete do %>
+            <i class="fab fa-hotjar mr-2 active"></i>Liked by <%= pluralize(review.likes.size, "person") %>
+          <% end %>
         <% end %>
       <% else %>
-        <%= link_to like_path(review), method: :delete do %>
-          <i class="fab fa-hotjar mr-2 active"></i>Liked by <%= pluralize(review.likes.size, "person") %>
+        <%= link_to new_user_session_path do %>
+          <i class="fab fa-hotjar mr-2"></i>
+              <% if @review.likes.size == 0 %>
+                Be the first to like this
+              <% else %>
+                Liked by <%= pluralize(review.likes.size, "person") %>
+              <% end %>
         <% end %>
       <% end %>
     </div>

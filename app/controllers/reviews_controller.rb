@@ -65,8 +65,9 @@ class ReviewsController < ApplicationController
       @provider.add_rating
       redirect_to @provider
     else
-      render :new_no_provider if params[:provider_id].nil?
-      render :new
+      raise
+      flash[:notice] = 'Sorry! Something went wrong with your review post.'
+      redirect_to root_path
     end
   end
 

@@ -22,10 +22,21 @@
         <% end %>
       <% end %>
     </li>
-    <li class="list-inline-item text-center">
-        <i id="ja" class="fas fa-plus-circle icon nav-icon"></i>
+    <% if user_signed_in? %>
+        <li class="list-inline-item text-center">
+          <i id="ja" class="user_signed_in fas fa-plus-circle icon nav-icon"></i>
+          <p id="ja">Add Post</p>
+      </li>
+
+    <% else %>
+      <%= link_to new_user_session_path do %>
+        <li class="list-inline-item text-center">
+          <i id="ja" class="fas fa-plus-circle icon nav-icon"></i>
         <p id="ja">Add Post</p>
     </li>
+      <% end %>
+    <% end %>
+
     <li class="list-inline-item text-center ">
       <%= link_to activity_path do %>
         <% if current_page?('/activity') %>
