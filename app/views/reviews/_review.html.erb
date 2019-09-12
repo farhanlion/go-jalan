@@ -1,17 +1,21 @@
-<div class="big-review d-flex flex-column">
+<div class="big-review d-flex flex-column", style="position: relative">
   <div class="d-flex m-0 p-0">
+
     <%= cl_image_tag(review.user.avatar, class: "avatar-medium mt-3 mx-3") %>
-    <div class="p-0 mt-3 ml-1 flex-grow-1">
+
+    <div class="p-0 mt-3 ml-1">
       <p class="m-0 p-0 font-weight-bold"><%= review.user.username %></p>
-      <p class="m-0 p-0 small" style="display: -webkit-box; width: 50vw">Review for <%= link_to review.provider.name, provider_path(review.provider) %></p>
+      <p class="m-0 p-0 small" style="display: -webkit-box; width: 90%">Review for <%= link_to review.provider.name, provider_path(review.provider) %></p>
     </div>
-    <div class="review-star mt-3 mr-3">
+
+    <div class="review-star", style="position: absolute; top: 1em; right: 1em;">
       <ul class="list-inline">
         <% review.rating.times do %>
           <li class="list-inline-item p-0 m-0"><i class="fas fa-star"></i></li>
         <% end %>
       </ul>
     </div>
+
   </div>
 
   <% review.review_photos.each do |photo| %>
