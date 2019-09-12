@@ -36,7 +36,7 @@ class PagesController < ApplicationController
     @providers = @providers.where(id: prov_ids.flatten.uniq)
     end
     @providers = @providers.sort_by(&:avg_rating).reverse! if params["sort"]=="rating"
-    @markers = @providers.geocoded.map do |provider|
+    @markers = @providers.map do |provider|
    if provider.latitude
       {
         lat: provider.latitude,
