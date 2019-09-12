@@ -30,6 +30,10 @@ class ApplicationPolicy
     update?
   end
 
+  def results?
+    true
+  end
+
   def destroy?
     false
   end

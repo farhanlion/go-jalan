@@ -22,6 +22,6 @@ class ProviderPolicy < ApplicationPolicy
   end
 
   def destroy?
-    true
+    false
   end
 end

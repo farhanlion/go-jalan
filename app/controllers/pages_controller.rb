@@ -1,13 +1,13 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: %i[home nearby results]
-  before_action :loc
+  skip_before_action :authenticate_user!, only: [:home, :nearby, :results]
+
 
   def home
     @reviews = Review.best
   end
 
   def results
-
+    skip_authorization
     @providers = Provider.all
     @reviews = Review.all
     @reviews = Review.global_search(params[:query]) if params[:query].present?
@@ -40,7 +40,6 @@ class PagesController < ApplicationController
           lat: provider.latitude,
           lng: provider.longitude,
           infoWindow: render_to_string(partial: 'components/map_popup', locals: { provider: provider })
-
         }
       end
     end
@@ -48,11 +47,12 @@ class PagesController < ApplicationController
 
   def nearby
     @providers = policy_scope(Provider)
-    @loc = Geocoder.search('Orchard Road, Singapore').first.coordinates if @loc == []
-    @providers = @providers.near(@loc, 5, units: :km)
-    @reviews = @providers.map do |provider|
-      provider.reviews
+    if request.location
+      result = request.location
+      location = result.coordinates
     end
+    location = Geocoder.search('Orchard Road, Singapore').first.coordinates if location == []
+    @providers = @providers.near(location, 5, units: :km)
     @favourite = Favourite.new
     @markers = @providers.map do |provider|
       {
@@ -67,15 +67,6 @@ class PagesController < ApplicationController
   def activity
     @likes = current_user.likes
     @favs = current_user.favourites
-  end
-
-  def loc
-    if request.location
-      result = request.location
-      @loc = result.coordinates
-    else
-      @loc = Geocoder.search('Orchard Road, Singapore').first.coordinates
-    end
   end
 
   def results_tags

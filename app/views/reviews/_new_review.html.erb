@@ -1,15 +1,17 @@
-<div id="review-form" class="bg-white" style='display:none;'>
-    <a href="#" class="closebtn">&times;</a>
-  <%= simple_form_for [Review.new] do |f| %>
-    <div class="output_image">
-      <img src="" id="output_image" style="width: 72px; height: 128px; object-fit: cover;" alt="">
-    </div>
-    <%= f.input :photo_url, label: 'Photo/Video' ,input_html: {value: '', multiple: "true"}, as: :file %>
-    <%= f.input :content, label: 'Caption this' %>
-    <%= f.association :provider, label: 'Tag restaurant', input_html: {required: 'required', class: 'beautiful-dropdown'} %>
-    <%= f.input :rating, collection: 1..5, prompt: "Rating", input_html: {required: 'required'}  %>
-    <%= f.submit "Post", class: "btn btn-primary" %>
-  <% end %>
-</div>
+<% if user_signed_in? %>
+  <div id="review-form" class="bg-white" style='display:none;'>
+      <a href="#" class="closebtn">&times;</a>
+    <%= simple_form_for [Review.new] do |f| %>
+      <div class="output_image">
+        <img src="" id="output_image" style="width: 72px; height: 128px; object-fit: cover;" alt="">
+      </div>
+      <%= f.input :photo_url, label: 'Photo/Video' ,input_html: {value: '', multiple: "true"}, as: :file %>
+      <%= f.input :content, label: 'Caption this' %>
+      <%= f.association :provider, label: 'Tag restaurant', input_html: {required: 'required', class: 'beautiful-dropdown'} %>
+      <%= f.input :rating, collection: 1..5, prompt: "Rating", input_html: {required: 'required'}  %>
+      <%= f.submit "Post", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+<% end %>
 
 
