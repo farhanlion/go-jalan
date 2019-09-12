@@ -13,11 +13,11 @@ require 'net/http'
 # User.destroy_all
 
 
-category_array = %w[Restaurants Activities Beauty Fitness]
-category_array.each do |category|
-  new_cat = Category.new(name: category)
-  new_cat.save!
-end
+# category_array = %w[Restaurants Activities Beauty Fitness]
+# category_array.each do |category|
+#   new_cat = Category.new(name: category)
+#   new_cat.save!
+# end
 
 # Seed restaurants
 puts 'Creating restaurants...'
