@@ -59,33 +59,34 @@ def scrape_viator(file_path)
 
     image_urls = viator_image_search(activity_page)
 
-    new_provider = Provider.new(name: name, description: description, price: price, country: country, latitude: 1.3521, longitude: 103.8198)
-    new_provider.save!
-    puts new_provider.name
 
-    image_urls.each do |url|
-      new_photo = Photo.new(provider: new_provider)
-      if url_should_be_accessible(url)
-        new_photo.remote_photo_url = url
-        new_photo.save!
+    new_provider = Provider.new(name: name, description: description, price: price, country: country, latitude: 1.3521, longitude: 103.8198)
+    if Provider.find_by(name: name).nil?
+        new_provider.save!
+        image_urls.each do |url|
+          new_photo = Photo.new(provider: new_provider)
+          if url_should_be_accessible(url)
+            new_photo.remote_photo_url = url
+            new_photo.save!
+          end
+        end
+
+        new_provider_category = ProviderCategory.new(category: Category.find_by(name: 'Activities'), provider: new_provider)
+        new_provider_category.save!
+
+        tag = element.search('.category-card-tag').text
+        new_tag = Tag.new(name: tag)
+        if !Tag.all.include?(new_tag)
+          new_tag.category = Category.find_by(name: 'Restaurants')
+          new_tag.save!
+          new_provider_tag = ProviderTag.new(tag: new_tag, provider: new_provider)
+          new_provider_tag.save!
+        else
+          new_provider_tag = ProviderTag.new(tag: Tag.find_by(name: tag), provider: new_provider)
+          new_provider_tag.save!
+        end
       end
     end
-
-    new_provider_category = ProviderCategory.new(category: Category.find_by(name: 'Activities'), provider: new_provider)
-    new_provider_category.save!
-
-    tag = element.search('.category-card-tag').text
-    new_tag = Tag.new(name: tag)
-    if !Tag.all.include?(new_tag)
-      new_tag.category = Category.find_by(name: 'Restaurants')
-      new_tag.save!
-      new_provider_tag = ProviderTag.new(tag: new_tag, provider: new_provider)
-      new_provider_tag.save!
-    else
-      new_provider_tag = ProviderTag.new(tag: Tag.find_by(name: tag), provider: new_provider)
-      new_provider_tag.save!
-    end
-  end
 end
 
 
