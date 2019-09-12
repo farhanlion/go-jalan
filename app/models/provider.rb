@@ -7,7 +7,7 @@ class Provider < ApplicationRecord
   has_many :reviews
   has_many :favourites, dependent: :destroy
   geocoded_by :street_address
-  after_validation :geocode, if: :will_save_change_to_street_address?
+  # after_validation :geocode, if: :will_save_change_to_street_address?
   has_many :photos
   include PgSearch::Model
   pg_search_scope :global_search,

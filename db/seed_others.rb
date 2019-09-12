@@ -35,7 +35,7 @@ viator_doc.search('.product-card-main-content').each do |element|
     new_photo = Photo.new(provider: new_provider)
     if url_should_be_accessible(url)
       new_photo.remote_photo_url = url
-      new_photo.save!
+      new_photo.save
     end
   end
 
@@ -53,8 +53,6 @@ viator_doc.search('.product-card-main-content').each do |element|
     new_provider_tag = ProviderTag.new(tag: Tag.find_by(name: tag), provider: new_provider)
     new_provider_tag.save!
   end
-  counter += 1
-  break if counter >= 10
 end
 
 

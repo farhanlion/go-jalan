@@ -7,9 +7,9 @@ Your GoJalan activity ...
 Your likes & favourites
 <% end %>
 <div class="activity-top-section d-flex">
-  
+
   <i class="fas fa-arrow-left back-icon" ></i>
-  
+
   <ul class="nav nav-pills activity-tabs" id="pills-tab" role="tablist">
     <li class="nav-item activity-tab">
       <a class="nav-link activity-tab-link active" id="pills-likes-tab" data-toggle="pill" href="#pills-likes" role="tab" aria-controls="pills-likes" aria-selected="true">My Likes</a>
@@ -17,13 +17,13 @@ Your likes & favourites
     <li class="nav-item activity-tab">
       <a class="nav-link activity-tab-link" id="pills-favourites-tab" data-toggle="pill" href="#pills-favourites" role="tab" aria-controls="pills-favourites" aria-selected="false">My Favourites</a>
     </li>
-    
+
   </ul>
 </div>
 <div class="tab-content" id="pills-tabContent">
   <div class="tab-pane fade show active" id="pills-likes" role="tabpanel" aria-labelledby="pills-likes-tab">
     <% if @likes.empty? %>
-    <p>You haven't liked any reviews yet.</p>
+    <p class="ml-1">You haven't liked any reviews yet</p>
     <% else %>
     <div class="review-cards w-100">
       <div class="row mw-100 p-0 m-0">
@@ -38,7 +38,7 @@ Your likes & favourites
   </div>
   <div class="tab-pane fade" id="pills-favourites" role="tabpanel" aria-labelledby="pills-favourites-tab">
     <% if @favs.empty? %>
-    <p>You haven't favourite anything yet.</p>
+    <p class="ml-1">You haven't favourited anything yet</p>
     <% else %>
     <% current_user.favourites.each do |fav| %>
     <%= render "components/provider_card_small", provider: fav.provider %>
@@ -58,10 +58,10 @@ Your likes & favourites
   </nav>
   <div class="tab-content mt-3 m-0 p-0 w-100" id="nav-tabContent">
     <div class="tab-pane fade show active w-100" id="nav-likes" role="tabpanel" aria-labelledby="nav-likes-tab">
-      
+
     </div>
     <div class="tab-pane fade w-100" id="nav-favourites" role="tabpanel" aria-labelledby="nav-favourites-tab">
-      
+
     </div>
   </div>
 </div>

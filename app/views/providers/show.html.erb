@@ -1,5 +1,5 @@
 <div style="position: relative">
-  <div data-card-id='<%=@provider.id%>', style="position: absolute; right: 1em; z-index: 1000">
+  <div data-card-id='<%=@provider.id%>', style="position: absolute; right: 1em; z-index: 100">
   <% if current_user.favourites.find_by(provider: @provider).nil? %>
       <%= link_to provider_favourites_path(@provider), data:{id: @provider.id}, id: 'fav', method: :post, remote: true do  %>
         <i class="far fa-heart inactive"></i>
