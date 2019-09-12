@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: %i[home nearby results]
+  skip_before_action :authenticate_user!, only: [:home, :nearby, :results]
   before_action :loc
 
   def home
@@ -9,7 +9,7 @@ class PagesController < ApplicationController
   end
 
   def results
-    
+
     @providers = Provider.all
     @reviews = Review.all
     @reviews = Review.global_search(params[:query]) if params[:query].present?
@@ -37,14 +37,13 @@ class PagesController < ApplicationController
     end
     @providers = @providers.sort_by(&:avg_rating).reverse! if params["sort"]=="rating"
     @markers = @providers.geocoded.map do |provider|
-   if provider.latitude
-      {
-        lat: provider.latitude,
-        lng: provider.longitude,
-        infoWindow: render_to_string(partial: 'components/map_popup', locals: { provider: provider })
-
-      }
-    end
+     if provider.latitude
+        {
+          lat: provider.latitude,
+          lng: provider.longitude,
+          infoWindow: render_to_string(partial: 'components/map_popup', locals: { provider: provider })
+        }
+      end
     end
   end
 
