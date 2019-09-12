@@ -5,7 +5,9 @@
          "description":"",
          "address":"Depot Heights Shopping Centre #02-07A, 108 Depot Road, (S)100108",
          "phone":"6270 2172",
+
          "image":[
+
             "https://x1.sdimgs.com/sd_static/images/side_banner/188_x_158/1283.jpg?v=1.0.2.280?v=1.0.2.280"
          ],
          "tags":[
@@ -20,10 +22,12 @@
          "description":"",
          "address":"Taman Jurong Shopping Centre, 399 Yung Sheng Road, (S)610399",
          "phone":"6266 5929",
+
          "image":[
             "https://x1.sdimgs.com/sd_static/images/side_banner/188_x_158/1296.jpg?v=1.0.2.280?v=1.0.2.280"
          ],
          "tags":[
+
             "Digital Rebonding",
             "Digital Perm",
             "Hair Tattoo"
@@ -50,6 +54,7 @@
          "image":[
             ""
          ],
+
          "tags":[
             "Hair Growth Treatment",
             "Medical",
@@ -64,6 +69,7 @@
          "image":[
             ""
          ],
+
          "tags":[
             "Spa and Massage",
             "Post Natal Massage"
@@ -78,6 +84,7 @@
             ""
          ],
          "tags":[
+
             "Massage",
             "Spa Treatment"
          ]
@@ -87,6 +94,7 @@
          "description":"We offer the most affordable hair weave and re-tightening package in town! Try out our effective Tricho treatment today! Founded in 1990, we have a team of skillful hair care consultants and hair weaving specialists. Together they have given people with hair problems the confidence of regaining their looks and youth. With more than 20 years of experience, our consultants are specialists when it comes to hair care, hair weaving, wigs, toupee, hair bonding and hair coloring.\n\n\n\n\nWe are all committed to providing you with the most cost-effective and best results when it comes to solving all of your hair problems.",
          "address":"People's Park Centre #03-43, 101 Upper Cross Street, (S)058357",
          "phone":"6339 9665",
+
          "image":[
             "https://x1.sdimgs.com/sd_static/images/side_banner/188_x_158/1247.jpg?v=1.0.2.280?v=1.0.2.280"
          ],
@@ -104,105 +112,176 @@
          "image":[
             ""
          ],
+
          "tags":[
+
             "Hair Removal",
             "Waxing and Threading",
             "Brazilian Waxing",
             "Waxing Hair Removal"
          ]
       },
+
       {
+
          "name":"Svenson Hair Center (S) Pte Ltd",
          "description":"SVENSON is a leading brand for Next-generation hair loss management & development of solutions for hair and scalp problems using the most advanced technologies. With over 50 years of trichological expertise and knowledge, Svenson offers scientific diagnosis and customized & effective solutions to almost all hair problems. Operating a global network of hair centers today, we have 54 branches worldwide and 3 in Singapore. Our in-house Trichologists combine years of formal training under UK-based specialists with expertise gain by extensively consulting around the region. Our Hair Consultants study an average of 3,000 cases and undergo 6 years of experience and regular training with our UK-based Trichologists. And our therapists helps maximise treatment efficacy with skilled support, from the know-how to operate treatment machines to the massages now synonymous with the Svenson experience. All these, because we have your best interests at heart.",
          "address":"International Building #09-06/07, 360 Orchard Road, (S)238869 View All 3 Branches",
          "phone":"1800-7777-333",
+<<<<<<< HEAD
          "image":[
             ""
          ],
          "tags":[
+=======
+         "image":[
+            ""
+         ],
+         "tags":[
+>>>>>>> 072023190d178f1d9b4edc96bcd5462153353ebd
             "Hair Treatment",
             "Hair Loss Treatment",
             "Baldness Treatment"
          ]
       },
+<<<<<<< HEAD
       {
+=======
+      {
+>>>>>>> 072023190d178f1d9b4edc96bcd5462153353ebd
          "name":"TK TrichoKare",
          "description":"TK TrichoKare is a holistic hair and scalp care centre that provides European Herbal remedies. Our herbal remedies is good to treat and prevent hair loss & hair fall. The hrbal remedies consists of natural botanicals such as Jojoba, Rosemary, Nettles, Burdock, Aloe Vera and Lavender. They are catered to treat many hair conditions.TK TrichoKare was started by a certified trichologist who pioneered the concept of establishing a hair care centre that provides a luxurious environment while providing hair care through European herbal remedies. Professional hair weaving services are also available.TK TrichoKare is the only ISO 9001 certified trichological centre in Singapore.",
          "address":"The Clementi Mall #05-11, 3155 Commonwealth Avenue West, (S)129588 View All 5 Branches",
          "phone":"6338 8680",
+<<<<<<< HEAD
          "image":[
             ""
          ],
          "tags":[
+=======
+         "image":[
+            ""
+         ],
+         "tags":[
+>>>>>>> 072023190d178f1d9b4edc96bcd5462153353ebd
             "Beauty Services",
             "Hair Loss",
             "Hair Loss Treatment",
             "Beauty Treatment"
          ]
       },
+<<<<<<< HEAD
       {
+=======
+      {
+>>>>>>> 072023190d178f1d9b4edc96bcd5462153353ebd
          "name":"Wink Wax Wellness",
          "description":"Wink Wax is an award wining Company specializing in unisex waxing, Brazilian wax and IPL Permenant Hair removal cover.",
          "address":"60 Peck Seah Street, (S)079323",
          "phone":"6536 8785",
+<<<<<<< HEAD
          "image":[
             ""
          ],
          "tags":[
+=======
+         "image":[
+            ""
+         ],
+         "tags":[
+>>>>>>> 072023190d178f1d9b4edc96bcd5462153353ebd
             "Waxing Bar",
             "Waxing Hair Removal",
             "Spa Services",
             "Nail Treatment"
          ]
       },
+<<<<<<< HEAD
       {
+=======
+      {
+>>>>>>> 072023190d178f1d9b4edc96bcd5462153353ebd
          "name":"E. Beaute Salon",
          "description":"Through precise techniques, those wrinkles and fine lines greatly diminishes as we gradually lift and tone your face. Droopy eyelids, double-chins and sagging necklines can easily be a thing of the past! Treatment increases blood circulation and lymphatic drainage, giving you a bright, radiant look with an instant, light lift that will have everyone guessing WHAT YOUR SECRET IS!  Reverse-Aging Facial\r\n\r\n‘Non-surgical’ Face Lift\r\nNo Side Effects\r\nVisible Lifting In one Treatment",
          "address":"1 Jalan Anak Bukit, #01-22 Bukit Timah Plaza (S) 588996",
          "phone":"6469 8992",
+<<<<<<< HEAD
          "image":[
             ""
          ],
          "tags":[
+=======
+         "image":[
+            ""
+         ],
+         "tags":[
+>>>>>>> 072023190d178f1d9b4edc96bcd5462153353ebd
             "Facial & Skin Rejuvenation",
             "Facial Spa",
             "Waxing Hair Removal",
             "Beauty Salons"
          ]
       },
+<<<<<<< HEAD
       {
+=======
+      {
+>>>>>>> 072023190d178f1d9b4edc96bcd5462153353ebd
          "name":"Reds Hairdressing Pte Ltd",
          "description":"36 Years of Hair Styling! REDS Hairdressing was established in 1982. Over the years, our successful operations of our chain of hair salons has provided us with invaluable experience and knowledge of the needs and demands of the profession. The support, vision and advice from our stylists aim to give you functional, fabulous and fashionable hair. The shared experienced between client and stylist ensures that you walk out with confidence. We do not follow trends thoughtlessly, instead, we tailor each hairstyle accordingly to accommodate you and your lifestyle.",
          "address":"Nex #01-73 , 23 Serangoon Central, (S)556083 View All 6 Branches",
          "phone":"6634 4666",
+<<<<<<< HEAD
          "image":[
             ""
          ],
          "tags":[
+=======
+         "image":[
+            ""
+         ],
+         "tags":[
+>>>>>>> 072023190d178f1d9b4edc96bcd5462153353ebd
             "Beauty Care",
             "Hair Stylist",
             "Beauty Salons"
          ]
       },
+<<<<<<< HEAD
       {
+=======
+      {
+>>>>>>> 072023190d178f1d9b4edc96bcd5462153353ebd
          "name":"Kimage Salon Pte Ltd",
          "description":"Established in 1994, Kimage is a boutique hair salon chain in Singapore founded on a guiding belief that an individual’s personality can be amplified through the craft of hairdressing. Today, we have 13 hair salons in Singapore. Our experienced, professional stylists provide personal consultations based on your personality and lifestyle. Then they work their magic and transform your look, letting your crowning glory shine through a range of innovative, creative hair services that are customised based on your needs.We also have a hairdressing school that’s awarded EduTrust certification by Singapore Committee for Private Education, a first for a hairdressing school here.",
          "address":"Marina Square #01-201 , 6 Raffles Boulevard, (S)039594 View All 10 Branches",
          "phone":"6276 2700",
+<<<<<<< HEAD
          "image":[
             ""
          ],
          "tags":[
+=======
+         "image":[
+            ""
+         ],
+         "tags":[
+>>>>>>> 072023190d178f1d9b4edc96bcd5462153353ebd
             "Hair Grooming",
             "Beauty",
             "Hair Extension"
          ]
       },
+<<<<<<< HEAD
       {
+=======
+      {
+>>>>>>> 072023190d178f1d9b4edc96bcd5462153353ebd
          "name":"GM Health & Beauty Care",
          "description":"",
          "address":"HDB Jurong Gateway #02-331, 135 Jurong Gateway Road, (S)600135",
          "phone":"9036 2166",
+<<<<<<< HEAD
          "image":[
             ""
          ],
@@ -211,10 +290,21 @@
          ]
       },
       {
+=======
+         "image":[
+            ""
+         ],
+         "tags":[
+            null
+         ]
+      },
+      {
+>>>>>>> 072023190d178f1d9b4edc96bcd5462153353ebd
          "name":"Polish The Nails Room",
          "description":"",
          "address":"Square 2 #04-06, 10 Sinaran Drive, (S)307506 View All 3 Branches",
          "phone":"6397 6597",
+<<<<<<< HEAD
          "image":[
             ""
          ],
@@ -223,25 +313,47 @@
          ]
       },
       {
-         "name":"Gesicht Skin Solution",
-         "description":"Gesicht is established since October 2009 from a humble shop house. Currently it’s conveniently located in Tampines, it is the perfect place to relax & be pampered by our skilled therapists dedicated to allowing you to indulge with personalised & beauty treatments.  Each of every room in our salon are furnished with new age technology equipment. As the atmosphere in the air is lightly scented with aromatic oils and relaxing music washes over you creating a complete sense of well-being.  Step into our salon now to enjoy a whole new sensational experience.",
-         "address":"201B Tampines Street, #01-1073 (S) 522201",
-         "phone":"6785 9068",
+=======
          "image":[
             ""
          ],
          "tags":[
+            null
+         ]
+      },
+      {
+>>>>>>> 072023190d178f1d9b4edc96bcd5462153353ebd
+         "name":"Gesicht Skin Solution",
+         "description":"Gesicht is established since October 2009 from a humble shop house. Currently it’s conveniently located in Tampines, it is the perfect place to relax & be pampered by our skilled therapists dedicated to allowing you to indulge with personalised & beauty treatments.  Each of every room in our salon are furnished with new age technology equipment. As the atmosphere in the air is lightly scented with aromatic oils and relaxing music washes over you creating a complete sense of well-being.  Step into our salon now to enjoy a whole new sensational experience.",
+         "address":"201B Tampines Street, #01-1073 (S) 522201",
+         "phone":"6785 9068",
+<<<<<<< HEAD
+         "image":[
+            ""
+         ],
+         "tags":[
+=======
+         "image":[
+            ""
+         ],
+         "tags":[
+>>>>>>> 072023190d178f1d9b4edc96bcd5462153353ebd
             "Facial Service",
             "Facial Spa",
             "Beauty Treatment",
             "Beauty Salons"
          ]
       },
+<<<<<<< HEAD
       {
+=======
+      {
+>>>>>>> 072023190d178f1d9b4edc96bcd5462153353ebd
          "name":"Donna Beauty",
          "description":"Donna Beauty - The Modern beauty’s Secret\r\nTake the time to indulge in face and spa treatments helps you to get back in touch with your bodies - a rewarding ritual.\r\nWith our excellent service and experienced esthetician and therapists, from a pioneer set up at Jurong IMM specializing in Nails to 3D Creative Embroidery in eyebrows and customized facial at City Vibe, Donna Beauty a Beauty Spa is now at The Star Vista- Buona Vista. \r\nDonna Beauty provides Six exclusive warm and cosy treatment rooms with an Contemporary yet welcoming reception area. Discover us with a sense of aroma and a result driven and qualified esthetician, a herbal concoction that calm and relax your mind and soul. your journey of body, mind and spirit is a delightly feeling of peace and tranquillity deep within the innerself. \r\nThe spa's ingenious design together with the exotic mood carried by sensual touches of sight, sound and scent, make the perfect setting for the unforgettable moments that lie ahead.\r\nEvery treatment at Donna Beauty has been carefully designed to elevate the experience from simply special to the truly unique, engendering a memorable time to be relished long after the trip has ended.",
          "address":"IMM Building #02-30, 2 Jurong East Street 21, (S)609601 View All 6 Branches",
          "phone":"8687 3176",
+<<<<<<< HEAD
          "image":[
             ""
          ],
@@ -250,43 +362,82 @@
          ]
       },
       {
-         "name":"Beauty Qlinic",
-         "description":"Officially launched in May 2010, Beauty Qlinic offers a range of beauty & body treatments using DECLEOR products, an internationally well known skin care brand. Despite being a young establishment, Beauty Qlinic had already successfully captured the hearts of many satisfied customers with its professional service and the commitment to offer only the best for its customers.",
-         "address":"Icon Village #01-68/69, 12 Gopeng Street, (S)078877",
-         "phone":"6222 2281",
+=======
          "image":[
             ""
          ],
          "tags":[
+            null
+         ]
+      },
+      {
+>>>>>>> 072023190d178f1d9b4edc96bcd5462153353ebd
+         "name":"Beauty Qlinic",
+         "description":"Officially launched in May 2010, Beauty Qlinic offers a range of beauty & body treatments using DECLEOR products, an internationally well known skin care brand. Despite being a young establishment, Beauty Qlinic had already successfully captured the hearts of many satisfied customers with its professional service and the commitment to offer only the best for its customers.",
+         "address":"Icon Village #01-68/69, 12 Gopeng Street, (S)078877",
+         "phone":"6222 2281",
+<<<<<<< HEAD
+         "image":[
+            ""
+         ],
+         "tags":[
+=======
+         "image":[
+            ""
+         ],
+         "tags":[
+>>>>>>> 072023190d178f1d9b4edc96bcd5462153353ebd
             "Beauty",
             "Beauty Salons",
             "Beauty Care",
             "Facial Skin Care"
          ]
       },
+<<<<<<< HEAD
       {
+=======
+      {
+>>>>>>> 072023190d178f1d9b4edc96bcd5462153353ebd
          "name":"Belleza Skin Care Pte Ltd",
          "description":"Belleza Skin Care Pte Ltd is a beauty salon and beauty products retailer who is committed to provide skin care services and products.\nBelleza was officially established in 2011 by Ms Annie and Li Ping, with more than 17 years (combined) of experience in the beauty industry.' At Belleza, we make every effort to offer our customers the finest quality and personalized service at reasonably prices.\nBelleza specially crafted treatment is uniquely created to meet individual's needs and demands (as every individuals' skin condition and requirement is difference) for - Acne Treatment - IPL Hair Removal - Skin Whitening/ Renewal Treatment - Anti-Pigment Treatment - Anti-Scar Treatment - Hydrating Treatment - Collagen Treatment\nBelleza range of beauty products specially imported from Switzerland after careful selection and study of all available products in the market place. 'Switzerland products are proven to produce positive result within short period of application.' And Belleza is the sole distributor of CALLA-VIAR Home Care products in Singapore.",
          "address":"Bukit Timah Plaza #02-44, 1 Jalan Anak Bukit, (S)588996",
          "phone":"6466 6826",
+<<<<<<< HEAD
          "image":[
             ""
          ],
          "tags":[
+=======
+         "image":[
+            ""
+         ],
+         "tags":[
+>>>>>>> 072023190d178f1d9b4edc96bcd5462153353ebd
             "Beauty Services",
             "Skin Care",
             "Beauty"
          ]
       },
+<<<<<<< HEAD
       {
+=======
+      {
+>>>>>>> 072023190d178f1d9b4edc96bcd5462153353ebd
          "name":"Summer Sweet Nails",
          "description":"Summer Sweet Nail's saccharine nail carers ensure that no nails are left unturned. Pampering nails from experience, fingernail fussers shape down, buff up and keep extremities gleaming with perfection. Once finger mirrors are poised with stunning silhouettes, choose from a wide collection of nail colours to show off your style with one or two tone Gelish nail polish that gives gorgeous glam while it protecting against scrapes and bumps from heavy duty action scenes. Succumb to toecaps' desire to stand out from the crowd and march them to a Gelish Pedicure to keep them smiling, or opt for the three-session royal treatment to stay ahead of the competition.",
          "address":"180 Bencoolen Street, #01-58 (S) 189646",
          "phone":"6884 9626",
+<<<<<<< HEAD
          "image":[
             ""
          ],
          "tags":[
+=======
+         "image":[
+            ""
+         ],
+         "tags":[
+>>>>>>> 072023190d178f1d9b4edc96bcd5462153353ebd
             "Nail Extensions",
             "Gelish Manicure",
             "Beauty",
@@ -294,26 +445,42 @@
             "Manicure & Pedicure"
          ]
       },
+<<<<<<< HEAD
       {
+=======
+      {
+>>>>>>> 072023190d178f1d9b4edc96bcd5462153353ebd
          "name":"Adele Beauty Institute",
          "description":"ADELE BEAUTY INSTITUTE\r\nEnter a world of sensorial bliss when you step into the restful sanctuary of Adele Beauty Institute.The model of tranquil, Adele Beauty Institute prides itself as a serene haven for beauty and wellness enhancement. The spa is under the care of master beauty therapists who have dedicated more than 20 years of skin analysis and improving the overall well-being of thousands of customers, through the industry's most advanced beauty services and body therapies.Nestled within Midpoint Orchard, right in the midst of Orchard Road, Adele Beauty Institute is a convenient retreat stop in the vibrant heart of the city.\r\n \r\nDECLEOR PARIS\r\nThe winsome allure of Adele Beauty Institute lies in its range of award-winning skincare products from Decleor Paris,which is one of the largest beauty therapy brand.These globally renowned products have been carefully researched to complement the comprehensive menu of treatments offered at Adele Beauty Institute. They guarantee the best natural ingredients with the highest efficacy for restoring and maintaining of exuberance and vitality of the skin.\r\n \r\nADELE BEAUTY INSTITUTE TREATMENTS\r\nAdele Beauty Institute offers an extensive range of purifying and revitalizing skin and body therapies. These are all specially designed to provide a sense of rejuvenation and improve our customers' overall well-being.Each treatment is customized to cater to the needs, skin type and lifestyle of each customer, delivering lasting, visible results.For more information, please visit our official website at www.adelebeautyinstitute.com",
          "address":"Midpoint Orchard #04-06, 220 Orchard Road, (S)238852 View All 2 Branches",
          "phone":"6338 6206",
+<<<<<<< HEAD
          "image":[
             ""
          ],
          "tags":[
+=======
+         "image":[
+            ""
+         ],
+         "tags":[
+>>>>>>> 072023190d178f1d9b4edc96bcd5462153353ebd
             "Skin Care Products",
             "Therapy Massage",
             "Spa and Massage",
             "Pedicure Spa"
          ]
       },
+<<<<<<< HEAD
       {
+=======
+      {
+>>>>>>> 072023190d178f1d9b4edc96bcd5462153353ebd
          "name":"PamperMe Beauty Spa Nails",
          "description":"",
          "address":"220 Orchard Road, #02-10 Midpoint Orchard (S) 238852",
          "phone":"6735 2028",
+<<<<<<< HEAD
          "image":[
             ""
          ],
@@ -322,10 +489,21 @@
          ]
       },
       {
+=======
+         "image":[
+            ""
+         ],
+         "tags":[
+            null
+         ]
+      },
+      {
+>>>>>>> 072023190d178f1d9b4edc96bcd5462153353ebd
          "name":"Beauty Senses.1",
          "description":"",
          "address":"Blk 807 Yishun Ring Road, #01-4215 HDB Yishun (S) 760807",
          "phone":"6758 7213",
+<<<<<<< HEAD
          "image":[
             ""
          ],
@@ -334,24 +512,46 @@
          ]
       },
       {
-         "name":"De Pierreries Beauty Saloon",
-         "description":"Enjoy a therapeutic body massage treatment, Gua Sha, waxing, make-up service, eyebrow shaping and eyelash design. Take some time off your monotonous schedule for a well-deserved break at De Pierreries Beauty Salon. We have therapeutic body massage, or pamper yourself with our signature facial treatments. Our trained beauticians are all experienced. Our salon was started in 1984. We also offer a wide range of ear candling, Gua Sha, eyebrow shaping, eyelash design, waxing and make-up services for all your beauty needs. De Pierreries strives to give you a complete beauty and wellness experience to leave you feeling refreshed after each session.",
-         "address":"Peninsula. Excelsior Hotel #03-25, 5 Coleman Street, (S)179805",
-         "phone":"6339 7458",
+=======
          "image":[
             ""
          ],
          "tags":[
+            null
+         ]
+      },
+      {
+>>>>>>> 072023190d178f1d9b4edc96bcd5462153353ebd
+         "name":"De Pierreries Beauty Saloon",
+         "description":"Enjoy a therapeutic body massage treatment, Gua Sha, waxing, make-up service, eyebrow shaping and eyelash design. Take some time off your monotonous schedule for a well-deserved break at De Pierreries Beauty Salon. We have therapeutic body massage, or pamper yourself with our signature facial treatments. Our trained beauticians are all experienced. Our salon was started in 1984. We also offer a wide range of ear candling, Gua Sha, eyebrow shaping, eyelash design, waxing and make-up services for all your beauty needs. De Pierreries strives to give you a complete beauty and wellness experience to leave you feeling refreshed after each session.",
+         "address":"Peninsula. Excelsior Hotel #03-25, 5 Coleman Street, (S)179805",
+         "phone":"6339 7458",
+<<<<<<< HEAD
+         "image":[
+            ""
+         ],
+         "tags":[
+=======
+         "image":[
+            ""
+         ],
+         "tags":[
+>>>>>>> 072023190d178f1d9b4edc96bcd5462153353ebd
             "Beauty",
             "Eyebrow Shaping",
             "Eye Brow Threading"
          ]
       },
+<<<<<<< HEAD
       {
+=======
+      {
+>>>>>>> 072023190d178f1d9b4edc96bcd5462153353ebd
          "name":"BB Beauty",
          "description":"Background information\r\nBB Beauty is a beauty salon founded in Apr 2013. We believe in providing our customers with the highest standards of services at an affordable price. Currently, BB Beauty provides the following services to our customers.\r\n\r\nWaxing\r\nPermanent Hair Loss\r\nFacial Treatment\r\nNail\r\n\r\n\r\n\r\nModus Operandi\r\nAt BB Beauty, we uses premium waxes to ensure that our customers only pay for the highest quality. We do our best to service our customers without hard selling Our therapists are certified and highly professional and exercise extreme care and caution to minimise any discomfort. We observe stringent hygiene practices such as sterilising our equipments, using disposable tools and no double dipping of spatula. Great efforts are put into decorating the interior of our salon to ensure that our customers feel comfortable and at home.",
          "address":"HDB Bukit Merah #02-3545, 162 Bukit Merah Central, (S)150162",
          "phone":"6271 7185",
+<<<<<<< HEAD
          "image":[
             ""
          ],
@@ -360,10 +560,21 @@
          ]
       },
       {
+=======
+         "image":[
+            ""
+         ],
+         "tags":[
+            null
+         ]
+      },
+      {
+>>>>>>> 072023190d178f1d9b4edc96bcd5462153353ebd
          "name":"Zhi Beauty House",
          "description":"",
          "address":"Fu Lu Shou Complex #B1-30, 149 Rochor Road, (S)188425",
          "phone":"6338 8193",
+<<<<<<< HEAD
          "image":[
             ""
          ],
@@ -372,10 +583,21 @@
          ]
       },
       {
+=======
+         "image":[
+            ""
+         ],
+         "tags":[
+            null
+         ]
+      },
+      {
+>>>>>>> 072023190d178f1d9b4edc96bcd5462153353ebd
          "name":"Beauty Within You",
          "description":"",
          "address":"Roxy Square #02-138, 50 East Coast Road, (S)428769",
          "phone":"6345 5315",
+<<<<<<< HEAD
          "image":[
             ""
          ],
@@ -384,10 +606,21 @@
          ]
       },
       {
+=======
+         "image":[
+            ""
+         ],
+         "tags":[
+            null
+         ]
+      },
+      {
+>>>>>>> 072023190d178f1d9b4edc96bcd5462153353ebd
          "name":"The Beauty Star",
          "description":"",
          "address":"Bukit Timah Shopping Centre #01-17, 170 Upper Bukit Timah Road, (S)588179",
          "phone":"6612 5224",
+<<<<<<< HEAD
          "image":[
             ""
          ],
@@ -396,24 +629,46 @@
          ]
       },
       {
+=======
+         "image":[
+            ""
+         ],
+         "tags":[
+            null
+         ]
+      },
+      {
+>>>>>>> 072023190d178f1d9b4edc96bcd5462153353ebd
          "name":"Jil Beauty",
          "description":"We specialize in eyebrow planting & embroidery and manicures & pedicures.",
          "address":"HDB Ang Mo Kio #01-2543, 703 Ang Mo Kio Avenue 8, (S)560703 View All 3 Branches",
          "phone":"6459 0020",
+<<<<<<< HEAD
          "image":[
             "https://x2.sdimgs.com/sd_static/images/side_banner/188_x_158/784.jpg?v=1.0.2.280?v=1.0.2.280"
          ],
          "tags":[
+=======
+         "image":[
+            "https://x2.sdimgs.com/sd_static/images/side_banner/188_x_158/784.jpg?v=1.0.2.280?v=1.0.2.280"
+         ],
+         "tags":[
+>>>>>>> 072023190d178f1d9b4edc96bcd5462153353ebd
             "Nail Care",
             "Beauty Salons",
             "Facial Treatment"
          ]
       },
+<<<<<<< HEAD
       {
+=======
+      {
+>>>>>>> 072023190d178f1d9b4edc96bcd5462153353ebd
          "name":"Vincy's Beauty Services Pte Ltd",
          "description":"",
          "address":"3 Norris Road (2nd floor), (S)208248",
          "phone":"6295 5018",
+<<<<<<< HEAD
          "image":[
             ""
          ],
@@ -422,86 +677,158 @@
          ]
       },
       {
-         "name":"Beaute Lab Pte Ltd",
-         "description":"",
-         "address":"9@Tagore #04-08, 9 Tagore Lane, (S)787472",
-         "phone":"6453 0327",
-         "image":[
-            "https://x2.sdimgs.com/sd_static/images/side_banner/188_x_158/5288.jpg?v=1.0.2.280?v=1.0.2.280"
-         ],
-         "tags":[
-            "Beauty",
-            "Webpages"
-         ]
-      },
-      {
-         "name":"My Beauty Research",
-         "description":"我公司成立于2001年. 到现在有11多年的历史. 我公司专门治疗黑头, 青春痘有10多年的经验. 几千人经过我们的治疗方法有收到了满意的结果. 在治疗黑头的期间, 皮肤不会痛, 不会肿, 不留疤痕.治疗后立刻见影. 大约 5-10 次, 皮肤恢复健康.\nMy Beauty Research was founded in 2001. To date, we have 11 years of experience. We have been specializing in the treatment and removal of blackheads and pimples for over 10 years. Everyone that has gone through our treatments have received very satisfactory results. With the treatment of blackheads, your skin will not experience pain, swelling and scarring. In approximately 5-10 times, you will see immediate results and skin recovery.\n\n﻿",
-         "address":"#02-508,  No Address, (S)000000",
-         "phone":"6291 0819",
+=======
          "image":[
             ""
          ],
          "tags":[
+            null
+         ]
+      },
+      {
+>>>>>>> 072023190d178f1d9b4edc96bcd5462153353ebd
+         "name":"Beaute Lab Pte Ltd",
+         "description":"",
+         "address":"9@Tagore #04-08, 9 Tagore Lane, (S)787472",
+         "phone":"6453 0327",
+<<<<<<< HEAD
+         "image":[
+            "https://x2.sdimgs.com/sd_static/images/side_banner/188_x_158/5288.jpg?v=1.0.2.280?v=1.0.2.280"
+         ],
+         "tags":[
+=======
+         "image":[
+            "https://x2.sdimgs.com/sd_static/images/side_banner/188_x_158/5288.jpg?v=1.0.2.280?v=1.0.2.280"
+         ],
+         "tags":[
+>>>>>>> 072023190d178f1d9b4edc96bcd5462153353ebd
+            "Beauty",
+            "Webpages"
+         ]
+      },
+<<<<<<< HEAD
+      {
+=======
+      {
+>>>>>>> 072023190d178f1d9b4edc96bcd5462153353ebd
+         "name":"My Beauty Research",
+         "description":"我公司成立于2001年. 到现在有11多年的历史. 我公司专门治疗黑头, 青春痘有10多年的经验. 几千人经过我们的治疗方法有收到了满意的结果. 在治疗黑头的期间, 皮肤不会痛, 不会肿, 不留疤痕.治疗后立刻见影. 大约 5-10 次, 皮肤恢复健康.\nMy Beauty Research was founded in 2001. To date, we have 11 years of experience. We have been specializing in the treatment and removal of blackheads and pimples for over 10 years. Everyone that has gone through our treatments have received very satisfactory results. With the treatment of blackheads, your skin will not experience pain, swelling and scarring. In approximately 5-10 times, you will see immediate results and skin recovery.\n\n﻿",
+         "address":"#02-508,  No Address, (S)000000",
+         "phone":"6291 0819",
+<<<<<<< HEAD
+         "image":[
+            ""
+         ],
+         "tags":[
+=======
+         "image":[
+            ""
+         ],
+         "tags":[
+>>>>>>> 072023190d178f1d9b4edc96bcd5462153353ebd
             "Facial Treatment",
             "Beauty",
             "Skin Treatment",
             "Massage Services"
          ]
       },
+<<<<<<< HEAD
       {
+=======
+      {
+>>>>>>> 072023190d178f1d9b4edc96bcd5462153353ebd
          "name":"Slim Fit (S) Pte Ltd",
          "description":"Slim Fit is a one-stop beauty salon that provides a comprehensive range of 100% natural therapies for an exclusively female clientele. Offering fabulous services ranging from skincare treatments, bust enhancement, stretch mark removal therapy, weight loss programmes to body massage, Slim Fit is the beauty paradise for every modern lady.",
          "address":"#03-01A to #03-02 View All 4 Branches",
          "phone":"6737 6398",
+<<<<<<< HEAD
          "image":[
             ""
          ],
          "tags":[
+=======
+         "image":[
+            ""
+         ],
+         "tags":[
+>>>>>>> 072023190d178f1d9b4edc96bcd5462153353ebd
             "Health",
             "Beauty",
             "Slimming Services",
             "Beauty Care"
          ]
       },
+<<<<<<< HEAD
       {
+=======
+      {
+>>>>>>> 072023190d178f1d9b4edc96bcd5462153353ebd
          "name":"Eu Yan Sang",
          "description":"Rich in tradition and history, Chinese medicine can help to cure illness and ailments, when Western medicine has failed. Bilingual and informative staff here can introduce you a mix of herbs, tea leaves\n and animal parts, for better health.",
          "address":"Eu Yan Sang Centre, 21 Tai Seng Drive, (S)535223 View All 46 Branches",
          "phone":"6278 2667",
+<<<<<<< HEAD
          "image":[
             ""
          ],
          "tags":[
+=======
+         "image":[
+            ""
+         ],
+         "tags":[
+>>>>>>> 072023190d178f1d9b4edc96bcd5462153353ebd
             "Chinese Medicine Herbs",
             "Beauty",
             "Chinese Herbs",
             "Chinese Related"
          ]
       },
+<<<<<<< HEAD
       {
+=======
+      {
+>>>>>>> 072023190d178f1d9b4edc96bcd5462153353ebd
          "name":"Guardian Health & Beauty",
          "description":"Founded in 1972, Guardian Health & Beauty operates Singapore’s largest health & beauty chain offering professional services such as patient-care counselling & dispensary services as well as a wide range of health and beauty products.\r\nWe are Singapore's largest pharmacy & beauty chain store with 154 stores islandwide! Offering pharmacy services such as patient-care counselling & dispensary services as well as offering a wide range of health (vitamins and health foods) and beauty/personal care products. Opening Hrs : 9am to 10pm Daily Pharmacy Service Hrs : 9.30am to 9.30pm",
          "address":"Giant #03-01, 21 Tampines North Drive 2, (S)528765 View All 115 Branches",
          "phone":"6337 4518",
+<<<<<<< HEAD
          "image":[
             ""
          ],
          "tags":[
+=======
+         "image":[
+            ""
+         ],
+         "tags":[
+>>>>>>> 072023190d178f1d9b4edc96bcd5462153353ebd
             "Beauty Care",
             "Pharmacy",
             "Health"
          ]
       },
+<<<<<<< HEAD
       {
+=======
+      {
+>>>>>>> 072023190d178f1d9b4edc96bcd5462153353ebd
          "name":"Rupini's Beauty Consultant Pte Ltd",
          "description":"Rupini's Beauty Consultant is a health and beauty institute which offers balancing and harmonizing aromatherapy, skin and body treatments for women. Since our inception in 1994, we have achieved recognition by Singaporeans as a trend-setter in the Beauty Consultation industry. Rupini's Beauty Consultant is unique because we are a health and beauty institute that caters to the balance of the body and mind through the fusion of modern & ancient art of holistic beauty therapy.",
          "address":"11A Dalhousie Lane, (S)209680 View All 6 Branches",
          "phone":"6291 6789",
+<<<<<<< HEAD
          "image":[
             "https://x2.sdimgs.com/sd_static/images/side_banner/188_x_158/1532.jpg?v=1.0.2.280?v=1.0.2.280"
          ],
          "tags":[
+=======
+         "image":[
+            "https://x2.sdimgs.com/sd_static/images/side_banner/188_x_158/1532.jpg?v=1.0.2.280?v=1.0.2.280"
+         ],
+         "tags":[
+>>>>>>> 072023190d178f1d9b4edc96bcd5462153353ebd
             "Facial Treatment",
             "Beauty",
             "Skin Care Products",
@@ -509,30 +836,52 @@
             "Beauty Consultant"
          ]
       },
+<<<<<<< HEAD
       {
+=======
+      {
+>>>>>>> 072023190d178f1d9b4edc96bcd5462153353ebd
          "name":"House De Beauty",
          "description":"",
          "address":"People's Park Complex #04-07, 1 Park Road, (S)059108",
          "phone":"6536 8528",
+<<<<<<< HEAD
          "image":[
             ""
          ],
          "tags":[
+=======
+         "image":[
+            ""
+         ],
+         "tags":[
+>>>>>>> 072023190d178f1d9b4edc96bcd5462153353ebd
             "Eyebrow Embroidery",
             "Beauty Salons",
             "Beauty Care",
             "Waxing Hair Removal"
          ]
       },
+<<<<<<< HEAD
       {
+=======
+      {
+>>>>>>> 072023190d178f1d9b4edc96bcd5462153353ebd
          "name":"Pink Parlour",
          "description":"Founded in 2005, Pink Parlour started with a goal in mind, that YOU can come in and enjoy, relax, gossip and feel good about yourself. At Pink Parlour, we obsess in keeping you well groomed and fabulous. Leave the hard work to us. Simply step in, be yourself and let us satisfy the kitten in you  \r\n\r\n\r\n \r\n\r\n\r\n\r\n\r\nMon - Sat:\r\n11:30 am\r\n-\r\n9:00 pm\r\n\r\n\r\nSun:\r\n10:30 am\r\n-\r\n7:00 pm",
          "address":"Far East Plaza #05-83, 14 Scotts Road, (S)228213 View All 7 Branches",
          "phone":"6100 7465",
+<<<<<<< HEAD
          "image":[
             ""
          ],
          "tags":[
+=======
+         "image":[
+            ""
+         ],
+         "tags":[
+>>>>>>> 072023190d178f1d9b4edc96bcd5462153353ebd
             "Nail Polish",
             "Nail Spa",
             "Beauty Care",
@@ -540,28 +889,50 @@
             "Gelish Nails"
          ]
       },
+<<<<<<< HEAD
       {
+=======
+      {
+>>>>>>> 072023190d178f1d9b4edc96bcd5462153353ebd
          "name":"Venus Beauty Pte Ltd",
          "description":"\"Skin Care, Bath, Body Care, Hair Care, Fragrance, Special Care, Accessories\"",
          "address":"Venus Beauty, 4 Toh Tuck Link, (S)596226 View All 12 Branches",
          "phone":"6238 5688",
+<<<<<<< HEAD
          "image":[
             ""
          ],
          "tags":[
+=======
+         "image":[
+            ""
+         ],
+         "tags":[
+>>>>>>> 072023190d178f1d9b4edc96bcd5462153353ebd
             "Beauty",
             "Pharmacy"
          ]
       },
+<<<<<<< HEAD
       {
+=======
+      {
+>>>>>>> 072023190d178f1d9b4edc96bcd5462153353ebd
          "name":"Alyssa Hairdressing N Spa",
          "description":"Blk 539 Bedok North Street 3 #01-621   Call 6443 9297\r\nBlk 827 Tampines Street 81   #01-134   Call 6781 7813\r\n\r\nBlk 829 Tampines Street 81   #01-294   Call 6785 7852",
          "address":"HDB Bedok #01-621, 539 Bedok North Street 3, (S)460539 View All 3 Branches",
          "phone":"6443 9297",
+<<<<<<< HEAD
          "image":[
             "https://x2.sdimgs.com/sd_static/images/side_banner/188_x_158/1778.jpg?v=1.0.2.280?v=1.0.2.280"
          ],
          "tags":[
+=======
+         "image":[
+            "https://x2.sdimgs.com/sd_static/images/side_banner/188_x_158/1778.jpg?v=1.0.2.280?v=1.0.2.280"
+         ],
+         "tags":[
+>>>>>>> 072023190d178f1d9b4edc96bcd5462153353ebd
             "Beauty Care",
             "Beauty Salons",
             "Beauty Supplies",
@@ -569,11 +940,16 @@
             "Beauty"
          ]
       },
+<<<<<<< HEAD
       {
+=======
+      {
+>>>>>>> 072023190d178f1d9b4edc96bcd5462153353ebd
          "name":"Nail Magic",
          "description":"Nail Magic is a nail spa service salon who serve our clients by friendly, professionally and well trained staff. We dedictaed to provideing every client the individual attention they deserver.",
          "address":"HDB Tampines Heart #01-333, 505 Tampines Central 1, (S)520505",
          "phone":"6783 3507",
+<<<<<<< HEAD
          "image":[
             ""
          ],
@@ -2082,6 +2458,1516 @@
             ""
          ],
          "tags":[
+=======
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Nail Care",
+            "Manicure & Pedicure",
+            "Nail Art"
+         ]
+      },
+      {
+         "name":"Chapter 2 Hairdressing Pte Ltd",
+         "description":"Moving away from the sleek, sanitized, production-line interiors typical of most hair salons, chapter 2's interiors are personal spaces with cozy corners. Comfortable and laidback, there are seats prepared for friends or companions. With late hours for you, we spread our door from 11am till 10pm for that exquisite 3-hour Colourcontour after work. For the workaholics, party-goers to the let-your-hair-down impulses for a new chapter for the night, we are there for everyone to express themselves hairsomely.",
+         "address":"Marina Square #03-258/279, 6 Raffles Boulevard, (S)039594 View All 4 Branches",
+         "phone":"6336 2212",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Beauty",
+            "Hair Salons"
+         ]
+      },
+      {
+         "name":"Xin Beauty",
+         "description":"Until now, people with acne scar or mark such as pimple scar, chicken-poxmark, pigmentation, dark spots, freckles and age spot have had few options.They had to undergo pianful lasers or skin exfoliations to get rid of thier problems.",
+         "address":"HDB Tampines Grove #01-118, 826 Tampines Street 81, (S)520826 View All 3 Branches",
+         "phone":"6785 0118",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Beauty Care",
+            "Beauty",
+            "Spa Treatment",
+            "Beauty Treatment"
+         ]
+      },
+      {
+         "name":"Fusion Hub Holdings Pte Ltd",
+         "description":"Fusion Hub Singapore is a one stop station for all hair beauty services providing herbal hair loss treatment and hair care treatments, with products from FaZhiDao (髮之道).  We have 8 outlets in Singapore located in every region. Do drop by our shop for hair beauty services or get a free consultation for suitable herbal hair care treatment services.",
+         "address":"HDB Tampines Grove #01-02, 824 Tampines Street 81, (S)520824 View All 6 Branches",
+         "phone":"6456 1617",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Beauty Care Products",
+            "Hair Rebonding",
+            "Hair Colouring",
+            "Hair Stylist"
+         ]
+      },
+      {
+         "name":"Team Salon Pte Ltd",
+         "description":"Established in 1985 by Director Jean Tong, Team Salon can be considered a veteran in the hair industry. Despite the wealth of experience it holds, Team Salon still remains timeless, marrying the attributes of classic and modern, creating wonderful results for the crowning glories of its customers.",
+         "address":"Parkway Parade #02-45, 80 Marine Parade Road, (S)449269 View All 5 Branches",
+         "phone":"6440 6592",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Body Treatment",
+            "Beauty Treatment",
+            "Hair Wigs",
+            "Body Wrap"
+         ]
+      },
+      {
+         "name":"The Face Shop",
+         "description":"The Face Shop - for all beauties. THEFACESHOP understands the value of health and beauty, and we passionately pursue to serve your everyday needs. We will continue working with beauties throughout the world to exceed their expectation with much devotion.",
+         "address":"Suntec City Mall #02-340, 3 Temasek Boulevard, (S)038983 View All 23 Branches",
+         "phone":"6837 2826",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Beauty Care",
+            "Beauty Products",
+            "Facial Products",
+            "Skin Protection"
+         ]
+      },
+      {
+         "name":"Donum Terra Aromatherapy",
+         "description":"Mt Sapola was named after the mountain where the ancient Roman first discovered natural soap.They were at the bottom of this mountain when a clay-like substance of fat trickled down the mountain into the river through raindrops.Mt Sapola produced their first natural handmade soap in 1997 till today.",
+         "address":"Bugis Junction #01-K10-11, 200 Victoria Street, (S)188021 View All 6 Branches",
+         "phone":"6338 8540",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Beauty Care",
+            "Body Treatment",
+            "Spa Treatment",
+            "Spa and Massage"
+         ]
+      },
+      {
+         "name":"Beauty & Her Nails Pte Ltd",
+         "description":"We offer professionally groomed & beautified nails/brows by experienced staff. Indulge in sense-licious spa treats. Hair depilatory service is conducted in a safe private environment. We welcome you to come experience our relaxing haven in a 'fusion' baroque earth concept setting",
+         "address":"Yew Tee Point #01-52 , 21 Choa Chu Kang North 6, (S)689578 View All 3 Branches",
+         "phone":"6762 8220",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Beauty",
+            "Beauty Salons",
+            "Beauty Care",
+            "Nail Care"
+         ]
+      },
+      {
+         "name":"Blossom Beauty House LLP",
+         "description":"Relax, Revive and Renew @ Blossom Beauty House!\r\nAs a premier beauty house that specializes in face and body care, we are committed to your total body wellness by delivering the finest in beauty experience.\r\nSo start to pamper yourself with a relaxing, enjoyable day and allow our expertly trained professionals to cater to your every need. \r\nCome visit us to experience the finest and most luxurious beauty products and services available at Blossom Beauty House. \r\nLook your absolute best!",
+         "address":"HDB Toa Payoh Central #02-268, 183 Toa Payoh Central, (S)310183 View All 2 Branches",
+         "phone":"6253 2268",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Beauty Treatment",
+            "Beauty"
+         ]
+      },
+      {
+         "name":"RitaBella (S) Pte Ltd",
+         "description":"Forever beauty Professionals guarantee’s the utmost best in beauty products and service quality. Established in 2010, our company has made widespread quality research to come up with the best range of beauty care products for everyone. Our hope is to reach every household with our Ritabella trademark.\nOur staffs are well trained to give the best of care and attention to our customers . We believe in sticking to our core values of support, service and family based culture. Everyone works hard and loves what they do and are proud of being part of the Ritabella family. Every consultant makes a difference with each customer with their vibrant and own unique style of consultancy to each client.\nThe Ritabella Miracle clay and Ritabella 24K Nano Gold Serum are just the stepping stones for our Ritabella range. Beauty only does not exist on the outside but has to blossom from within as well, and our company will be coming up with an extensive range of other products to promote beauty from the inside and out. Ritabella Truly Cares.",
+         "address":"Biztech Centre, 627A Aljunied Road, (S)389842",
+         "phone":"6844 4426",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Cosmetic Products",
+            "Beauty"
+         ]
+      },
+      {
+         "name":"IM Beauty Salon & Spa",
+         "description":"IM Beauty Salon & Spa is located at HDB Chin Swee, 52 Chin Swee Road, Tel 6536 3505, view IM Beauty Salon & Spa location, products and services on Streetdirectory Map",
+         "address":"HDB Central Area #03-31, 52 Chin Swee Road, (S)160052",
+         "phone":"6536 3505",
+         "image":[
+            "https://x2.sdimgs.com/sd_static/images/side_banner/188_x_158/2209.jpg?v=1.0.2.280?v=1.0.2.280"
+         ],
+         "tags":[
+            "Skin Care",
+            "Beauty Salons"
+         ]
+      },
+      {
+         "name":"Top Image Hair & Beauty Academy Pte Ltd",
+         "description":"",
+         "address":"HDB Ang Mo Kio #02-2627, 710A Ang Mo Kio Avenue 8, (S)561710",
+         "phone":"6455 6178",
+         "image":[
+            ""
+         ],
+         "tags":[
+            null
+         ]
+      },
+      {
+         "name":"Citispa",
+         "description":"CITISPA was conceptualized as a one-stop service provider that reconnects your body, mind and soul. It is built on the firm belief that beauty emanates from within and is a reflection of the state of health and well-being.\r\nIt is not a luxury reserved for the privileged-few, but a lifestyle choice that should be made easily available to all.\r\nThis is reflected in the CITISPA commitment to offer the newest products and services at a price that gives you the best value.\r\nYou can choose from more than 80 types of spa, skin, body and beauty treatments offered, as well as speciality products to cater to your top-to-toe needs.\r\nCITISPA members also have unlimited access to various spa facilities for convenient stress and weight management.   CITISPA was incorporated in Singapore , backed by a beauty group with more than 30 years in the industry, and has since expanded to 15 outlets in Singapore and Malaysia .\r\n \r\nSome are located in the heart of town, while others are at the doorstep of housing estates. CITISPA also has a presence in Malaysia, in Johor Bahru and Kuala Lumpur.\r\nIn addition, the group has successfully franchised its spa business to South East Asia since 2001. Plans to open more franchise outlets in the region will be implemented within the next 3 years.",
+         "address":"Suntec Tower Five #03-042, 5 Temasek Boulevard, (S)038985 View All 24 Branches",
+         "phone":"6339 7398",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Portable Spa",
+            "Beauty Treatment",
+            "Beauty Care",
+            "Cosmetics Store"
+         ]
+      },
+      {
+         "name":"Tokyo Bust Express Pte. Ltd.",
+         "description":"Tokyo Bust Express sets the pace in its foray of bust solutions to provide surpassed and progressive results executed through technological programs coupled with productive ingredients.   Embarking on to a higher level of efficacy with the most advanced technology, Tokyo Bust Express has adopted the purest of organic soy extracts.",
+         "address":"Orchard Central #b1-21, 181 Orchard Road, (S)238896 View All 5 Branches",
+         "phone":"6262 6161",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Slimming",
+            "Breast Augmentation"
+         ]
+      },
+      {
+         "name":"Magic Global Group",
+         "description":"Magic Global Group\n \nMagic Global was founded with one goal in mind; to help you feel good and look beautiful. We believe that our selection of beauty and slimming services, coupled with our friendly and professional staff is a key to our success.\nEvery customer will be assured of Magic Global Exclusive Hallmark of, Acclaimed Service, Optimum Quality, Astute Professionalism, Advanced Technology & Effective Results.",
+         "address":"Chancerlodge Complex, 105 Sims Avenue, (S)387429",
+         "phone":"9106 3688",
+         "image":[
+            "https://x2.sdimgs.com/sd_static/images/side_banner/188_x_158/2829.jpg?v=1.0.2.280?v=1.0.2.280"
+         ],
+         "tags":[
+            "Slimming",
+            "Slimming Products",
+            "Beauty",
+            "Beauty Care Products"
+         ]
+      },
+      {
+         "name":"Call For A Beautician",
+         "description":"HOME BASED BEAUTICIAN...",
+         "address":"11-127",
+         "phone":"8403 1417",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Beauty",
+            "Beauty Care"
+         ]
+      },
+      {
+         "name":"Dermacare Aesthetic & Laser Clinic",
+         "description":"An aesthetic and laser clinic that offers a comprehensive host of services, ranging from ablative and non-ablative laser therapy, botox and filler injections, ultrasound-based therapies, to luxury aesthetic treatments for the face and body.",
+         "address":"ION Orchard #05-05, 2 Orchard Turn, (S)238801 View All 3 Branches",
+         "phone":"6634 6328",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Health",
+            "Aesthetic Clinic",
+            "Beauty"
+         ]
+      },
+      {
+         "name":"Pro Academy",
+         "description":"Nurturing professionals for the beauty and wellness industry",
+         "address":"Tanjong Pagar Shop Houses #01-01, 75 Tras Street, (S)079014",
+         "phone":"6534 8298",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Beauty Lesson",
+            "Beauty Workshops",
+            "Modelling Agency",
+            "Beauty Tutorial"
+         ]
+      },
+      {
+         "name":"Action Hair Boutique",
+         "description":"Vietnam, November 2011 - L’Oréal Professionnel Vietnam recently held a prestigious night presenting Autumn-Winter Collection 2011/2012 at the White Palace Convention Center in Ho Chi Minh City with the participation of over 600 hair stylists and guests. L’Oréal Professionnel Vietnam was privileged to invite a guest artist from Singapore, world class stylist Vinn Wong. Vinn’s collection is a harmony of unique style and creations with innovative techniques. It captured the audience and was acclaimed first class performance for art of cutting and styling. His performance is not simply a hair show but an moment where you enjoy the breathtaking craftsmanship of an impeccable piece of Art.",
+         "address":"The Shoppes at Marina Bay Sands # B1-150, 2 Bayfront Avenue, (S)018972 View All 3 Branches",
+         "phone":"6688 7320",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Hair Treatment",
+            "Hair Salons",
+            "Hair Grooming"
+         ]
+      },
+      {
+         "name":"Vive Hair & Beauty Salon Pte Ltd",
+         "description":"Located in the heartbeat of Orchard Road - Paragon, Vive Hair and Beauty Salon provides a wide array of services available from Hair spa to Nail spa. The brainchild of celebrity make-up artists Cecilia Chng and Agnes Ng, this is one salon which have adorned many who sashay down the catwalk and to chichi parties. It remains the de facto salon for its clientele consisting of celebrities including socialites and Tai Tais.\nFor the clueless, it is a haven for possible make-over. Leveraging on decades of experience, Cecilia Chng and Agnes Ng helm the beauty spa with its exclusive premier products. Clients can be assured of a glamorous make-over with no-frills treatment. The back of the salon accommodates for a private make-over session with MAC products, seating up to 4 clients per session. Eyebrow Shaping, Tinting, Perming or even the latest trend, Eyebrow Embroidery, is also available.",
+         "address":"The Paragon #05-06, 290 Orchard Road, (S)238859",
+         "phone":"6734 1311",
+         "image":[
+            "https://x2.sdimgs.com/sd_static/images/side_banner/188_x_158/53.gif?v=1.0.2.280?v=1.0.2.280"
+         ],
+         "tags":[
+            "Hair Salons",
+            "Beauty"
+         ]
+      },
+      {
+         "name":"Make Up Store",
+         "description":"MAKE UP STORE is a Swedish cosmetic concept store that has progressed from a humble beginning to having more than 160 stores worldwide to date.    With its wide assortment of makeup colors, customers walking into Make Up Store feel that they are walking into a candy store for make up.\r\n  Our friendly makeup artists are always on hand to help customers with product and color selection.\r\n    Striving for excellence in serving the customers needs, this dynamic and creative business continually works to improve by generating new ideas and setting new trends.",
+         "address":"The Paragon #03-20, 290 Orchard Road, (S)238859 View All 4 Branches",
+         "phone":"6887 5828",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Beauty Care",
+            "Fashion",
+            "Spa Treatment"
+         ]
+      },
+      {
+         "name":"Biotherm",
+         "description":"Biotherm is a French brand founded in 1952. Specializing in the conception and manufacture of skincare products, biological research is central to the brand’s approach. All Biotherm products contain thermal plankton, a micro-organism found in the hot springs of the Pyrenees Mountains. Thermal plankton is now reproduced via bio-fermentation and has the capacity to stimulate the skin’s natural defenses.",
+         "address":"Bugis Junction Tower Level 1, 230 Victoria Street, (S)188024 View All 3 Branches",
+         "phone":"6337 8400",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Skin Care Wholesale",
+            "Pigmentation Treatment",
+            "Pigmentation",
+            "Skin Care Products",
+            "Skin Care"
+         ]
+      },
+      {
+         "name":"Beauty. Mums. Babies",
+         "description":"All pregnant women face tremendous physical changes range from weight gain, bloatedness, swelling to psychological changes caused by hormonal changes. Most women enjoy being pregnant. To help you along, we offer to help you look good, feel good during your Pre Natal and Post Natal period and ensure you enjoy being pregnant.",
+         "address":"The Paragon #05-02, 290 Orchard Road, (S)238859",
+         "phone":"6235 0688",
+         "image":[
+            "https://x2.sdimgs.com/sd_static/images/side_banner/188_x_158/2537.jpg?v=1.0.2.280?v=1.0.2.280"
+         ],
+         "tags":[
+            "Beauty",
+            "Post Natal Massage",
+            "Slimming and Beauty"
+         ]
+      },
+      {
+         "name":"UNV Beauty Therapy & Slimming",
+         "description":"UNV Beauty Therapy & Slimming has been operating since year 2005. We are able to retain a pool of loyal customer base and attract new customers through recommendations and introductions due to our good service, upgrading of our staff training, our willingness to learn/adopt new technology in treatment methods and products, our willingness to share knowledge with our customers such as through our annual seminars and most importantly; Customers are satisfied after seeing positive results with the treatments.",
+         "address":"HDB Jurong Gateway #02-323, 135 Jurong Gateway Road, (S)600135",
+         "phone":"62 6126",
+         "image":[
+            "https://x2.sdimgs.com/sd_static/images/side_banner/188_x_158/1321.jpg?v=1.0.2.280?v=1.0.2.280"
+         ],
+         "tags":[
+            "Skin Treatment",
+            "Facial Skin Care"
+         ]
+      },
+      {
+         "name":"OSIM",
+         "description":"OSIM, the global leader in healthy lifestyle products! Currently offers the widest range of innovative products that are relevant to air travellers, home owners and more. Being the expert in comfort and relaxation, holistic product offerings cater to the physical, mental and emotional well-being of their customers. The OSIM concept shop carries a line of 'OSIM travel-comforts' consisting of all the innovative and portable gadgets that make life more comfortable during and after travel.",
+         "address":"OSIM Headquarters, 65 Ubi Avenue 1, (S)408939 View All 31 Branches",
+         "phone":"6738 8466",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Preventive Healthcare",
+            "Beauty Care",
+            "Beauty",
+            "Beauty Treatment"
+         ]
+      },
+      {
+         "name":"Adonis Beauty Consultants Pte Ltd",
+         "description":"Adonis is an established and trusted brand which grew over the years by building our expertise and reputation in the market.Adonis has grown over the years and established as of today, eight service centers, strategically located in Singapore and fifteen centers across Malaysia.Adonis exhibits passion and commitment to pamper every customer who places their trust in us. Our products and services deliver high and consistent quality standards at all times.",
+         "address":"HDB Jurong #01-229, 130 Jurong Gateway Road, (S)600130 View All 12 Branches",
+         "phone":"6737 9854",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Eyebrow Shaping",
+            "Beauty"
+         ]
+      },
+      {
+         "name":"Beauty Language",
+         "description":"beautylanguage.com is a leading beauty retailer offering a wide selection of the finest fragrance, cosmetics, hair, facial and skin care products in Singapore.",
+         "address":"Suntec Tower Five #02-098, 5 Temasek Boulevard, (S)038985 View All 18 Branches",
+         "phone":"6884 4700",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Cosmetic Products",
+            "Beauty Care Products",
+            "Women"
+         ]
+      },
+      {
+         "name":"Star Beauty",
+         "description":"Star Beautycaters male and female on their beauty care needs - from hair care, nail care and more.Cabalen  is your one stop shop for Filipino goods, such as dry goods, snacks, toiletries and as well as Pinoy seasonings.Ystilo de Manila is the beauty salon that will take good care of your hair treatment, hair cut and more.",
+         "address":"Lucky Plaza #02-57, 304 Orchard Road, (S)238863 View All 3 Branches",
+         "phone":"8182 5487",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Beauty",
+            "Beauty Treatment",
+            "Beauty Care"
+         ]
+      },
+      {
+         "name":"Sure Solution Pte Ltd",
+         "description":"Sure Solution is an Aesthetic Dermal Spa that offers a wide variety of face and body treatments.\nSupported by a portfolio of premium products from established brands (Dermaheal, pHformula, Genosys, SRS, Mesologica), we aim to keep our customers at the cutting edge of technology that helps enhancing each individual beauty at the most affordable price!",
+         "address":"Orchard Hotel #03-23, 442 Orchard Road, (S)238879",
+         "phone":"6737 8076",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Beauty Supplies",
+            "Beauty",
+            "Cosmetic Products"
+         ]
+      },
+      {
+         "name":"Vanessa Beauty Salon & Henna Art Work Creations",
+         "description":"Vanessa Beauty Salon is well known in the community for our latest hair stylish. More and more satisfied customers are coming back to us. Each time our customers come back, friends of theirs will accompany them for the latest hair style. In our salon we have all the latest computerized equipment to make the final touch up. All our satisfied customers are relaxing and enjoying themselves in our cozy and warmth welcome salon.",
+         "address":"The Verge #02-02, 2 Serangoon Road, (S)218227 View All 2 Branches",
+         "phone":"6291 0977",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Beauty",
+            "Henna"
+         ]
+      },
+      {
+         "name":"Mary Chia Beauty & Slimming Specialist",
+         "description":"Mary Chia is established in Singapore for 27 years, well-known for its innovative high-tech technology beauty & slimming treatments. Mary Chia is more than just a Beauty & Slimming Centre, has much to offer, combining excellence and innovation in everything we do.",
+         "address":"Causeway Point #04-23/25, 1 Woodlands Square, (S)738099 View All 11 Branches",
+         "phone":"6894 1788",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Hair Grooming",
+            "Beauty",
+            "Beauty Care",
+            "Body Treatment",
+            "Slimming Services"
+         ]
+      },
+      {
+         "name":"Bella Skin Care",
+         "description":"Established in 1982, Bella has over 30 centres worldwide to date and is the region's acknowledged leader in advanced skincare services and advanced hair removal solution.",
+         "address":"Nex #B1-52, 23 Serangoon Central, (S)556083 View All 6 Branches",
+         "phone":"6509 3373",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Skin Pigmentation",
+            "Beauty",
+            "Beauty Care",
+            "Pigmentation Treatment"
+         ]
+      },
+      {
+         "name":"Face Bistro Pte Ltd",
+         "description":"An exclusive skincare and beauty boutique helmed by celebrity make-up artist Dily Wang, Face Bistro provides expert beauty advice and services as well as niche skincare and make-up products from Japan that are tailored for the Asian skin. We embody a one-stop provider of premium beauty and skincare services to Asian men and women, regardless of age and skin types.",
+         "address":"Holland Village, 27A Lorong Liput, (S)277738 View All 2 Branches",
+         "phone":"6462 4988",
+         "image":[
+            "https://x1.sdimgs.com/sd_static/images/side_banner/188_x_158/486.jpg?v=1.0.2.280?v=1.0.2.280"
+         ],
+         "tags":[
+            "Beauty Spa",
+            "Spa",
+            "Waxing Hair Removal"
+         ]
+      },
+      {
+         "name":"Erabelle Pte Ltd",
+         "description":"Erabelle seeks to enhance your beauty so that it looks natural, never overly made-up or fake. Erabelle is the preferred beauty service provider for brow-related services and spa treatments.",
+         "address":"Quartz Industrial Building #08-01/02, 5 Upper Aljunied Link, (S)367903 View All 4 Branches",
+         "phone":"6383 3323",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Spa Treatment",
+            "Hair Wigs",
+            "Eye Brow Threading"
+         ]
+      },
+      {
+         "name":"Dr. Cindy Medical Aesthetics Clinic",
+         "description":"Dr. Cindy's Medical Aesthetics Clinic offer a wide range of aesthetics services such as acne scar treatments, filler and botox, laser treatments, body contouring, laser hair removal, non-surgical facelifts and customized aesthetics treatments based on the latest technologies. Our treatments are non time-consuming, pose no risks to the body and are effective. We know that you want the best results without compromising on your health.",
+         "address":"International Building #05-06, 360 Orchard Road, (S)238869 View All 3 Branches",
+         "phone":"6733 4433",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Skin Care",
+            "Facial Treatment",
+            "Botox Clinic",
+            "Aesthetic Clinic"
+         ]
+      },
+      {
+         "name":"Estetica Beauty Therapy & Slimming Centre",
+         "description":"Since 1980, we at Estetica have understood that beauty is never just skin deep. Our policy of developing Experience, investing in Innovation and pursuing a Professional yet Personal relationship with each Customer has given us the opportunity of being your Beauty Companion throughout the different stages of your life.",
+         "address":"Nex  #02-37, 23 Serangoon Central, (S)556083 View All 9 Branches",
+         "phone":"6285 6372",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Beauty Care",
+            "Slimming Centre",
+            "Spa Treatment"
+         ]
+      },
+      {
+         "name":"Yummi House",
+         "description":"YUMMI HOUSE PTE LTD. A Singapore-based company with its main trading arm of all natural, unprocessed wild honey. We are dedicated in research and development, sourcing the best and most natural health products from the most primitive environments for our consumers.We emphasise on best quality and originality with excellent customers' satisfaction. We are committed with our products to adhere with a stringent control policy to meet the requirement of ORIGIN, QUALITY, SOURCE and TASTE.",
+         "address":"Citimac #01-19, 605 Macpherson Road, (S)368239 View All 8 Branches",
+         "phone":"6282 0777",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Health",
+            "Health Food",
+            "Food",
+            "Beauty"
+         ]
+      },
+      {
+         "name":"The Nail Status",
+         "description":"If you are looking for a classy, elegance & a truly defining nail experience, then The Nail Status is definitely the place to be.",
+         "address":"Far East Plaza #04-83, 14 Scotts Road, (S)228213 View All 2 Branches",
+         "phone":"6836 2005",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Nail Spa",
+            "Manicure Salon",
+            "Manicure Spa",
+            "Gelish Manicure"
+         ]
+      },
+      {
+         "name":"Ladyfinger",
+         "description":"Established in 2004, Ladyfinger offers a unique overall experience by offering a creative concept together with food & beverages for you to unwind. To date, we have expanded to include a total of six outlets island wide.",
+         "address":"Orchard Gateway 04-20/21, 277 Orchard Road, (S)238858 View All 6 Branches",
+         "phone":"6884 4044",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Body Treatment",
+            "Beauty Care",
+            "Nail Treatment",
+            "Beauty & Day Spas"
+         ]
+      },
+      {
+         "name":"Bud Cosmetics",
+         "description":"Welcome to bud Cosmetics - the source for \r\norganic natural skin care, cosmetics and aromatherapy, bud Cosmetics is the \r\ndedicated retailer to focus exclusively on organic in the beauty industry. It \r\nevaluates beauty brands from around the world against it's stringent \r\nselection criteria - evaluating purity, quality, and commitment to organic. \r\nOffering premium and trusted brands from around the world, including The Organic Pharmacy, Logona Naturkosmetik, Sante Naturkosmetik, 100% Pure, Dr Alkaitis, John Masters Organics, Kimberly Sayer of London, Intelligent Nutrients, Madara, Buds Baby Organics, Fushi Wellbeing, NEOM, OSKIA, Honore Des Pres, Mukti Botanics and many others",
+         "address":"Square 2 #01-66, 10 Sinaran Drive, (S)307506 View All 3 Branches",
+         "phone":"6397 6013",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Hair Grooming",
+            "Beauty"
+         ]
+      },
+      {
+         "name":"SaSa Cosmetic Singapore",
+         "description":"Sa Sa International Holdings Limited (\"Sa  Sa\") is a leading cosmetic retailing and beauty services group in Asia.  Our 90 retail stores and counters in Asia sell more than 400 brands of  skincare, fragrance, make-up and hair care products including private  labels and other exclusive international brands.   Sa Sa is committed to hiring and  developing the best talent. We invest in your training and career  development, offering significant growth and stimulating career  opportunities through different career assignments in our diverse  organization.",
+         "address":"Bugis Junction #01-83/84, 200 Victoria Street, (S)188021 View All 25 Branches",
+         "phone":"6336 9180",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Skin Care",
+            "Hair Care Products",
+            "Beauty Products"
+         ]
+      },
+      {
+         "name":"New York Skin Solutions Pte Ltd",
+         "description":"New York Skin Solutions is a premium skin treatment company that focuses on restoring healthy, perfect skin for those struggling with skin problems. With breakthrough prescriptive treatments administered by dedicated skincare experts and custom-blended, 100% botanical products returned perfectly by dermatological researchers for Asian skin, New York Solutions has resolved skin woes of thousands of consumers with amazing results.Countless real testimonials have been featured in the press, as well as television programs and commercials in these market to drive home the message that consumers can rely on us for the ultimate skin solution.",
+         "address":"White Sands #04-07/08, 1 Pasir Ris Central Street 3, (S)518457 View All 14 Branches",
+         "phone":"6788 5566",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Beauty",
+            "Anti Acne",
+            "Hair Grooming",
+            "Natural Anti-Aging",
+            "Psoriasis Treatment"
+         ]
+      },
+      {
+         "name":"Immortelle Atelier LLP",
+         "description":"Immortelle Atelier provides a wide range of beauty courses. Its objective is to promote quality education and active learning in health and beauty at a reasonable fee.  Designed for people who want to have professional skills on hand, our  Make-Up & Beauty Therapy courses are the perfect introduction to  this exciting, diverse and rewarding industry.",
+         "address":"United Square #02-08B, 101 Thomson Road, (S)307591",
+         "phone":"6259 9001",
+         "image":[
+            "https://x2.sdimgs.com/sd_static/images/side_banner/188_x_158/1336.jpg?v=1.0.2.280?v=1.0.2.280"
+         ],
+         "tags":[
+            "Facial Treatment",
+            "Beauty",
+            "Facial & Skin Rejuvenation",
+            "Facial Skin Care"
+         ]
+      },
+      {
+         "name":"Arches Hairspa Pte Ltd",
+         "description":"Arches Hair Spa + Salon offers a full range of hair care services, done with professionalism and commitment to only the best. A young and lively team with experience to match, Arches Hair Spa + Salon is fast establishing itself in the local fashion industry. From the highly popular hair spa treatment that provides pure relaxation for stressed out customers to families who come for haircuts, you can expect nothing but the best service. Arches Hairspa + Salon has also been involved in various TV shows and magazine shoots.",
+         "address":"White Sands #04-14, 1 Pasir Ris Central Street 3, (S)518457 View All 2 Branches",
+         "phone":"6581 0310",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Spa",
+            "Spa Treatment",
+            "Home Spa Equipment",
+            "Wellness Business"
+         ]
+      },
+      {
+         "name":"Skin Food",
+         "description":"SKINFOOD's Food Principles  \"To protect your skin for 14 years, not just for 14 days.\"  That is the goal of SKINFOOD. We believe in beauty within food. It takes a long time for us to produce products from cultivating the ingredients to making them into actual cosmetics, but our products manifest effects for a longer time.",
+         "address":"Ang Mo Kio (AMK) Hub #B1-06, 53 Ang Mo Kio Avenue 3, (S)569933 View All 6 Branches",
+         "phone":"6853 7291",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Herbal Skin Care Products",
+            "Cosmetic Products",
+            "Herbal Product",
+            "Beauty Care"
+         ]
+      },
+      {
+         "name":"Yes! Your Eyewear Specialists",
+         "description":"To provide a wide range of optical & eye care products like prescriptive glasses , contact lenses and sunglasses from affordable range to top renowned brands and constantly invest in the latest eye check equipment to detect ocular complications as early as possible by our groups of certified optometrists and opticians.",
+         "address":"Suntec Tower Five #01-075, 5 Temasek Boulevard, (S)038985 View All 4 Branches",
+         "phone":"6332 5332",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Opticians",
+            "Beauty",
+            "Optical",
+            "Spectacles"
+         ]
+      },
+      {
+         "name":"The Spa-lon",
+         "description":"The-SPA-lon continually strives to be innovative and professional. Keeping a clean and tidy environment at the SPA is also held with high regard.",
+         "address":"Chijmes #02-04/05/02, 30 Victoria Street, (S)187996 View All 6 Branches",
+         "phone":"6837 0131",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Creative Eyebrow",
+            "Pigmentation Treatment",
+            "Pigmentation",
+            "Beauty Salons"
+         ]
+      },
+      {
+         "name":"Theresa Beauty Slimming & Fitness Pte Ltd",
+         "description":"Our humble success story begins in the 1987 with the establishment of our first outlet at Ang Mo Kio. The concept of slimming has evolved since then and at Theresa Slimming Beauty Spa, we have adopted a perfect blend of technology with extensive experience on developing with pure natural organic products, thus eloping a new generation of slimming concept. Introducing ?Organic slimming ?- which adopts a completely natural and organic way in slimming ? we use only natural product with significant results. Combined with the latest slimming technologies and developing organic diet meals, one will experience the full benefits of internal-external weight management.",
+         "address":"HDB Bedok #01-33, 416 Bedok North Avenue 2, (S)460416 View All 8 Branches",
+         "phone":"6482 1187",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Botox",
+            "Slimming",
+            "Fitness",
+            "Organic Health"
+         ]
+      },
+      {
+         "name":"House Pte Ltd",
+         "description":"HOUSE, Spa Esprit Group's first venture into the F&B arena, opened in 2007 as an ambitious 17,000 sq-feet venue that combines an indoor and outdoor cafe, four multi-function rooms, and a bar. Nestled in the forest of Dempsey Hill, the former British military barracks has been refashioned into a whimsical dining space.",
+         "address":"8D Dempsey Road, (S)249672",
+         "phone":"6479 0070",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Beauty Care",
+            "Cosmetics Store",
+            "Beauty Treatment",
+            "High Tea"
+         ]
+      },
+      {
+         "name":"Meitoto Pte Ltd",
+         "description":"We serve and care for all our beloved customers through our one-on-one professional sessions, beauticians’ professional expertise and enhanced comprehensive service quality in accordance with the five-star service standards. We would make a detailed analysis of each customer in terms of her skin type. Our Director will prepare the unique formula in person, so that our customers will be able to have their dream skin quickly.",
+         "address":"IMM Building #04-31H, 2 Jurong East Street 21, (S)609601 View All 2 Branches",
+         "phone":"6560 7378",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Beauty Care",
+            "Spa Treatment",
+            "Beauty Treatment",
+            "Face Threading"
+         ]
+      },
+      {
+         "name":"Fresver Beauty Pte Ltd",
+         "description":"We feature the best facial ad body wellness treatments that will help to improve your IMMUNITY, increase your VITALITY and REJUVENATE your cells. Place yourself into the hands of our highly trained therapist who are always interested in what your needs are.",
+         "address":"Telepark #01-23, 5 Tampines Central 6, (S)529482 View All 4 Branches",
+         "phone":"6100 1030",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Therapist",
+            "Spa Treatment",
+            "Hair Wigs",
+            "Hair Removal"
+         ]
+      },
+      {
+         "name":"The Pink Room International Nail Academy Pte Ltd",
+         "description":"The Pink Room International Nail Academy taught their first student in the year 2003. It is the only school in Singapore that focuses and specialized in the training and certification of Nails & Beauty.",
+         "address":"International Plaza #15-06, 10 Anson Road, (S)079903",
+         "phone":"6348 1592",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Undergraduate Program",
+            "Nail Care",
+            "College",
+            "Masters Degree"
+         ]
+      },
+      {
+         "name":"Rapellez Pte Ltd",
+         "description":"Your skin's retreat & sanctuary - our professional skincare treatment & other services by our experience, well trained & skilful beauty therapist to meet the unique needs of every skin.",
+         "address":"Fu Tsu Building #09-01, 19 Kim Keat Road, (S)328804 View All 5 Branches",
+         "phone":"6224 0816",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Eye Brow Threading",
+            "Creative Eyebrow",
+            "Eyebrow Shaping"
+         ]
+      },
+      {
+         "name":"Mtm Skincare Pte Ltd",
+         "description":"MTM Skincare was founded with the aim of designing skincare regimes that match the diverse and unique skincare needs of every individual with Custom-blended Products and Services.",
+         "address":"Winsland House I #01-04/05, 3 Killiney Road, (S)239519 View All 5 Branches",
+         "phone":"6738 6006",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Eyebrow Shaping",
+            "Beauty",
+            "Eye Brow Threading"
+         ]
+      },
+      {
+         "name":"Belina Beauty",
+         "description":"Begin your journey into effective and professional beauty treatments with a complimentary skin consultation. In a private session, our experts will establish your personalized skin profile and create for you a customized treatment program to meet the needs of your skin. Belina Beauty invites you to experience the charm and comfort of this classically inspired beauty destination, a place where you can feel at home while drifting off into a state of relaxation and comfort. The most distinctive element at Belina Beauty is our staff, the most talented and professional people who care for your total well being. Belina Beauty wants you to feel pampered from head to toe and for you to know just how special you are to us.",
+         "address":"Thomson Garden Estate, 246 Upper Thomson Road, (S)574370",
+         "phone":"6452 3566",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Beauty Salons",
+            "Beauty",
+            "Health & Wellness"
+         ]
+      },
+      {
+         "name":"Fusion Cosmetics Pte Ltd",
+         "description":"Fusion Cosmetics Pte Ltd is a multi-million dollar hair care and skin care company.  We are the leading marketer and sole distributor of award winning French beauty and hair care brands that include PHYTO, Secret Professionnel, LIERAC and NUXE skincare, Medavita and ImOlive brand.  Our products are represented throughout Singapore with close to 300 point of sales that includes leading department stores like Robinsons and John Little as well as renowned retailers such as Sa Sa Cosmetics, Watson's, Guardian, the Living Pharmacy and also leading salons.  Reporting directly to the Marketing and Communications Director, you will be responsible for website design and graphic design for our internal and external design projects. Your job duties include designing, development and maintenance of our websites, as well as graphic design for merchandising, advertising and marketing collaterals including print advertisements, newsletters, brochures, Point of Sales displays, POP, posters and banners. You will be working with top Singapore magazines and publications such as Her World, Simply Her, Cita Bella, UWeekly, Singapore Women’s Weekly, Harpers Bazaar, Straits Times, New Paper, and Lianhe Zaobao.",
+         "address":"Kewalram House #04-11/12/13/14, 8 Jalan Kilang Timor, (S)159305 View All 4 Branches",
+         "phone":"6278 8456",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Beauty",
+            "Hair Style",
+            "Beauty Products",
+            "Hair Care Products"
+         ]
+      },
+      {
+         "name":"Visage The Salon Pte Ltd",
+         "description":"Centrally located along Orchard Road at Delfi Orchard, it is the perfect place to escape & be pampered by therapists dedicated to providing you with personalised & professional spa & beauty treatments.",
+         "address":"Delfi Orchard #02-12/14, 402 Orchard Road, (S)238876 View All 3 Branches",
+         "phone":"6733 0933",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Beauty",
+            "Beauty Care",
+            "Creative Eyebrow",
+            "Waxing Hair Removal"
+         ]
+      },
+      {
+         "name":"Vedure MediBoutique (Wheelock Place)",
+         "description":"Experience the latest in anti-aging methodologies and innovative therapies within our aristocratic sanctuary. At Vedure, every individual is unique and we will help you select the best available solution to look and feel your best.  At Vedure, let us help you create the Most Beautiful You.",
+         "address":"Wheelock Place #04-06, 501 Orchard Road, (S)238880",
+         "phone":"6732 6448",
+         "image":[
+            "https://x1.sdimgs.com/sd_static/images/side_banner/188_x_158/634.gif?v=1.0.2.280?v=1.0.2.280"
+         ],
+         "tags":[
+            "Skin Care",
+            "Beauty Salons",
+            "Facial Service",
+            "Spa and Massage",
+            "Permanent Hair Removal"
+         ]
+      },
+      {
+         "name":"Angelface Holding Pte Ltd",
+         "description":"With more than 2 decade years’ experience, Ms Angie Lim aspires for Angel Face to reveal another world of beauty and indulgence for today’s career women. Angel Face philosophy is to cure and treat your skin problem with a team of skilled and well trained therapists.\nCustomary in every treatment are therapeutic beauty treats from skilled therapists for further pampering. Relaxed senses undoubtedly enhance treatment efficiency.\nConstant customers’ referrals have affirmed Angel Face professionalism. Angel Face caters to a wide range of budgets and time, ranging from one hour skin renewal facial to a 3 hour rejuvenating face, body regime and Correcting Treatment for problem skin inevitable in urban living. Miraculously, work stress is transformed into feminine strength with newly revitalized skin!\nAngel Face is where you retreat from hectic routine and re-emerge looking your best, or perhaps more angelic.",
+         "address":"Tanjong Pagar Plaza #01-48, (S)082001 View All 2 Branches",
+         "phone":"6221 3723",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Beauty Products",
+            "Beauty Care",
+            "Creative Eyebrow",
+            "Eye Brow Threading",
+            "Beauty Salons"
+         ]
+      },
+      {
+         "name":"Clariancy Private Limited",
+         "description":"Clariancy (Private Limited) was incorporated in early 2010 by a group of medical and beauty professionals to cater to the exponential growth and demand for aesthetic services and equipment.",
+         "address":"Raffles Hotel Shopping Arcade #02-15/16, 328 North Bridge Road, (S)188719 View All 8 Branches",
+         "phone":"6338 2619",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Beauty Supplies",
+            "Aesthetic Clinic",
+            "Facial & Skin Rejuvenation",
+            "Facial Skin Care"
+         ]
+      },
+      {
+         "name":"Proasis Skin & Body Care Pte Ltd",
+         "description":"Proasis Sin & Body Care was established with the intention to bring convenience to customers with our wide range of services.  We are your ONE STOP head to toe beauty salon that promise to deliver the best service with you in mind.",
+         "address":"HDB Bedok #01-75, 510 Bedok North Street 3, (S)460510 View All 2 Branches",
+         "phone":"6448 7848",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Hair Wigs",
+            "Beauty Treatment",
+            "Men's Fragrance",
+            "Skin Care Products"
+         ]
+      },
+      {
+         "name":"Heaven - Nail's Indulgence",
+         "description":"Age shows first in the hands and feet, where skin is thinner than in other areas of the body. In today's world, woman has less and less time for themselves, Pressure of today leaves woman very little time for themselves.",
+         "address":"Northpoint Shopping Centre #03-46, 930 Yishun Avenue 2, (S)769098",
+         "phone":"6482 5722",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Foot Spa",
+            "Beauty",
+            "Bridal Nails",
+            "Nail Art",
+            "Nail Care"
+         ]
+      },
+      {
+         "name":"Style By Louis & Co. Pte Ltd",
+         "description":"The Brand NEW Colorance Express Toning is a 5 minute blonde toning service which offers intense shine and condition on lightened hair. This fast and durable blonde toning service is the ultimate in toning. Available in 6 intermixable shades it can be used after a full-head powder lightener application, after a highlights service or as refreshment of blonde color in-between color services.",
+         "address":"The Central #03-65/66/67, 6 Eu Tong Sen Street, (S)059817",
+         "phone":"6884 5335",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Hair Care Products",
+            "Hair Loss Products",
+            "Eyebrow Shaping",
+            "Salon Equipment"
+         ]
+      },
+      {
+         "name":"La Coco Hair Pte Ltd",
+         "description":"La Coco Hair is the first Korean salon in Singapore back in 2001.  La Coco is more than just your hair salon, it  provides you comfort while being pampered.",
+         "address":"Orchard Central #04-13, 181 Orchard Road, (S)238896 View All 2 Branches",
+         "phone":"6884 4544",
+         "image":[
+            "https://x1.sdimgs.com/sd_static/images/side_banner/188_x_158/2349.jpg?v=1.0.2.280?v=1.0.2.280"
+         ],
+         "tags":[
+            "Hair Treatment",
+            "Hair Extension",
+            "Korean Hair Style"
+         ]
+      },
+      {
+         "name":"Dii Laila Beauty",
+         "description":"Dii Laila Beauty, which is owned by a Singapore woman who has over 30 years experience in the beauty industry; not only provides facial beauty treatment and hair treatment especially for “Moslem”, but also works together with women from Brunei Darussalam to introduce beauty products.  All the products are 100% Halal and suitable for Asian skin.",
+         "address":"Kembangan Plaza #01-02, 18 Jalan Masjid, (S)418944",
+         "phone":"6844 1093",
+         "image":[
+            "https://x2.sdimgs.com/sd_static/images/side_banner/188_x_158/2078.jpg?v=1.0.2.280?v=1.0.2.280"
+         ],
+         "tags":[
+            "Beauty",
+            "Beauty Treatment"
+         ]
+      },
+      {
+         "name":"LARAKA Beauty",
+         "description":"Did you know a woman’s face starts ageing at 20 years, compared to 25 just a decade ago? Due to work-related stress and long hours, the working woman of today experiences earlier ageing, resulting in fine lines and wrinkles. Thankfully, Laraka Beauty provides the solution for the beauty-conscious ladies.\nLaraka Beauty staffs and management are experienced as they went through professional training to provide excellent service and attitudes towards customers. We use the famous award winning skin care product from Germany, Babor. Babor started from 1955 till present and it had also won numerous amount of prizes till now. Babor's product specialises in treating acne skin, sensitive skin, pigmentation skin and matured skin and dark eye rings. People nowadays face huge stress due to work and they also have a irregular lifestyle due to insufficient amount of sleep and a irregular diet usually are the cause of skin problems such as acne, pigmentation skin and sensitive skin.",
+         "address":"HDB Ang Mo Kio #01-2605, 709 Ang Mo Kio Avenue 8, (S)560709",
+         "phone":"6455 4720",
+         "image":[
+            "https://x2.sdimgs.com/sd_static/images/side_banner/188_x_158/2315.jpg?v=1.0.2.280?v=1.0.2.280"
+         ],
+         "tags":[
+            "Beauty",
+            "Hair Removal",
+            "Eyelash Extension"
+         ]
+      },
+      {
+         "name":"Hado Beauty Wellness",
+         "description":"Come in. Relax and rejuvenate in the secret oasis of the city..At Hado, we only do one thing.  Help you discover the most beautiful you.Let us take care of your face, body and soul..",
+         "address":"Telok Ayer Shop Houses, 104 Amoy Street, (S)069924",
+         "phone":"6338 4532",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Beauty Salons",
+            "Skin Care"
+         ]
+      },
+      {
+         "name":"One Beauty Spa LLP",
+         "description":"Enter into a realm of tranquility and rejuvenation. Let the hands of our professional and friendly therapists pamper you and reveal your true beauty. Feel the calmness and harmony. Let us help you attain the perfect balance of the Body, Mind, and Soul. Enjoy the individual attention that you well deserve.",
+         "address":"14 Liang Seah Street, (S)189035 View All 3 Branches",
+         "phone":"6338 4979",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Spa and Massage",
+            "Beauty Wellness",
+            "Wellness Spa",
+            "Hydro Spa",
+            "Wellness Business"
+         ]
+      },
+      {
+         "name":"Senses Beauty LLP",
+         "description":"",
+         "address":"HDB Jurong #01-45, 344 Jurong East Street 31, (S)600344",
+         "phone":"6567 4388",
+         "image":[
+            ""
+         ],
+         "tags":[
+            null
+         ]
+      },
+      {
+         "name":"Luxe Women",
+         "description":"More than just the “tools” by which we work and play, our hands and feet are an important form of self-expression and presentation. They are also essential elements of good grooming. In the past, manicures and pedicures have often been viewed as highly indulgent luxuries out of the reach of most people's pocketbooks. We set out to change all that. We started Luxe Women, Singapore's first ladies-only nail concept boutique, with one key aim - to deliver the highest quality, most innovative nail care services to the all ladies in a convenient, affordable and fun manner.",
+         "address":"HDB Ang Mo Kio #01-2130, 347 Ang Mo Kio Avenue 3, (S)560347 View All 2 Branches",
+         "phone":"9615 5970",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Gelish Nails",
+            "Manicure & Pedicure",
+            "Foot Care",
+            "Wedding Nails"
+         ]
+      },
+      {
+         "name":"Kiehl's",
+         "description":"Hailing from New York, Kiehl's offers customers with products blending cosmetic, pharmaceutical, herbal, and medicinal knowledge developed through the generations. The brand is dedicated to serving its customers quality products through its extensive line of skin and hair care formulations.",
+         "address":"VivoCity #01-11/12, 1 Harbourfront Walk, (S)098585 View All 10 Branches",
+         "phone":"6376 9017",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Skin Protection",
+            "Herbal Skin Care Products",
+            "Skin Care",
+            "Men's Skin Care",
+            "Skin Solution"
+         ]
+      },
+      {
+         "name":"Korres",
+         "description":"Korres Natural Products is a Greek company with roots in Athens' first ever Homeopathic Pharmacy. Korres uses extensive scientific resources for the creation of beneficial and safe products.",
+         "address":"ION Orchard #B2-34, 2 Orchard Turn, (S)238801 View All 4 Branches",
+         "phone":"6509 3600",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Skin Care Products",
+            "Beauty",
+            "Beauty Care",
+            "Herbal Cosmetics"
+         ]
+      },
+      {
+         "name":"Jo-Wa",
+         "description":"Item: Coffee Slimming Gel (Japanese Formula)Quantity: 5Description: Effective cream for slimmingPrice: S$18.50Item: Blackpower Hair TonicQuantity: 5Description: For preventing hair-loss and promotes the growth of hair.Price: S$32.00Item: Blackpower Hair ShampooQuantity: 3Description: Promotes healthy scalp and prevents hair-loss.Price: S$32.00",
+         "address":"Square 2 #03-36, 10 Sinaran Drive, (S)307506",
+         "phone":"6397 2810",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Beauty",
+            "Hair Grooming",
+            "Hair Treatment"
+         ]
+      },
+      {
+         "name":"Salon 360?",
+         "description":"Salon 360° is our newest addition, opening at the magnificent Marina Bay Sands Resort in late 2010. Here at Salon 360°, we believe in enhancing your external beauty through your inner soul and body rejuvenation.\nAllow us to engage you with our scientific diagnostic treatment and customised therapy sessions. While you luxuriate in paradise, your skin, hair and scalp are being repaired and restored, regaining health and lustre.",
+         "address":"The Shoppes at Marina Bay Sands #B2-40, Canal Level, 2 Bayfront Avenue, (S)018972",
+         "phone":"6688 7666",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Creative Eyebrow",
+            "Wellness Business",
+            "Beauty Care Products",
+            "Eyebrow Shaping",
+            "Beauty"
+         ]
+      },
+      {
+         "name":"The Nail Shop",
+         "description":"Indulge in a Pampering & Cosy Nail Experience @ The Nail Shop!",
+         "address":"Far East Plaza #01-54/55/56, 14 Scotts Road, (S)228213",
+         "phone":"6737 5565",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Nail Polish",
+            "Podiatry",
+            "Wedding Nails",
+            "Nail Care",
+            "Foot Biomechanics"
+         ]
+      },
+      {
+         "name":"Nailphile",
+         "description":"Nailphile is your go-to for quick lunchtime cuticle fixes or chic, luxurious pampering. A quirky combination of minimal, urban luxe, Nailphile exclusively utilizes Hollywood cult indie beauty label - Bella Lucce - for all sensuous spa treatments. Let our warm and experienced therapists pamper your hands and feet in an intimate environment with gourmet teas, coffees and nibbles. From soothing away the toxins of city life, to some simple 'me' time, Nailphile's extensive treatment menu will leave you no less than perfect.",
+         "address":"Raffles Hotel Shopping Arcade #02-24, 328 North Bridge Road, (S)188719",
+         "phone":"6333 9223",
+         "image":[
+            "https://x1.sdimgs.com/sd_static/images/side_banner/188_x_158/1533.jpg?v=1.0.2.280?v=1.0.2.280"
+         ],
+         "tags":[
+            "Nail Art",
+            "Manicure & Pedicure",
+            "Nail Polish",
+            "Nail Spa",
+            "Beauty"
+         ]
+      },
+      {
+         "name":"Beauty Hope Pte Ltd",
+         "description":"We at Beauty Hope Pte Ltd specializes in providing high-quality beauty and healthcare services here in Singapore. - *Confidence always with you* - has always been our business slogan and also part of our motivation support because we live up to the ambition of providing high customer services and also by rendering excellent beauty solutions and treatments and products to our clients. We consistently enhance and maintain our customer's physical appearances and mental well-being.",
+         "address":"Bylands Building #01-10/11, 135 Middle Road, (S)188975",
+         "phone":"6883 2293",
+         "image":[
+            "https://x2.sdimgs.com/sd_static/images/side_banner/188_x_158/1521.jpg?v=1.0.2.280?v=1.0.2.280"
+         ],
+         "tags":[
+            "Slimming Centre",
+            "Spa and Massage",
+            "Beauty Spa"
+         ]
+      },
+      {
+         "name":"Kate Make-up",
+         "description":"I am a professional make up artist cum hair stylist with 11 yrs experience . Graduated from local well-known makeup school since year 2000.\n Use to work with TV Drama production , TV commercial Ads , Movie production , Stage Drama , Beauty competition ,Wedding ... Now , i am focus and specialize in Wedding makeup for Brides , brides maid, sister,mum or company function .",
+         "address":"HDB The Sundial #12-381, 168A Punggol East, (S)821168",
+         "phone":"8233 9881",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Bridal Makeup",
+            "Professional Makeup",
+            "Hair Studio",
+            "Manicure Salon"
+         ]
+      },
+      {
+         "name":"Nur Beauty Hut",
+         "description":"Nur Beauty Hut was established on 7 July 2007. Our services are ear candling, massage, facial, as well as products of Nouvelle Visage at MOST AFFORTABLE PRICES.....!!!Located @ Tanjong Katong Complex #03-34. We Welcome You.",
+         "address":"Tanjong Katong Complex #03-34, 845 Geylang Road, (S)400845",
+         "phone":"65 9270 0015",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Facial Treatment",
+            "Fashion Apparel",
+            "Skin Care Products"
+         ]
+      },
+      {
+         "name":"Kawaii Paradise",
+         "description":"Kawaii Paradise is an online retail shop that sells popular beauty and skincare products, breast enhancement products and exclusive Japanese branded fashion. ALL items sold on our website have been personally tested and deliver what they promise. Personalised shopping services for hard-to-find items in Japan, China, Taiwan and Hong Kong are available, as well as home slimming services catered towards the busy working woman. At Kawaii Paradise, we truly want you to Stay Kawaii!",
+         "address":"Hillcrest Arcadia, 261 Arcadia Road, (S)289853",
+         "phone":"9737 1471",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Fashion Store",
+            "Online Fashion Store"
+         ]
+      },
+      {
+         "name":"Bella Luna Pte Ltd",
+         "description":"Bella Luna is a modern contemporary day spa with the essence of ancient therapeutic formulas that provide the ultimate care for your overall wellness.Perfecting Beauty with Wellness, our promise for a lifestyle of beauty and strength. Exude confidence today!",
+         "address":"Tanjong Pagar Shop Houses #01-01, 75 Tras Street, (S)079014 View All 2 Branches",
+         "phone":"6275 3818",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Aromatherapy Products",
+            "Beauty",
+            "Massage",
+            "Massage Services",
+            "Beauty Services"
+         ]
+      },
+      {
+         "name":"Citi Beauty",
+         "description":"Citi Beauty provides one-stop services from head to toe.  The wealth of treatments that we offer revolves around total beauty concepts that are designed to stimulate the inner well being as much as the face and body.",
+         "address":"Beauty World Centre #01-21, 144 Upper Bukit Timah Road, (S)588177",
+         "phone":"6469 8842",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Spa and Massage",
+            "Beauty",
+            "Beauty Care",
+            "Beauty Spa"
+         ]
+      },
+      {
+         "name":"Elegant Unisex Salon",
+         "description":"With over 20 years of hair experience, you know you can count on us!",
+         "address":"HDB Everton Park #01-15, 7 Everton Park, (S)080007",
+         "phone":"6221 0311",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Hair Salons",
+            "Beauty"
+         ]
+      },
+      {
+         "name":"Qian Rou Mei The Beauty Boutique Pte Ltd",
+         "description":"",
+         "address":"HDB Clementi #01-75, 443 Clementi Avenue 3, (S)120443",
+         "phone":"9115 2480",
+         "image":[
+            ""
+         ],
+         "tags":[
+            null
+         ]
+      },
+      {
+         "name":"Lush Aesthetics Pte Ltd",
+         "description":"Lush Aesthetics is a specialized aesthetics centre in Singapore serving as a one-stop solution for your skin, hair and body needs. We aim to make you feel good and look your best at any age. It is about celebrating life with an unbound self assurance, immeasurable zeal, a lot of positivity and optimism at Lush Aesthetics - a Singapore Aesthetics Beauty Centre.\nWith a fusion of the art of beauty and science of dermatology, we provide effective, safe, non-surgical and non-invasive cutting-edge treatments that are clinically proven for results. We ensure that we revolutionize your looks through our highly effective aesthetic treatments personalized for each individual.\nAt Lush Aesthetics, we also utilizes a diversified range of aesthetic technologies and equipment to perfect your body, skin and hair.\nLush Aesthetics, located in the city, is your trusted one-stop provider of aesthetic beauty treatments in Singapore.",
+         "address":"Tanglin Shopping Centre #06-11, 19 Tanglin Road, (S)247909",
+         "phone":"6737 4964",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Aesthetic Doctor",
+            "Beauty"
+         ]
+      },
+      {
+         "name":"D'sparkling Touch",
+         "description":"Unleashing the ravishing beauty within you! The art of beautiful nails, waxing, threading, make-up & hairstyling, eyelash extension & perming, eyebrow embroidery, personal, corporate, professional makeup courses.",
+         "address":"#02-93A, 10 Anson Road, (S)079903",
+         "phone":"6221 8142",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Cosmetics Eyeliner",
+            "Waxing Hair Removal",
+            "Beauty",
+            "Makeup Artists",
+            "Cosmetic Products"
+         ]
+      },
+      {
+         "name":"Luv Ur Nails",
+         "description":"Pamper yourself with a manicure and pedicure session here. Our manicurists are attentive to you and to details -- so you will definitely leave our spa feeling good!",
+         "address":"Far East Plaza #04-25, 14 Scotts Road, (S)228213",
+         "phone":"6733 2625",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Gelish Manicure",
+            "Manicure & Pedicure",
+            "Gelish Nails",
+            "Gelish Pedicure",
+            "Nail Salon"
+         ]
+      },
+      {
+         "name":"Star Of Asia Hair & Beauty Supply Pte Ltd",
+         "description":"Star of Asia Hair & Beauty Supply was set up in 2012, born out of two founders’ deep passion in the hair salon business, where they had a vast experience of close to 30 years in the trade. \nOur company specializes in professional hair care products, hair salon equipment and furniture. We sourced our products for their innovation, latest technology and quality, yet user-friendly, to meet the ever-changing market trends and demands of the clients.\nOur main distribution is to all hair and beauty salons and we have advanced to a client base of 1,000 salons island-wide.\nWe strive to maintain as the preferred name in distribution of professional hair care products, salon equipment and furniture through constant sourcing for new products and technologies to introduce to the hairdressing industry.",
+         "address":"81 Ubi Ave 4, #09-20 UB.One (S) 408830",
+         "phone":"6604 6070",
+         "image":[
+            ""
+         ],
+         "tags":[
+            null
+         ]
+      },
+      {
+         "name":"Apivita",
+         "description":"It all started back in 1977 from a pharmacy in Athens. The pharmacy of Nikos and Niki Koutsianas... Sources of inspiration were the society of the bee and its products, the wealth of the Greek flora and the holistic approach of Hippocrates towards health and beauty. This is how APIVITA was born. From the first day of its operation until today, APIVITA invest systematically in the research and de...Lihat Selengkapnya",
+         "address":"VivoCity #01-04, 1 Harbourfront Walk, (S)098585",
+         "phone":"6225 7955",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Beauty Services",
+            "Beauty",
+            "Beauty Equipment"
+         ]
+      },
+      {
+         "name":"Himalaya Herbal Healthcare",
+         "description":"The Himalaya Drug Company was founded in 1930 by Mr. M. Manal with a clear vision to bring Ayurveda to society in a contemporary form and to unravel the mystery behind the 5,000 year old system of medicine. This included referring to ancient ayurvedic texts, selecting indigenous herbs and subjecting the formulations to modern pharmacological, toxicological and safety tests to create new drugs and therapies.\nEighty one years ago, on a visit to Burma, Mr. Manal saw restless elephants being fed with a root to pacify them. The plant from which this was taken is Rauwolfia serpentina. Fascinated by the plant's effect on elephants, he had it scientifically evaluated. After extensive research, Serpinaâ, the world's first anti-hypertensive drug, was launched in 1934.\nThe legacy of researching nature forms the foundation of Himalaya's operations. Himalaya has pioneered the use of modern science to rediscover and validate ayurveda's secrets. Cutting edge technology is employed to create pharmaceutical-grade ayurvedic products. As a confirmation that Himalaya is dedicated to providing the highest quality and consistency in herbal care, the Company was awarded an ISO 9001:2000 certification in 2003.\nSince its inception, the company has focused on developing safe, natural and innovative remedies that will help people lead richer, healthier lives. Today, Himalaya products have been endorsed by over 250,000 doctors around the globe and consumers in over 82 countries rely on Himalaya for their health and personal care needs.",
+         "address":"Harbourfront Centre #02-70, 1 Maritime Square, (S)099253",
+         "phone":"6535 3067",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Beauty",
+            "Health Club"
+         ]
+      },
+      {
+         "name":"Laline",
+         "description":"Laline is a successful international boutique brand with over 80 stores worldwide, offering trendy and customer-orientated products, designed to match the needs of every person.",
+         "address":"Bugis Junction #01-21, 200 Victoria Street, (S)188021 View All 2 Branches",
+         "phone":"6309 1200",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Beauty",
+            "Beauty Wellness",
+            "Beauty Products",
+            "Skin Care"
+         ]
+      },
+      {
+         "name":"J.L Beauty Home",
+         "description":"JL Beauty Home is your complete beauty centre offering you beauty treatments in a spacious & tranquil environment. Locating at the very convenient Chinatown, it will be easy to spot us! You will enjoy our facial treatments, removal of mole, dark pigmentation and unglamorous body hair. Not forgetting our most specialized eyebrow embroidery & lips enhancement carried out by highly qualified, experienced beauticians. If you think that your eyelashes are short and scarce? Fret not, we have high technology that will improve hair growth in no time.\nWe offer personalized services with a full range of eyebrow embroidery, beauty maintenance and hair removal at very affordable prices. We are here to ensure that you receive the best treatments from us. This means you are offered the most up-to-date technologies and cost effective services available.\nWe strive to provide each client with professional services that will make you feel at home.",
+         "address":"133 New Bridge Road,  #02-06/07 Chinatown Point (S) 059413",
+         "phone":"6702 0886",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Beauty",
+            "Beauty Salons",
+            "Beauty Services"
+         ]
+      },
+      {
+         "name":"Elements Wellness Pte Ltd",
+         "description":"Spa Elements is an urban retreat day spa specializing in massage therapy and other beauty services such as facials, body scrubs and slimming treatment.",
+         "address":"The Cathay #03-19, 2 Handy Road, (S)229233 View All 2 Branches",
+         "phone":"6738 8008",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Beauty Wellness",
+            "Facial & Skin Rejuvenation",
+            "Slimming and Beauty",
+            "Body Massage",
+            "Face Threading"
+         ]
+      },
+      {
+         "name":"Beauty in the eyes",
+         "description":"Beauty in the eyes is a fast growing global online beauty store that brings you the latest beauty products from Korea and beyond. We aim to reach out to beauty minded people who want a taste of quality Korean products that their well known for. At Beauty in the eyes , we believe that each single individual is entitled to beautiful radiant skin. \r\nWith that in mind , we aim to provide you with latest and most affordable products together with great customer service for your beauty and health needs.",
+         "address":"Blk 4004 Depot Lane, #01-11 (S) 109758",
+         "phone":"Call Now",
+         "image":[
+            ""
+         ],
+         "tags":[
+            null
+         ]
+      },
+      {
+         "name":"Bioskin Holdings Pte Ltd",
+         "description":"BIOSKIN has been providing high quality solutions to troubled skin for the past 14 years. Valued and trusted for our effective skin solutions especially formulated for Asian skin, we have distinguished ourselves from other beauty salons.\r\nBIOSKIN is Singapore’s leading provider of skincare solutions.",
+         "address":"Orchard Central #04-15/16/17, 181 Orchard Road, (S)238896 View All 8 Branches",
+         "phone":"6634 3373",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Home Spa Equipment",
+            "Hydro Spa",
+            "Retail POS",
+            "Creative Eyebrow",
+            "Eczema Treatment"
+         ]
+      },
+      {
+         "name":"Body Wellness Pte Ltd",
+         "description":"Established in 1997, Body Wellness was created to reward and pamper modern living woman. The first Body Wellness outlet was located at Ten Mile Junction with just 8 treatment rooms serving more than 3000 ladies.",
+         "address":"Ubi 55 #05-09, 55 Ubi Avenue 1, (S)408935 View All 3 Branches",
+         "phone":"6737 1577",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Hair Wigs",
+            "Spa",
+            "Slimming Services"
+         ]
+      },
+      {
+         "name":"Bronz Tanning Salon Pte Ltd",
+         "description":"We have the most complete range and stock for hardware and engineering materials in Asia.",
+         "address":"China Square Central #02-18, 18 Cross Street, (S)048423",
+         "phone":"6327 3777",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Beauty Salons",
+            "Creative Eyebrow",
+            "Indoor Tanning",
+            "Laser Clinic"
+         ]
+      },
+      {
+         "name":"Creative Faceworks",
+         "description":"Makeup & Hairstyling Services for Bridal, D&D, Prom & Corporate Event",
+         "address":"Far East Plaza #04-62, 14 Scotts Road, (S)228213",
+         "phone":"6735 9277",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Beauty Care",
+            "Spa Treatment",
+            "Eyebrow Shaping",
+            "Creative Eyebrow"
+         ]
+      },
+      {
+         "name":"Envy Beauty Face & Body Care Centre",
+         "description":"The Professional Face & Body Centre, since 1989\r\n\r\nMISSIONS\r\nEnvy only provides the best service and ensures the best treatments just for you.   We have well-trained personnel who do not practice unethical sales tactics, you can be assured of relaxing and stress-free quality treatments, That is a Promised from Envy.\r\nDESCRIPTIONS\r\nEnvy have been delighting customers since 1989 with its Professional Salon Beauty Services approach for the past 23 years.  As you are special and unique, we make it our commitment to develop customised and personalised treatment for you. Using solutions that deal directly with the root of your beauty and health needs,  we assure effective results!  Envy Beauty has helped many clients, just like you, to achieve their dreams of having beautiful, youthful, glowing skin. Getting rejuvenated and radiant skin is possible, we promise! It’s a matter of your commitment to undergo our customised personal treatment and our passion to professionally deliver it.  Our Principal Consultant, Ms Shirley Chong, who holds a Diet & Nutrition Diploma (CIBTAC, UK) will share with you how you can achieve a healthier lifestyle through proper diet & how a good nutritional program can add years to your life and give life to your years!   At Envy Beauty, its all about a holistic Beauty and Health treatment to achieve a therapeutic and uplifting experience\r\n \r\n \r\nAWARDS\r\nENVY is proud to be awarded the 'Singapore Outstanding Enterprises 2011' presented by ACRA and we are honored to be a recipient of the '2010 Successful Entrepreneur' Platinum Category last year. \r\n   \r\n \r\nWe are also one of the main sponsors for Miss Singapore Chinatown 2007 and we played a part as one of the sponsors for the International Women's Day 2011 organized by CozyCot.   Most recently our Company, Envy has been selected as honoured recipient of the prestigious 'Promising SME 500 2012 Award'\r\n\r\n\r\n\r\nItem Name 1\r\n\r\n\r\nItem Name 1\r\n\r\n\r\nItem Name 1",
+         "address":"Coronation Shopping Plaza #03-05/08, 587 Bukit Timah Road, (S)269707",
+         "phone":"6469 6286",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Beauty Salons",
+            "Spa and Massage",
+            "Beauty",
+            "Beauty Care"
+         ]
+      },
+      {
+         "name":"La Vie En Rose Pte Ltd",
+         "description":"At La Vie En Rose, a one-stop beauty hub for women, beauty consultant Arase believes in both internal and external beauty and has made it her business to bring out the best in YOU!  A certified beautician with more than 18 years of experience in skin care coupled with a string of international diplomas under her belt, Arase set up La Vie En Rose to provide top-notch professional and personalized beauty care.   Cozy, modern concept certified by CaseTrust and SPA Insurer Services for Ladies and Couples only Open Every day except Public Holiday",
+         "address":"#01-00, 44 Race Course Road, (S)218558",
+         "phone":"6396 4044",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Eyebrow Shaping",
+            "Beauty Salons",
+            "Eye Brow Threading",
+            "Beauty"
+         ]
+      },
+      {
+         "name":"Lim Kay Khee Optical & Contact Lens Centre",
+         "description":"Vintage Specs Galore\nDon't be fooled by the non-descript look of Lim Kay Khee Optical and Contact Lens Centre (330 Balestier Road); This Optical shop, has been around for over 60 years. It is a treasure chest of vintage specs! \nYou cango wild over the window display of funky frames that ranges from 40 to 60 years old.",
+         "address":"330 Balestier Road, (S)329762",
+         "phone":"6256 4635",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Optical",
+            "Beauty",
+            "Contact Lens Store"
+         ]
+      },
+      {
+         "name":"Marie France Bodyline (S) Pte Ltd",
+         "description":"With over 20 years of experience and more than 200 centres worldwide in Hong Kong, China, Singapore, Malaysia, Thailand, Indonesia, Taiwan, Macau and Brunei, our successful track record with celebrities and clients globally make us the only slimming centre that truly understands a woman’s body. Our experience enables us to tailor a programme to meet your specific needs, for visible, long lasting results. http://www.mariefrance.com.sg/",
+         "address":"International Building #08-01/05, 360 Orchard Road, (S)238869 View All 8 Branches",
+         "phone":"1800-7777-111",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Face Threading",
+            "Hair Wigs",
+            "Beauty Care",
+            "Slimming and Beauty",
+            "Spa Treatment"
+         ]
+      },
+      {
+         "name":"Mei Tai Wan Unisex Hairdressing & Beauty Saloon",
+         "description":"Welcome to Mei Tai Wan! Pamper yourself...",
+         "address":"995 Serangoon Road, (S)328151 View All 4 Branches",
+         "phone":"6296 6641",
+         "image":[
+            "https://x2.sdimgs.com/sd_static/images/side_banner/188_x_158/2724.jpg?v=1.0.2.280?v=1.0.2.280"
+         ],
+         "tags":[
+            "Hair Grooming",
+            "Hair Salons",
+            "Beauty Salons",
+            "Hair Rebonding",
+            "Beauty"
+         ]
+      },
+      {
+         "name":"Beauty Factors International Pte Ltd",
+         "description":"Beauty Factors started in 1976, trading in cosmetics and toiletries. \n \nIn 2003, Beauty Factors was privatised and is now known as Beauty Factors International Pte Ltd. The company has expanded its variety of trade to include household items. We are currently one of the most active importer, exporter and wholesaler of cosmetics, toiletries and household products in Singapore.\n \nL'oreal, Dove, Pantene, Head & Shoulders, Johnson & Johnson, Palmolive, Simple, Gillette, Olay, Nivea, St Ives, Finese, Garnier, Sunsilk, Dettol, Harpic, Ambipur etc are some of the brands we trade regularly. We welcome any enquiries on import, export or wholesale of these fmcg products.\n \nBeauty Factors International Pte Ltd also expanded its reins and took on various sole distributorship of professional haircare and skincare brands.\n \nSole distributorship brands include:\n \n1) Obsidian Professional Haircare from Korea\n2) Orzen Organic Haircare from Korea\n3) Lyra cosmetics pencils from Germany\n4) Yunsey Professional Haircare from Spain\n5) Aeto Botanica Organic Haircare from Italy\n6) SHT Haircare from Italy\n7) Olio Seta Haircare from Italy\n8) BodyNatur Skincare and Haircare from Spain\n9) Sarangsae Haircare from Korea\n \nWe are actively on the look out for strong and responsible brands to represent in Singapore. Given our decades of experience serving the local retail scene and the strong relationship built with our retailers over the year, we believe we are in the best position to represent interested companies in launching their brand into Singapore.",
+         "address":"SM Summit Building #01-01, 45 Ubi Road 1, (S)408696",
+         "phone":"6841 9819",
+         "image":[
+            ""
+         ],
+         "tags":[
+            "Sundry",
+            "Shopping",
+            "Beauty"
+         ]
+      },
+      {
+         "name":"Owell Bodycare Pte Ltd",
+         "description":"OWELL BodyCare is a fast expanding retailer of healthcare products. OWELL is innovation-driven and emphasizes on the importance of service quality and product quality and safety.   \r\nOWELL products are uniquely designed to cater to the lifestyle of today’s fast paced society. Easy to use and portable products provide great convenience for those who are constantly on the go.",
+         "address":"IMM Building #01-136, 2 Jurong East Street 21, (S)609601 View All 12 Branches",
+         "phone":"6339 0613",
+         "image":[
+            ""
+         ],
+         "tags":[
+>>>>>>> 072023190d178f1d9b4edc96bcd5462153353ebd
             "Beauty",
             "Body Treatment",
             "Watches & Jewellery",
