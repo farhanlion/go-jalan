@@ -20,6 +20,7 @@ gem 'pundit'
 gem 'jquery'
 gem 'jquery-rails'
 gem 'order_as_specified'
+gem "serviceworker-rails"
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.6.1'

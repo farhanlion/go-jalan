@@ -1,18 +1,19 @@
+<% icon_sizes = Rails.configuration.serviceworker.icon_sizes %>
 {
-  "background_color": "white",
-  "description": "Go Jalan - The most interesting way for you to Get a Life!",
-  "display": "fullscreen",
+  "name": "My Progressive Rails App",
+  "short_name": "Progressive",
+  "start_url": "/",
   "icons": [
+  <% icon_sizes.map { |s| "#{s}x#{s}" }.each.with_index do |dim, i| %>
     {
-      "src": "<%= image_path 'icons/android-icon-192x192.png' %>",
-      "sizes": "192x192",
+      "src": "<%= image_path "serviceworker-rails/heart-#{dim}.png" %>",
+      "sizes": "<%= dim %>",
       "type": "image/png"
-    },
-    {
-      ...
-    }
+    }<%= i == (icon_sizes.length - 1) ? '' : ',' %>
+  <% end %>
   ],
-  "name": "Go Jalan - Get a life!",
-  "short_name": "Go Jalan",
-  "start_url": "/"
+  "theme_color": "#000000",
+  "background_color": "#FFFFFF",
+  "display": "fullscreen",
+  "orientation": "portrait"
 }
