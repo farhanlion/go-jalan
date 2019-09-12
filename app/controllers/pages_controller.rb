@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[home nearby results]
   before_action :loc
@@ -9,7 +7,7 @@ class PagesController < ApplicationController
   end
 
   def results
-    
+
     @providers = Provider.all
     @reviews = Review.all
     @reviews = Review.global_search(params[:query]) if params[:query].present?
@@ -37,21 +35,24 @@ class PagesController < ApplicationController
     end
     @providers = @providers.sort_by(&:avg_rating).reverse! if params["sort"]=="rating"
     @markers = @providers.geocoded.map do |provider|
-   if provider.latitude
-      {
-        lat: provider.latitude,
-        lng: provider.longitude,
-        infoWindow: render_to_string(partial: 'components/map_popup', locals: { provider: provider })
+      if provider.latitude
+        {
+          lat: provider.latitude,
+          lng: provider.longitude,
+          infoWindow: render_to_string(partial: 'components/map_popup', locals: { provider: provider })
 
-      }
-    end
+        }
+      end
     end
   end
 
   def nearby
     @providers = policy_scope(Provider)
     @loc = Geocoder.search('Orchard Road, Singapore').first.coordinates if @loc == []
-    @providers = @providers.near(@loc, 1, units: :km)
+    @providers = @providers.near(@loc, 5, units: :km)
+    @reviews = @providers.map do |provider|
+      provider.reviews
+    end
     @favourite = Favourite.new
     @markers = @providers.map do |provider|
       {

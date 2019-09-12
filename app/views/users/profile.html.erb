@@ -2,6 +2,7 @@
 <% content_for(:title) do %>
 <%= @user.first_name %> - Profile
 <% end %>
+
 <div class="profile d-flex w-100 border-bottom pt-5 pb-3">
   <div class="media">
     <% if @user.avatar.filename.nil? %>
@@ -10,27 +11,29 @@
     <%= cl_image_tag(@user.avatar, class: "avatar-large align-self-center ml-3 mb-3 mr-3") %>
     <% end %>
   </div>
+
   <div class="media-body d-flex flex-column">
     <div class="profile-first-line d-flex justify-content-between">
       <h5 class="mt-0 mb-0"><%= @user.first_name %> <%= @user.last_name %></h5>
-      <div class="dropdown">
-        <button class="btn btn-dropdown dropdown-toggle m-0 py-1 px-3 mr-1  profile-dropdown" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        </button>
-        <div class="dropdown-menu profile-dropdown-content" aria-labelledby="dropdownMenuButton">
-          <%= link_to "Edit profile", edit_user_path(@user), class: "dropdown-item"%>
-          <%= link_to "Change password", edit_user_registration_path, class: "dropdown-item"%>
-          <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-        </div>
-      </div>
     </div>
     <% if current_user == @user %>
     <small class="text-muted"><%= @user.email%></small>
     <% end %>
     <small class="profile-desc mr-2 mt-3 pr-2 align-self-end"><%= @user.description %></small>
   </div>
+
+   <div class="dropdown", style="position: absolute; right: 10.5em;">
+      <button class="btn btn-dropdown dropdown-toggle profile-dropdown m-0 p-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      </button>
+      <div class="dropdown-menu profile-dropdown-content" aria-labelledby="dropdownMenuButton">
+        <%= link_to "Edit profile", edit_user_path(@user), class: "dropdown-item"%>
+        <%= link_to "Change password", edit_user_registration_path, class: "dropdown-item"%>
+        <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+      </div>
+    </div>
+
 </div>
 <div class="my-reviews">
-  <h4 class="my-posts-title">My Moments</h4>
   <% if @reviews.nil? %>
   <p>You don't have any posts yet.</p>
   <% else %>
