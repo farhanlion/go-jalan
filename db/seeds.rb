@@ -3,14 +3,14 @@ require 'open-uri'
 require 'json'
 require 'net/http'
 
-Photo.destroy_all
-ProviderTag.destroy_all
-ProviderCategory.destroy_all
-Tag.destroy_all
-Category.destroy_all
-Review.destroy_all
-Provider.destroy_all
-User.destroy_all
+# Photo.destroy_all
+# ProviderTag.destroy_all
+# ProviderCategory.destroy_all
+# Tag.destroy_all
+# Category.destroy_all
+# Review.destroy_all
+# Provider.destroy_all
+# User.destroy_all
 
 
 category_array = %w[Restaurants Activities Beauty Fitness]
@@ -41,10 +41,11 @@ CSV.foreach(file_path, headers: true, header_converters: :symbol) do |row|
     end
   end
 
-  post_code = row[:address].match(/Singapore \((.*)\)/)[1]
+  puts "#{row[:name]} ... #{row[:address]}"
+  post_code = row[:address].match(/Singapore \((.*)\)/)[1] unless row[:address].empty?
   url = "https://developers.onemap.sg/commonapi/search?searchVal=#{post_code}&returnGeom=Y&getAddrDetails=Y&pageNum=1"
   response = open(url).read
-  results = JSON.parse(response)["results"][0]
+  results = JSON.parse(response)["results"][0] unless response.nil?
   if !results.empty?
     street_address = results["ADDRESS"]
     latitude = results["X"]
@@ -58,7 +59,7 @@ CSV.foreach(file_path, headers: true, header_converters: :symbol) do |row|
   row[:image].split(" ").first(3).each do |photo_url|
     new_photo = Photo.new(provider: new_provider)
     new_photo.remote_photo_url = photo_url
-    new_photo.save!
+    new_photo.save
   end
 
   new_provider.save if Provider.find_by(name: row[:name]).nil?
