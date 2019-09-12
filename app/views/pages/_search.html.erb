@@ -1,5 +1,5 @@
 <%= form_tag results_path, method: :get, class: "mx-auto" do %>
-<div class="search-section d-flex p-1 pt-2">
+<div class="search-section d-flex p-1 pt-3">
   <i class="fas fa-arrow-left back-icon m-0 p-0" ></i>
   <%= text_field_tag :query,
   params[:query],
@@ -64,10 +64,12 @@
     <div class="tab-pane fade show active" id="pills-reviews" role="tabpanel" aria-labelledby="pills-reviews-tab">
       <div class="review-cards d-flex flex-column align-content-left">
         <div class="row mw-100 p-0 m-0">
-          <% @reviews.each do |review| %>
-          <div class="review-card col-6 mw-50 p-0 m-0">
-            <%= render "components/review_card_small", review: review %>
-          </div>
+          <% if !@reviews.nil? %>
+            <% @reviews.each do |review| %>
+              <div class="review-card col-6 mw-50 p-0 m-0">
+                <%= render "components/review_card_small", review: review %>
+              </div>
+            <% end %>
           <% end %>
         </div>
       </div>

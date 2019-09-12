@@ -1,10 +1,10 @@
 .search-section {
-	padding-top: 2%;
-    padding-bottom: 2%;
-    background-color:$dark-purple;
-    width: 100%;
-    justify-content: space-evenly;
-    align-items: center;
+	padding-top: 5px;
+  padding-bottom: 2px;
+  background-color:$dark-purple;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
 	color:black;
 
 	.back-icon {
@@ -15,26 +15,23 @@
     }
 
     .form-control {
-    	width: 76%;
-    	border-radius: 10px;
+    	width: 74%;
     	font-family: $body-font;
     	font-weight: 400;
-        background-color: $lighter-gray;
-        height: auto;
-
+      height: 30px;
     	&:focus{
     	border-color: $dark-purple;
     	}
-		
+
     }
 
-	
+
 	.form-control:focus + .btn{
 		background-color: $yellow;
 		color: black;
-		
+
 	}
-	
+
 
     .btn {
     	width: 20%;
@@ -75,7 +72,7 @@
             font-size:14px;
         }
         #map-icon {
-           margin-bottom: -7px; 
+           margin-bottom: -7px;
         }
         #map-icon-text {
             margin-bottom: -8px;
