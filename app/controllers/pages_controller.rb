@@ -9,7 +9,7 @@ class PagesController < ApplicationController
   end
 
   def results
-
+    skip_authorization
     @providers = Provider.all
     @reviews = Review.all
     @reviews = Review.global_search(params[:query]) if params[:query].present?
@@ -37,7 +37,7 @@ class PagesController < ApplicationController
     end
     @providers = @providers.sort_by(&:avg_rating).reverse! if params["sort"]=="rating"
     @markers = @providers.geocoded.map do |provider|
-     if provider.latitude
+      if provider.latitude
         {
           lat: provider.latitude,
           lng: provider.longitude,
