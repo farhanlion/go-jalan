@@ -74,7 +74,7 @@
         </div>
         <div class ="address-container d-flex">
           <div class="address-title w-25">Address</div>
-          <div class="address-info w-75"><%= @provider.street_address.titlecase %></div>
+          <div class="address-info w-75"><%= @provider.street_address.titlecase unless @provider.street_address.nil? %></div>
         </div>
       </div>
       <div

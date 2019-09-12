@@ -60,7 +60,7 @@ if(rating){
 }
 
 const triggerForm = () => {
- document.querySelector(".fa-plus-circle").addEventListener('click', () => {
+ document.querySelector(".user_signed_in").addEventListener('click', () => {
     document.querySelector("#review_photo_url").click();
   });
 
