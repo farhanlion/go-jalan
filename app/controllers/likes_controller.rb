@@ -11,7 +11,7 @@ class LikesController < ApplicationController
       skip_authorization
       flash[:notice] = 'You have already liked this review.'
     end
-    redirect_to provider_path(@review.provider)
+    redirect_to review_path(@review)
   end
 
   def destroy
@@ -24,6 +24,6 @@ class LikesController < ApplicationController
       authorize @like
       @like.destroy
     end
-    redirect_to provider_path(@review.provider)
+    redirect_to review_path(@review)
   end
 end

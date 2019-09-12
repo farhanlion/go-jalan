@@ -5,8 +5,6 @@ const updateBannerOnScroll = () => {
   const bannerContainer = document.querySelector('.banner-container');
   if (banner) {
     window.addEventListener('scroll', () => {
-        console.log(window.scrollY)
-        console.log(window.innerHeight)
 
       if (window.scrollY >= (window.innerHeight * 0.25)) {
         banner.classList.add('banner-background-hide');
