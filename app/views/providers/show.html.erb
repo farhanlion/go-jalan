@@ -1,14 +1,16 @@
 <div style="position: relative">
   <div data-card-id='<%=@provider.id%>', style="position: absolute; right: 1em; z-index: 100">
-  <% if current_user.favourites.find_by(provider: @provider).nil? %>
-      <%= link_to provider_favourites_path(@provider), data:{id: @provider.id}, id: 'fav', method: :post, remote: true do  %>
-        <i class="far fa-heart inactive"></i>
-      <% end %>
+  <% if user_signed_in? %>
+    <% if current_user.favourites.find_by(provider: @provider).nil? %>
+        <%= link_to provider_favourites_path(@provider), data:{id: @provider.id}, id: 'fav', method: :post, remote: true do  %>
+          <i class="far fa-heart inactive"></i>
+        <% end %>
     <% else %>
-      <%= link_to favourite_path(current_user.favourites.find_by(provider: @provider)),  id: 'fav', method: :delete, remote: :true do %>
-        <i class="fas fa-heart active"></i>
-      <% end %>
+        <%= link_to favourite_path(current_user.favourites.find_by(provider: @provider)),  id: 'fav', method: :delete, remote: :true do %>
+          <i class="fas fa-heart active"></i>
+        <% end %>
     <% end %>
+  <% end %>
 </div>
 
 <div>
