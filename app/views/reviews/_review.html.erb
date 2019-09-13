@@ -1,3 +1,8 @@
+<% if current_user == User.find(20) || User.find(25) || User.find(22) %>
+  <%= link_to review_path(review), method: :delete do %>
+      <li class="list-inline-item ml-2"><i class="far fa-trash-alt"></i></li>
+  <% end %>
+<% end %>
 <div class="big-review d-flex flex-column", style="position: relative">
   <div class="d-flex m-0 p-0">
 
@@ -33,7 +38,9 @@
     <% end %>
   <% end %>
 
+
   <div class="utility d-flex flex-row justify-content-between">
+
     <div class="hot ml-3 mt-3">
       <% if user_signed_in? %>
         <% if current_user.likes.find_by(review: review).nil? %>
@@ -79,7 +86,4 @@
     <p class="m-0 p-0"><%= review.content %></p>
     <p class="m-0 p-0 small"><%= review.created_at.strftime("%b %e, %l:%M %p") %></p>
   </div>
-
 </div>
-
-

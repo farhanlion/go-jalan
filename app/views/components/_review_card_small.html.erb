@@ -4,7 +4,7 @@
             <div class="review-card-small video-card d-flex flex-column align-items-start">
               <div class="video">
                 <%= cl_image_tag("#{review.review_photos.first.photo_url.file.public_id}.gif", :effect => "deshake:32", :effect=>"accelerate:-10", :resource_type=>"video", :transformation => [
-                  {:width=>215, height: 255, :start_offset=>"3", :end_offset=>"5.5", :effect=>"boomerang", :crop=>"fill"},
+                  {:width=>215, height: 255, :start_offset=>"1.5", :end_offset=>"3.5", :effect=>"boomerang", :crop=>"fill"},
                   {:effect=>"loop"}
                   ]) %>
                 <%#= cl_image_tag("#{review.review_photos.first.photo_url.file.public_id}.gif", :width=>210, :height=>235, :flags=>"animated", zz:fetch_format=>:auto, :crop=>"scale", :resource_type=>"video") %>
