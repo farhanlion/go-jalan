@@ -13,9 +13,7 @@ import {seeMore} from '../components/provider_description.js';
 import { updateBannerOnScroll } from '../components/banner';
 import {goBack} from '../components/back.js'
 import {likeHeart} from '../components/hearts.js'
-// <<<<<<< HEAD
-// import { infiniteScroll } from '../plugins/react_visit.js'
-// =======
+import { infiniteScroll } from '../plugins/react_visit.js'
 
 initStarRating();
 
@@ -23,7 +21,7 @@ initMapbox();
 
 improveDropdown();
 
-// infiniteScroll();
+infiniteScroll();
 
 seeMore();
 
@@ -39,7 +37,7 @@ if (mapBtn){
 	mapBtn.addEventListener('click', ()=>{
 	setTimeout(function(){ map.resize() }, 50);
 
-	
+
 })
 
 }
