@@ -1,3 +1,4 @@
+import $ from 'jquery'
 const form = document.getElementById('new_review')
 const content = document.getElementById("review_content");
 const provider = document.getElementById("review_provider_id");
@@ -60,9 +61,13 @@ if(rating){
 }
 
 const triggerForm = () => {
- document.querySelector(".user_signed_in").addEventListener('click', () => {
+ const btn = document.querySelector(".user_signed_in")
+ if (btn){
+   btn.addEventListener('click', () => {
     document.querySelector("#review_photo_url").click();
   });
+
+ }
 
 
   const inputBox = document.querySelector("#review_photo_url")
