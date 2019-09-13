@@ -3,7 +3,7 @@
 <%= @user.first_name %> - Profile
 <% end %>
 
-<div class="profile d-flex w-100 border-bottom pt-5 pb-3" style="position: relative">
+<div class="profile d-flex w-100 border-bottom pt-4 pb-3" style="position: relative">
   <div class="media">
     <% if @user.avatar.filename.nil? %>
     <%= image_tag("avatar-default.png", class: "avatar-large align-self-center ml-3 mb-3 mr-3", crop: :fill) %>
