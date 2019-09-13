@@ -54,7 +54,7 @@ class PagesController < ApplicationController
       result = request.location
       location = result.coordinates
     end
-    location = Geocoder.search('Orchard Road, Singapore').first.coordinates if location == []
+    location = Geocoder.search('Orchard Road, Singapore').first.coordinates if !location
     @providers = @providers.near(location, 1, units: :km)
     @providers = @providers.near(location, 5, units: :km)
     @favourite = Favourite.new
