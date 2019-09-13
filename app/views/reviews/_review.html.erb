@@ -1,5 +1,5 @@
 <% if user_signed_in? %>
-  <% if current_user == User.find(20) || User.find(25) || User.find(22) %>
+  <% if current_user == User.find(20) || current_user == User.find(25) || current_user == User.find(22) %>
     <%= link_to review_path(review), method: :delete do %>
         <li class="list-inline-item ml-2"><i class="far fa-trash-alt"></i></li>
     <% end %>
