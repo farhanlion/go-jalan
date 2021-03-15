@@ -1,1 +1,3 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+# GoJalan - Get a life!
+
+Don't want to be disappointed by your next outing? Let GoJalan help! Visit https://gojalanv2.herokuapp.com/ and explore only the best of the best places to do what you want.
